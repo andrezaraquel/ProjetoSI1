@@ -29,21 +29,23 @@ object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 Seq[Any](format.raw/*1.19*/("""
 
 """),_display_(/*3.2*/main("Portal do Leite")/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
-    """),format.raw/*4.5*/("""<div id="wrapper">
-        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Portal do leite</a> 
-            </div>
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+"""),format.raw/*4.1*/("""<div id="wrapper">
+	    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+	<div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Portal do leite</a> 
+</div>
+ <div style="color: white; padding: 15px 50px 5px 50px; float: right;font-size: 16px;"> Last access : 30 May 2014 &nbsp; 
+ 
+ 	<button class="btn btn-danger navbar-btn" onclick="location.href='/logout'">
+	<span class="glyphicon glyphicon-log-out"></span>
+	</button>
+</div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -129,12 +131,12 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
         
         </div>
     
-	<script src=""""),_display_(/*104.16*/routes/*104.22*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*104.64*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*105.16*/routes/*105.22*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*105.64*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*106.16*/routes/*106.22*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*106.67*/("""" type="text/javascript"></script>
-    <script src=""""),_display_(/*107.19*/routes/*107.25*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*107.71*/("""" type="text/javascript"></script>
-    <script src=""""),_display_(/*108.19*/routes/*108.25*/.Assets.at("javascripts/morris.js")),format.raw/*108.60*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*109.16*/routes/*109.22*/.Assets.at("javascripts/custom.js")),format.raw/*109.57*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*106.16*/routes/*106.22*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*106.64*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*107.16*/routes/*107.22*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*107.64*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*108.16*/routes/*108.22*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*108.67*/("""" type="text/javascript"></script>
+    <script src=""""),_display_(/*109.19*/routes/*109.25*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*109.71*/("""" type="text/javascript"></script>
+    <script src=""""),_display_(/*110.19*/routes/*110.25*/.Assets.at("javascripts/morris.js")),format.raw/*110.60*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*111.16*/routes/*111.22*/.Assets.at("javascripts/custom.js")),format.raw/*111.57*/("""" type="text/javascript"></script>
 """)))}))}
   }
 
@@ -147,11 +149,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 14:57:36 BRT 2015
+                  DATE: Thu Mar 12 15:18:16 BRT 2015
                   SOURCE: /home/andrezarmq/Documentos/ProjetoSI1/app/views/index.scala.html
-                  HASH: cf630f343af4c8d6040aa1338280aaff81cc1a1a
-                  MATRIX: 723->1|828->18|856->21|887->44|926->46|957->51|4943->4009|4959->4015|5023->4057|5101->4107|5117->4113|5181->4155|5259->4205|5275->4211|5342->4256|5423->4309|5439->4315|5507->4361|5588->4414|5604->4420|5661->4455|5739->4505|5755->4511|5812->4546
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|132->104|132->104|132->104|133->105|133->105|133->105|134->106|134->106|134->106|135->107|135->107|135->107|136->108|136->108|136->108|137->109|137->109|137->109
+                  HASH: 805860cc13339b4d0958543e25f49134f76c807c
+                  MATRIX: 723->1|828->18|856->21|887->44|926->46|953->47|4914->3980|4930->3986|4994->4028|5072->4078|5088->4084|5152->4126|5230->4176|5246->4182|5313->4227|5394->4280|5410->4286|5478->4332|5559->4385|5575->4391|5632->4426|5710->4476|5726->4482|5783->4517
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|134->106|134->106|134->106|135->107|135->107|135->107|136->108|136->108|136->108|137->109|137->109|137->109|138->110|138->110|138->110|139->111|139->111|139->111
                   -- GENERATED --
               */
           
