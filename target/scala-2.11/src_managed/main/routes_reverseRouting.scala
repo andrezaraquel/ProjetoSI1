@@ -1,6 +1,6 @@
 // @SOURCE:/home/andrezarmq/Documentos/ProjetoSI1/conf/routes
 // @HASH:b5c2c515978a331f13837f05b431ce3a95e05780
-// @DATE:Thu Mar 12 15:18:15 BRT 2015
+// @DATE:Thu Mar 12 16:26:33 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

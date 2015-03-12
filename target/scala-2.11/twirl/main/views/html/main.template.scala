@@ -35,25 +35,40 @@ Seq[Any](format.raw/*1.32*/("""
 	    <meta charset="utf-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	     
-	    <link rel="stylesheet" media="screen" href=""""),_display_(/*10.51*/routes/*10.57*/.Assets.at("stylesheets/main.css")),format.raw/*10.91*/("""">
-	    <link rel="stylesheet" media="screen" href=""""),_display_(/*11.51*/routes/*11.57*/.Assets.at("stylesheets/bootstrap.css")),format.raw/*11.96*/("""">
-		<link rel="stylesheet" media="screen" href=""""),_display_(/*12.48*/routes/*12.54*/.Assets.at("stylesheets/font-awesome.css")),format.raw/*12.96*/("""">
-		<link rel="stylesheet" media="screen" href=""""),_display_(/*13.48*/routes/*13.54*/.Assets.at("javascripts/morris-0.4.3.min.css")),format.raw/*13.100*/("""">
-	    <link rel="stylesheet" media="screen" href=""""),_display_(/*14.51*/routes/*14.57*/.Assets.at("stylesheets/custom.css")),format.raw/*14.93*/("""">
-		<script src=""""),_display_(/*15.17*/routes/*15.23*/.Assets.at("javascripts/hello.js")),format.raw/*15.57*/("""" type="text/javascript"></script>
+	    
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*11.48*/routes/*11.54*/.Assets.at("stylesheets/bootstrap-theme.min.css")),format.raw/*11.103*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*12.48*/routes/*12.54*/.Assets.at("stylesheets/bootstrap.min.css")),format.raw/*12.97*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*13.48*/routes/*13.54*/.Assets.at("stylesheets/font-awesome.min.css")),format.raw/*13.100*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*14.48*/routes/*14.54*/.Assets.at("stylesheets/bootstrap-notify.css")),format.raw/*14.100*/("""">
+		<script src=""""),_display_(/*15.17*/routes/*15.23*/.Assets.at("javascripts/jquery-2.1.1.min.js")),format.raw/*15.68*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*16.17*/routes/*16.23*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*16.65*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*17.17*/routes/*17.23*/.Assets.at("javascripts/bootstrap-notify.js")),format.raw/*17.68*/("""" type="text/javascript"></script>
+		<body background=""""),_display_(/*18.22*/routes/*18.28*/.Assets.at("images/fundo.jpg")),format.raw/*18.58*/(""""> 
 	
+	    <link rel="stylesheet" media="screen" href=""""),_display_(/*20.51*/routes/*20.57*/.Assets.at("stylesheets/bootstrap.css")),format.raw/*20.96*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*21.48*/routes/*21.54*/.Assets.at("stylesheets/font-awesome.css")),format.raw/*21.96*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*22.48*/routes/*22.54*/.Assets.at("javascripts/morris-0.4.3.min.css")),format.raw/*22.100*/("""">
+	    <link rel="stylesheet" media="screen" href=""""),_display_(/*23.51*/routes/*23.57*/.Assets.at("stylesheets/custom.css")),format.raw/*23.93*/("""">
 	       
-	    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*18.56*/routes/*18.62*/.Assets.at("images/favicon.png")),format.raw/*18.94*/("""">
+	    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*25.56*/routes/*25.62*/.Assets.at("images/favicon.png")),format.raw/*25.94*/("""">
 		
 		<!-- GOOGLE FONTS-->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' /> 
+		
+		   
+		<script src=""""),_display_(/*31.17*/routes/*31.23*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*31.65*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*32.17*/routes/*32.23*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*32.65*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*33.17*/routes/*33.23*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*33.68*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*34.17*/routes/*34.23*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*34.69*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*35.17*/routes/*35.23*/.Assets.at("javascripts/morris.js")),format.raw/*35.58*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*36.17*/routes/*36.23*/.Assets.at("javascripts/custom.js")),format.raw/*36.58*/("""" type="text/javascript"></script>
 	         
 	</head>
 
 	<body>
 		<div>
-			"""),_display_(/*27.5*/content),format.raw/*27.12*/("""
-		"""),format.raw/*28.3*/("""</div>
+			"""),_display_(/*42.5*/content),format.raw/*42.12*/("""
+		"""),format.raw/*43.3*/("""</div>
 	</body>
 </html>"""))}
   }
@@ -67,11 +82,11 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 15:18:16 BRT 2015
+                  DATE: Thu Mar 12 16:26:34 BRT 2015
                   SOURCE: /home/andrezarmq/Documentos/ProjetoSI1/app/views/main.scala.html
-                  HASH: 9cee625d54862d59b30dae3aa85fda14ce9a367f
-                  MATRIX: 727->1|845->31|874->34|978->112|1003->117|1204->291|1219->297|1274->331|1354->384|1369->390|1429->429|1506->479|1521->485|1584->527|1661->577|1676->583|1744->629|1824->682|1839->688|1896->724|1942->743|1957->749|2012->783|2140->884|2155->890|2208->922|2405->1093|2433->1100|2463->1103
-                  LINES: 26->1|29->1|31->3|34->6|34->6|38->10|38->10|38->10|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|46->18|46->18|46->18|55->27|55->27|56->28
+                  HASH: a1ed26d0ed179efe8bf9704a2220b5e02b408154
+                  MATRIX: 727->1|845->31|874->34|978->112|1003->117|1207->294|1222->300|1293->349|1370->399|1385->405|1449->448|1526->498|1541->504|1609->550|1686->600|1701->606|1769->652|1815->671|1830->677|1896->722|1974->773|1989->779|2052->821|2130->872|2145->878|2211->923|2294->979|2309->985|2360->1015|2443->1071|2458->1077|2518->1116|2595->1166|2610->1172|2673->1214|2750->1264|2765->1270|2833->1316|2913->1369|2928->1375|2985->1411|3079->1478|3094->1484|3147->1516|3329->1671|3344->1677|3407->1719|3485->1770|3500->1776|3563->1818|3641->1869|3656->1875|3722->1920|3800->1971|3815->1977|3882->2023|3960->2074|3975->2080|4031->2115|4109->2166|4124->2172|4180->2207|4282->2283|4310->2290|4340->2293
+                  LINES: 26->1|29->1|31->3|34->6|34->6|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|48->20|48->20|48->20|49->21|49->21|49->21|50->22|50->22|50->22|51->23|51->23|51->23|53->25|53->25|53->25|59->31|59->31|59->31|60->32|60->32|60->32|61->33|61->33|61->33|62->34|62->34|62->34|63->35|63->35|63->35|64->36|64->36|64->36|70->42|70->42|71->43
                   -- GENERATED --
               */
           

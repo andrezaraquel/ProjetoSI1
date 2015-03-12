@@ -36,11 +36,10 @@ Seq[Any](format.raw/*1.63*/("""
 	<link rel="stylesheet" media="screen" href=""""),_display_(/*8.47*/routes/*8.53*/.Assets.at("stylesheets/bootstrap.min.css")),format.raw/*8.96*/("""">
 	<link rel="stylesheet" media="screen" href=""""),_display_(/*9.47*/routes/*9.53*/.Assets.at("stylesheets/font-awesome.min.css")),format.raw/*9.99*/("""">
 	<link rel="stylesheet" media="screen" href=""""),_display_(/*10.47*/routes/*10.53*/.Assets.at("stylesheets/bootstrap-notify.css")),format.raw/*10.99*/("""">
-	<link rel="shortcut icon" type="image/png" href=""""),_display_(/*11.52*/routes/*11.58*/.Assets.at("images/icon.png")),format.raw/*11.87*/("""">
-	<script src=""""),_display_(/*12.16*/routes/*12.22*/.Assets.at("javascripts/jquery-2.1.1.min.js")),format.raw/*12.67*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*13.16*/routes/*13.22*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*13.64*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*14.16*/routes/*14.22*/.Assets.at("javascripts/bootstrap-notify.js")),format.raw/*14.67*/("""" type="text/javascript"></script>
-	<body background=""""),_display_(/*15.21*/routes/*15.27*/.Assets.at("images/fundo.jpg")),format.raw/*15.57*/("""">
+	<script src=""""),_display_(/*11.16*/routes/*11.22*/.Assets.at("javascripts/jquery-2.1.1.min.js")),format.raw/*11.67*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*12.16*/routes/*12.22*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*12.64*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*13.16*/routes/*13.22*/.Assets.at("javascripts/bootstrap-notify.js")),format.raw/*13.67*/("""" type="text/javascript"></script>
+	<body background=""""),_display_(/*14.21*/routes/*14.27*/.Assets.at("images/fundo.jpg")),format.raw/*14.57*/("""">
 	</head>
 	<body>
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,33 +74,33 @@ Seq[Any](format.raw/*1.63*/("""
 			</div>
 
 			<div class="col-md-6">
-				"""),_display_(/*50.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*50.65*/ {_display_(Seq[Any](format.raw/*50.67*/("""
-				"""),format.raw/*51.5*/("""<div class="alert alert-danger">
-					<p>"""),_display_(/*52.10*/(mensagemErro)),format.raw/*52.24*/("""</p>
+				"""),_display_(/*49.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*49.65*/ {_display_(Seq[Any](format.raw/*49.67*/("""
+				"""),format.raw/*50.5*/("""<div class="alert alert-danger">
+					<p>"""),_display_(/*51.10*/(mensagemErro)),format.raw/*51.24*/("""</p>
 				</div>
-			""")))}),format.raw/*54.5*/(""" 
+			""")))}),format.raw/*53.5*/(""" 
 
-			"""),_display_(/*56.5*/if(mensagem != null && !mensagem.trim().equals(""))/*56.56*/ {_display_(Seq[Any](format.raw/*56.58*/("""
-			"""),format.raw/*57.4*/("""<div class="alert alert-success">
-				<p>"""),_display_(/*58.9*/(mensagem)),format.raw/*58.19*/("""</p>
+			"""),_display_(/*55.5*/if(mensagem != null && !mensagem.trim().equals(""))/*55.56*/ {_display_(Seq[Any](format.raw/*55.58*/("""
+			"""),format.raw/*56.4*/("""<div class="alert alert-success">
+				<p>"""),_display_(/*57.9*/(mensagem)),format.raw/*57.19*/("""</p>
 			</div>
-		""")))}),format.raw/*60.4*/("""
+		""")))}),format.raw/*59.4*/("""
 
-		"""),format.raw/*62.3*/("""<div class="panel panel-default">
+		"""),format.raw/*61.3*/("""<div class="panel panel-default">
 			<div class="panel-heading">Login</div>
 			<div class="panel-body">
-				"""),_display_(/*65.6*/helper/*65.12*/.form(routes.AutenticacaoController.autenticar)/*65.59*/ {_display_(Seq[Any](format.raw/*65.61*/("""
-				"""),format.raw/*66.5*/("""<form role="form">
+				"""),_display_(/*64.6*/helper/*64.12*/.form(routes.AutenticacaoController.autenticar)/*64.59*/ {_display_(Seq[Any](format.raw/*64.61*/("""
+				"""),format.raw/*65.5*/("""<form role="form">
 					<div class="form-group">
-						<input type="email" class="form-control" name="email" value='"""),_display_(/*68.69*/form("email")/*68.82*/.value),format.raw/*68.88*/("""' placeholder="Digite seu email" required>
+						<input type="email" class="form-control" name="email" value='"""),_display_(/*67.69*/form("email")/*67.82*/.value),format.raw/*67.88*/("""' placeholder="Digite seu email" required>
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" name="senha" placeholder="Digite sua senha" required>
 					</div>
 					<button type="submit" class="btn btn-primary">Entrar</button>
 				</form>
-			""")))}),format.raw/*75.5*/("""
-		"""),format.raw/*76.3*/("""</div>
+			""")))}),format.raw/*74.5*/("""
+		"""),format.raw/*75.3*/("""</div>
 	</div>
 </div>
 <div class="col-md-3">
@@ -122,11 +121,11 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 15:43:33 BRT 2015
+                  DATE: Thu Mar 12 16:26:34 BRT 2015
                   SOURCE: /home/andrezarmq/Documentos/ProjetoSI1/app/views/login.scala.html
-                  HASH: 56806081532504491b740488a2a270208b098811
-                  MATRIX: 744->1|893->62|921->64|1063->180|1077->186|1147->235|1222->284|1236->290|1299->333|1374->382|1388->388|1454->434|1530->483|1545->489|1612->535|1693->589|1708->595|1758->624|1803->642|1818->648|1884->693|1961->743|1976->749|2039->791|2116->841|2131->847|2197->892|2279->947|2294->953|2345->983|3484->2096|3552->2155|3592->2157|3624->2162|3693->2204|3728->2218|3778->2238|3811->2245|3871->2296|3911->2298|3942->2302|4010->2344|4041->2354|4089->2372|4120->2376|4255->2485|4270->2491|4326->2538|4366->2540|4398->2545|4542->2662|4564->2675|4591->2681|4905->2965|4935->2968
-                  LINES: 26->1|29->1|31->3|35->7|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|38->10|38->10|38->10|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|78->50|78->50|78->50|79->51|80->52|80->52|82->54|84->56|84->56|84->56|85->57|86->58|86->58|88->60|90->62|93->65|93->65|93->65|93->65|94->66|96->68|96->68|96->68|103->75|104->76
+                  HASH: b3378e16ce5be64019b03243c19b093f748a2ada
+                  MATRIX: 744->1|893->62|921->64|1063->180|1077->186|1147->235|1222->284|1236->290|1299->333|1374->382|1388->388|1454->434|1530->483|1545->489|1612->535|1657->553|1672->559|1738->604|1815->654|1830->660|1893->702|1970->752|1985->758|2051->803|2133->858|2148->864|2199->894|3338->2007|3406->2066|3446->2068|3478->2073|3547->2115|3582->2129|3632->2149|3665->2156|3725->2207|3765->2209|3796->2213|3864->2255|3895->2265|3943->2283|3974->2287|4109->2396|4124->2402|4180->2449|4220->2451|4252->2456|4396->2573|4418->2586|4445->2592|4759->2876|4789->2879
+                  LINES: 26->1|29->1|31->3|35->7|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|38->10|38->10|38->10|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|77->49|77->49|77->49|78->50|79->51|79->51|81->53|83->55|83->55|83->55|84->56|85->57|85->57|87->59|89->61|92->64|92->64|92->64|92->64|93->65|95->67|95->67|95->67|102->74|103->75
                   -- GENERATED --
               */
           

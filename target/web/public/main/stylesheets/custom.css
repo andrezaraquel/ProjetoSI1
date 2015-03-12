@@ -206,8 +206,6 @@ max-width:170px;
 }
 
 .navbar-cls-top .navbar-brand {
-	color: #fff;
-background: #000033;
 width: 260px;
 text-align: center;
 height: 60px;
@@ -215,7 +213,6 @@ font-size: 30px;
 font-weight: 700;
 }
 .active-menu {
-    background-color:#b0c4de!important;
 }
 
 .arrow {
@@ -310,8 +307,6 @@ font-weight: 700;
 	
 }
 .navbar-cls-top .navbar-brand:hover {
-
-background: #000033;
 color:#fff;
 
 }
