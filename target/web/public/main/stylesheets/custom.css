@@ -212,6 +212,12 @@ height: 60px;
 font-size: 30px;
 font-weight: 700;
 }
+
+.navbar-top2 .navbar-brand {
+font-size: 35px;
+text-align: center;
+}
+
 .active-menu {
 }
 
@@ -306,6 +312,8 @@ font-weight: 700;
 	border-bottom:none;
 	
 }
+
+
 .navbar-cls-top .navbar-brand:hover {
 color:#fff;
 
