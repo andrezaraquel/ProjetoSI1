@@ -4,7 +4,7 @@
 		module="projetosi1_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150312132055"
+		publication="20150312143919"
 	>
 		<description>
 		ProjetoSI1
@@ -46,6 +46,5 @@
 		<dependency org="postgresql" name="postgresql" rev="9.1-901-1.jdbc4" conf="compile->default(compile)"/>
 		<dependency org="org.hibernate" name="hibernate-core" rev="4.2.3.Final" conf="compile->default(compile)"/>
 		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.2.3.Final" conf="compile->default(compile)"/>
-		<dependency org="net.sf.opencsv" name="opencsv" rev="2.3" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

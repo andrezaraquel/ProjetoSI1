@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@105a6cb[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f0124[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -1126,32 +1126,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.2.3.Final [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving net.sf.opencsv#opencsv;2.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.sf.opencsv#opencsv;2.3 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried /home/andrezarmq/.ivy2/local/net.sf.opencsv/opencsv/2.3/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for net.sf.opencsv#opencsv;2.3[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/andrezarmq/Documentos/ProjetoSI1/repository/net.sf.opencsv/opencsv/2.3/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	activator-local: no ivy file found for net.sf.opencsv#opencsv;2.3[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for net.sf.opencsv#opencsv;2.3[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom (2.3)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] net.sf.opencsv#opencsv;2.3!opencsv.pom(pom.original) (594ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried /home/andrezarmq/.ivy2/local/net.sf.opencsv/opencsv/2.3/jars/opencsv.jar[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/andrezarmq/Documentos/ProjetoSI1/repository/net.sf.opencsv/opencsv/2.3/jars/opencsv.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar[0m
-[0m[[0mdebug[0m] [0m	found net.sf.opencsv#opencsv;2.3 in public[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [compile][0m
@@ -1809,10 +1783,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.2.3.Final [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [runtime][0m
@@ -2471,10 +2441,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.2.3.Final [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.11;2.3.8 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.11;2.3.8 {test=[default(compile)]}[0m
@@ -4453,10 +4419,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.2.3.Final [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -5117,10 +5079,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.2.3.Final [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for projetosi1#projetosi1_2.11;1.0-SNAPSHOT [test-internal][0m
@@ -5781,10 +5739,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-entitymanager;4.2.3.Final->org.hibernate#hibernate-core;4.2.3.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.2.3.Final [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->net.sf.opencsv#opencsv;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies projetosi1#projetosi1_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->compile][0m
@@ -7289,12 +7243,6 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] postgresql#postgresql;9.1-901-1.jdbc4!postgresql.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.hibernate#hibernate-core;4.2.3.Final!hibernate-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.hibernate#hibernate-entitymanager;4.2.3.Final!hibernate-entitymanager.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.sf.opencsv#opencsv;2.3!opencsv.jar (619ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.1!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#build-link;2.3.8!build-link.jar[0m
@@ -7422,7 +7370,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5366ms :: artifacts dl 1111ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3821ms :: artifacts dl 263ms[0m
 [0m[[0mdebug[0m] [0m	report for projetosi1#projetosi1_2.11;1.0-SNAPSHOT compile produced in /home/andrezarmq/Documentos/ProjetoSI1/target/resolution-cache/reports/projetosi1-projetosi1_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for projetosi1#projetosi1_2.11;1.0-SNAPSHOT runtime produced in /home/andrezarmq/Documentos/ProjetoSI1/target/resolution-cache/reports/projetosi1-projetosi1_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for projetosi1#projetosi1_2.11;1.0-SNAPSHOT test produced in /home/andrezarmq/Documentos/ProjetoSI1/target/resolution-cache/reports/projetosi1-projetosi1_2.11-test.xml[0m
@@ -7436,5 +7384,5 @@
 [0m[[0mdebug[0m] [0m	report for projetosi1#projetosi1_2.11;1.0-SNAPSHOT docs produced in /home/andrezarmq/Documentos/ProjetoSI1/target/resolution-cache/reports/projetosi1-projetosi1_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for projetosi1#projetosi1_2.11;1.0-SNAPSHOT pom produced in /home/andrezarmq/Documentos/ProjetoSI1/target/resolution-cache/reports/projetosi1-projetosi1_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for projetosi1#projetosi1_2.11;1.0-SNAPSHOT scala-tool produced in /home/andrezarmq/Documentos/ProjetoSI1/target/resolution-cache/reports/projetosi1-projetosi1_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (5366ms resolve - 1111ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3821ms resolve - 263ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

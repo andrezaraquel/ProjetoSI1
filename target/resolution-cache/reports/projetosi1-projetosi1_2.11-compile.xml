@@ -7,20 +7,8 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150312132055"/>
+		date="20150312143919"/>
 	<dependencies>
-		<module organisation="net.sf.opencsv" name="opencsv">
-			<revision name="2.3" status="release" pubdate="20110728020018" resolver="public" artresolver="public" homepage="http://opencsv.sf.net" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="70">
-				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="5445" time="594" location="/home/andrezarmq/.ivy2/cache/net.sf.opencsv/opencsv/ivy-2.3.xml" searched="true" original-local-location="/home/andrezarmq/.ivy2/cache/net.sf.opencsv/opencsv/ivy-2.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.pom"/>
-				<caller organisation="projetosi1" name="projetosi1_2.11" conf="compile" rev="2.3" rev-constraint-default="2.3" rev-constraint-dynamic="2.3" callerrev="1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="opencsv" type="jar" ext="jar" status="successful" details="" size="19827" time="619" location="/home/andrezarmq/.ivy2/cache/net.sf.opencsv/opencsv/jars/opencsv-2.3.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="org.hibernate" name="hibernate-entitymanager">
 			<revision name="4.2.3.Final" status="release" pubdate="20130703122649" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="69">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
