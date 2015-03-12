@@ -1,6 +1,6 @@
 // @SOURCE:/home/andrezarmq/Documentos/ProjetoSI1/conf/routes
 // @HASH:b31e3ed4075748bc0576b3b7654b92b97f9d84ad
-// @DATE:Thu Mar 12 14:39:19 BRT 2015
+// @DATE:Thu Mar 12 14:48:15 BRT 2015
 
 
 import play.core._

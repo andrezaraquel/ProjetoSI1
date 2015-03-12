@@ -27,31 +27,9 @@ object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
       _display_ {
 
 Seq[Any](format.raw/*1.19*/("""
-	
-"""),format.raw/*3.1*/("""<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portal do Leite</title>
-  
-        <link rel="stylesheet" media="screen" href=""""),_display_(/*10.54*/routes/*10.60*/.Assets.at("stylesheets/main.css")),format.raw/*10.94*/("""">
-        <link rel="stylesheet" media="screen" href=""""),_display_(/*11.54*/routes/*11.60*/.Assets.at("stylesheets/bootstrap.css")),format.raw/*11.99*/("""">
-		<link rel="stylesheet" media="screen" href=""""),_display_(/*12.48*/routes/*12.54*/.Assets.at("stylesheets/font-awesome.css")),format.raw/*12.96*/("""">
-		<link rel="stylesheet" media="screen" href=""""),_display_(/*13.48*/routes/*13.54*/.Assets.at("javascripts/morris-0.4.3.min.css")),format.raw/*13.100*/("""">
-        <link rel="stylesheet" media="screen" href=""""),_display_(/*14.54*/routes/*14.60*/.Assets.at("stylesheets/custom.css")),format.raw/*14.96*/("""">
-		<script src=""""),_display_(/*15.17*/routes/*15.23*/.Assets.at("javascripts/hello.js")),format.raw/*15.57*/("""" type="text/javascript"></script>
 
-        
-        <link rel="shortcut icon" type="image/png" href=""""),_display_(/*18.59*/routes/*18.65*/.Assets.at("images/favicon.png")),format.raw/*18.97*/("""">
-		
-		  <!-- GOOGLE FONTS-->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' /> 
-         
-</head>
-
-<body>
-    <div id="wrapper">
+"""),_display_(/*3.2*/main("Portal do Leite")/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
+    """),format.raw/*4.5*/("""<div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -60,7 +38,7 @@ Seq[Any](format.raw/*1.19*/("""
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Portal do leite</a> 
+                <a class="navbar-brand" href="#">Portal do leite</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -151,14 +129,13 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
         
         </div>
     
-	<script src=""""),_display_(/*126.16*/routes/*126.22*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*126.64*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*127.16*/routes/*127.22*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*127.64*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*128.16*/routes/*128.22*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*128.67*/("""" type="text/javascript"></script>
-    <script src=""""),_display_(/*129.19*/routes/*129.25*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*129.71*/("""" type="text/javascript"></script>
-    <script src=""""),_display_(/*130.19*/routes/*130.25*/.Assets.at("javascripts/morris.js")),format.raw/*130.60*/("""" type="text/javascript"></script>
-	<script src=""""),_display_(/*131.16*/routes/*131.22*/.Assets.at("javascripts/custom.js")),format.raw/*131.57*/("""" type="text/javascript"></script>
-</body>
-</html>"""))}
+	<script src=""""),_display_(/*104.16*/routes/*104.22*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*104.64*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*105.16*/routes/*105.22*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*105.64*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*106.16*/routes/*106.22*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*106.67*/("""" type="text/javascript"></script>
+    <script src=""""),_display_(/*107.19*/routes/*107.25*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*107.71*/("""" type="text/javascript"></script>
+    <script src=""""),_display_(/*108.19*/routes/*108.25*/.Assets.at("javascripts/morris.js")),format.raw/*108.60*/("""" type="text/javascript"></script>
+	<script src=""""),_display_(/*109.16*/routes/*109.22*/.Assets.at("javascripts/custom.js")),format.raw/*109.57*/("""" type="text/javascript"></script>
+""")))}))}
   }
 
   def render(message:String): play.twirl.api.HtmlFormat.Appendable = apply(message)
@@ -170,11 +147,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 14:43:47 BRT 2015
+                  DATE: Thu Mar 12 14:57:36 BRT 2015
                   SOURCE: /home/andrezarmq/Documentos/ProjetoSI1/app/views/index.scala.html
-                  HASH: 81596396256b6a375744fde16a39975676241c4a
-                  MATRIX: 723->1|828->18|857->21|1148->285|1163->291|1218->325|1301->381|1316->387|1376->426|1453->476|1468->482|1531->524|1608->574|1623->580|1691->626|1774->682|1789->688|1846->724|1892->743|1907->749|1962->783|2092->886|2107->892|2160->924|6317->5053|6333->5059|6397->5101|6475->5151|6491->5157|6555->5199|6633->5249|6649->5255|6716->5300|6797->5353|6813->5359|6881->5405|6962->5458|6978->5464|7035->5499|7113->5549|7129->5555|7186->5590
-                  LINES: 26->1|29->1|31->3|38->10|38->10|38->10|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|46->18|46->18|46->18|154->126|154->126|154->126|155->127|155->127|155->127|156->128|156->128|156->128|157->129|157->129|157->129|158->130|158->130|158->130|159->131|159->131|159->131
+                  HASH: cf630f343af4c8d6040aa1338280aaff81cc1a1a
+                  MATRIX: 723->1|828->18|856->21|887->44|926->46|957->51|4943->4009|4959->4015|5023->4057|5101->4107|5117->4113|5181->4155|5259->4205|5275->4211|5342->4256|5423->4309|5439->4315|5507->4361|5588->4414|5604->4420|5661->4455|5739->4505|5755->4511|5812->4546
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|132->104|132->104|132->104|133->105|133->105|133->105|134->106|134->106|134->106|135->107|135->107|135->107|136->108|136->108|136->108|137->109|137->109|137->109
                   -- GENERATED --
               */
           
