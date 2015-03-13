@@ -213,10 +213,6 @@ font-size: 30px;
 font-weight: 700;
 }
 
-.navbar-top2 .navbar-brand {
-font-size: 35px;
-text-align: center;
-}
 
 .active-menu {
 }
@@ -324,7 +320,7 @@ border:0px solid black;
      
 }
 .navbar-header {
-    background: #A70303;
+
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color: #b0c4de;

@@ -29,8 +29,7 @@ object login extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 Seq[Any](format.raw/*1.63*/("""
 
 """),_display_(/*3.2*/main("Login")/*3.15*/{_display_(Seq[Any](format.raw/*3.16*/("""
-		"""),format.raw/*4.3*/("""<div class="navbar navbar-default navbar-top2  navbar-fixed-top" role="navigation">
-			<a class="navbar-brand" href="/">Portal do Leite</a>
+		"""),format.raw/*4.3*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -38,6 +37,7 @@ Seq[Any](format.raw/*1.63*/("""
 						<span class="icon-bar"></span> <span class="icon-bar"></span> 
 						<span class="icon-bar"></span>
 					</button>
+					<a class="navbar-brand" href="/">Portal do Leite</a>	
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -107,10 +107,10 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 19:45:39 BRT 2015
+                  DATE: Fri Mar 13 19:02:45 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/login.scala.html
-                  HASH: dba487c6af56c4cb69869d5e9074fddfe63e566f
-                  MATRIX: 744->1|893->62|923->67|944->80|982->81|1012->85|2172->1219|2240->1278|2280->1280|2313->1286|2383->1329|2418->1343|2470->1365|2505->1374|2565->1425|2605->1427|2637->1432|2706->1475|2737->1485|2787->1505|2820->1511|2958->1623|2973->1629|3029->1676|3069->1678|3102->1684|3248->1803|3270->1816|3297->1822|3618->2113|3649->2117
+                  HASH: 99b382326ac667e487e6cff4c9b39369af9c8a71
+                  MATRIX: 744->1|893->62|923->67|944->80|982->81|1012->85|2162->1209|2230->1268|2270->1270|2303->1276|2373->1319|2408->1333|2460->1355|2495->1364|2555->1415|2595->1417|2627->1422|2696->1465|2727->1475|2777->1495|2810->1501|2948->1613|2963->1619|3019->1666|3059->1668|3092->1674|3238->1793|3260->1806|3287->1812|3608->2103|3639->2107
                   LINES: 26->1|29->1|31->3|31->3|31->3|32->4|64->36|64->36|64->36|65->37|66->38|66->38|68->40|70->42|70->42|70->42|71->43|72->44|72->44|74->46|76->48|79->51|79->51|79->51|79->51|80->52|82->54|82->54|82->54|89->61|90->62
                   -- GENERATED --
               */

@@ -32,8 +32,7 @@ Seq[Any](format.raw/*1.19*/("""
 
 """),format.raw/*5.1*/("""<div id="wrapper">
 	
-	<div class="navbar navbar-default navbar-top2  navbar-fixed-top" role="navigation">
-			<a class="navbar-brand" href="/">Portal do Leite</a>
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,7 +40,7 @@ Seq[Any](format.raw/*1.19*/("""
 						<span class="icon-bar"></span> <span class="icon-bar"></span> 
 						<span class="icon-bar"></span>
 					</button>
-					
+					<a class="navbar-brand" href="/">Portal do Leite</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -120,9 +119,9 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 19:56:55 BRT 2015
+                  DATE: Fri Mar 13 19:02:45 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/index.scala.html
-                  HASH: 656acbcbda901f9f6a7178a7e320a783057a8e1b
+                  HASH: 7ea4b71b022a099e3adad643915e7f027ef784c0
                   MATRIX: 723->1|828->18|858->23|889->46|928->48|958->52
                   LINES: 26->1|29->1|31->3|31->3|31->3|33->5
                   -- GENERATED --

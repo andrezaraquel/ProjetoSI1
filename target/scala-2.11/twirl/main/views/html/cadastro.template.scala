@@ -29,8 +29,7 @@ object cadastro extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,F
 Seq[Any](format.raw/*1.63*/("""
 
 """),_display_(/*3.2*/main("Cadastro")/*3.18*/{_display_(Seq[Any](format.raw/*3.19*/("""
-		"""),format.raw/*4.3*/("""<div class="navbar navbar-default navbar-top2 navbar-fixed-top" role="navigation">
-			<a class="navbar-brand" href="/">Portal do Leite</a>
+		"""),format.raw/*4.3*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed"
@@ -39,6 +38,7 @@ Seq[Any](format.raw/*1.63*/("""
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 				</button>
+				<a class="navbar-brand" href="/">Portal do Leite</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -124,10 +124,10 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 19:45:39 BRT 2015
+                  DATE: Fri Mar 13 19:02:45 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/cadastro.scala.html
-                  HASH: d91f07c71be8eecb86498cf645a3a9ac6c39e387
-                  MATRIX: 747->1|896->62|926->67|950->83|988->84|1018->88|2168->1212|2236->1271|2276->1273|2309->1279|2379->1322|2414->1336|2466->1358|2504->1370|2564->1421|2604->1423|2636->1428|2705->1471|2736->1481|2786->1501|2821->1509|2970->1632|2985->1638|3040->1684|3080->1686|3113->1692|3264->1816|3285->1828|3312->1834|3501->1996|3523->2009|3550->2015|4054->2489|4085->2493|4210->2588
+                  HASH: b0d5d75b8c9fc68e2d6556650c2fb1862e481d1e
+                  MATRIX: 747->1|896->62|926->67|950->83|988->84|1018->88|2157->1201|2225->1260|2265->1262|2298->1268|2368->1311|2403->1325|2455->1347|2493->1359|2553->1410|2593->1412|2625->1417|2694->1460|2725->1470|2775->1490|2810->1498|2959->1621|2974->1627|3029->1673|3069->1675|3102->1681|3253->1805|3274->1817|3301->1823|3490->1985|3512->1998|3539->2004|4043->2478|4074->2482|4199->2577
                   LINES: 26->1|29->1|31->3|31->3|31->3|32->4|67->39|67->39|67->39|68->40|69->41|69->41|71->43|73->45|73->45|73->45|74->46|75->47|75->47|77->49|79->51|82->54|82->54|82->54|82->54|83->55|86->58|86->58|86->58|90->62|90->62|90->62|103->75|104->76|114->86
                   -- GENERATED --
               */

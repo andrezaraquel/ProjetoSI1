@@ -1,9 +1,7 @@
 package controllers;
 
 import static play.data.Form.form;
-
 import java.util.List;
-
 import models.Usuario;
 import models.dao.GenericDAO;
 import models.dao.GenericDAOImpl;
@@ -15,8 +13,7 @@ import play.db.jpa.Transactional;
 public class AutenticacaoController extends Controller {
 
 	private static GenericDAO dao = new GenericDAOImpl();
-	private static Form<Usuario> usuarioForm = form(Usuario.class)
-			.bindFromRequest();
+	private static Form<Usuario> usuarioForm = form(Usuario.class).bindFromRequest();
 
 	@Transactional
 	public static Result showLogin() {
