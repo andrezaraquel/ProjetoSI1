@@ -30,9 +30,7 @@ Seq[Any](format.raw/*1.19*/("""
 
 """),_display_(/*3.2*/main("Portal do Leite")/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
 
-"""),format.raw/*5.1*/("""<div id="wrapper">
-	
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	"""),format.raw/*5.2*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
 			<div class="container">
 				<div>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -42,6 +40,7 @@ Seq[Any](format.raw/*1.19*/("""
 					</button>
 					<a class="navbar-brand" href="/">Portal do Leite</a>
 				</div>
+				
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="/sobre">Sobre</a></li>
@@ -57,56 +56,85 @@ Seq[Any](format.raw/*1.19*/("""
 				</div>
 			</div>
 	</div>	
-        
-	<!-- /. NAV TOP  -->
-	<nav class="navbar-default navbar-side" role="navigation">
-		<div class="sidebar-collapse">
-	 		<ul class="nav" id="main-menu">
+     
+<div class="container">
+	<div class="row">
+		<!-- Temas da disciplina -->
+		<div class="col-md-3">
+			<br /> <br /> <br /> <br />
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Temas da disciplina SI1</h3>
+				</div>
 				
-				<li class="text-center">
-						<br><br>
-						<h1>Disciplina SI1</h1>
-				</li>
-				<li>
-					<a class="active-menu"  href="">Análise x Design </a>
-				</li>
-				<li>
-					<a  href="">Orientação a Objetos</a>
-				</li>
-				<li>
-					<a  href="">Padrões de Projeto GRASP</a>
-				</li>
-				<li>
-					<a   href="">Padrões de Projeto Gof</a>
-				</li>	
-				<li>
-					<a  href="">Arquitetura de Software</a>
-				</li>
-				<li>
-					<a  href="">Play Framework</a>
-				</li>		
-				<li>
-					<a  href="">Java Script </a>
-				</li>		
-				<li>
-					<a  href="">HTML + CSS + Bootstrap </a>
-				</li>		
-				<li>
-					<a  href="">Heroku </a>
-				</li>		
-				<li>
-					<a  href="">Laboratórios </a>
-				</li>		
-				<li>
-	 				<a  href="">Minitestes </a>
-				</li>
-				<li>
-					<a  href="">Projeto </a>
-				</li>
-			</ul>
+				<div>
+					<ul class="nav" id="main-menu">
+						<li>
+			
+						<a  href="">Análise x Projeto</a>
+						
+						</li>
+						<li>
+							<a  href="">Orientação a Objetos</a>
+						</li>
+						<li>
+							<a  href="">Padrões de Projeto GRASP</a>
+						</li>
+						<li>
+							<a   href="">Padrões de Projeto Gof</a>
+						</li>	
+						<li>
+							<a  href="">Arquitetura de Software</a>
+						</li>
+						<li>
+							<a  href="">Play Framework</a>
+						</li>		
+						<li>
+							<a  href="">Java Script </a>
+						</li>		
+						<li>
+							<a  href="">HTML + CSS + Bootstrap </a>
+						</li>		
+						<li>
+							<a  href="">Heroku </a>
+						</li>		
+						<li>
+							<a  href="">Laboratórios </a>
+						</li>		
+						<li>
+	 						<a  href="">Minitestes </a>
+						</li>
+						<li>
+							<a  href="">Projeto </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<button type="button" class="btn btn-info btn-lg btn-block">Nova dica</button>		
 		</div>
-	</nav>
-</div>      
+		
+		
+		
+		<div class="row">
+			
+			<div class="col-md-5">	
+				<br /> <br /> <br /> <br />
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Nome do tema aqui</h3>
+					</div>
+					<div>
+					<ul>
+					<!--Se tema.getDicas() == 0 -->
+						<li> Não há nenhuma dica para o tema. </li>
+					
+					<!-- Se existir metas exibir  a lista -->
+					</ul>	
+					</div>
+   				</div>
+			</div>
+		</div>	
+</div>
 """)))}))}
   }
 
@@ -119,10 +147,10 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 13 19:02:45 BRT 2015
+                  DATE: Fri Mar 13 23:57:09 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/index.scala.html
-                  HASH: 7ea4b71b022a099e3adad643915e7f027ef784c0
-                  MATRIX: 723->1|828->18|858->23|889->46|928->48|958->52
+                  HASH: 1ab03f2c1de765c06c77d00f73e90f60073df6da
+                  MATRIX: 723->1|828->18|858->23|889->46|928->48|959->53
                   LINES: 26->1|29->1|31->3|31->3|31->3|33->5
                   -- GENERATED --
               */

@@ -20,7 +20,8 @@ public class Application extends Controller {
 			return redirect(routes.AutenticacaoController.showLogin());
 		}
 		return ok(index.render("Portal do Leite"));
-	} 
+		//return ok(views.html.index.render(getUsuarioLogado(), TemaController.getTemas(), ""));//Implementar getTema
+	}
 
 	protected static Usuario getUsuarioLogado() {
 		Usuario user = new Usuario();
