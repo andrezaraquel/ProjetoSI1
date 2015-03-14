@@ -109,32 +109,10 @@ Seq[Any](format.raw/*1.19*/("""
 						</li>
 					</ul>
 				</div>
-			</div>
-			<button type="button" class="btn btn-info btn-lg btn-block">Nova dica</button>		
+			</div>	
 		</div>
 		
-		
-		
-		<div class="row">
-			
-			<div class="col-md-5">	
-				<br /> <br /> <br /> <br />
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h3 class="panel-title">Nome do tema aqui</h3>
-					</div>
-					<div>
-					<ul>
-					<!--Se tema.getDicas() == 0 -->
-						<li> Não há nenhuma dica para o tema. </li>
-					
-					<!-- Se existir metas exibir  a lista -->
-					</ul>	
-					</div>
-   				</div>
-			</div>
-		</div>	
-</div>
+	
 """)))}))}
   }
 
@@ -147,9 +125,9 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 13 23:57:09 BRT 2015
+                  DATE: Sat Mar 14 00:20:41 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/index.scala.html
-                  HASH: 1ab03f2c1de765c06c77d00f73e90f60073df6da
+                  HASH: 5809819a4ebd1964b6913c1ead7cdb2baafb018e
                   MATRIX: 723->1|828->18|858->23|889->46|928->48|959->53
                   LINES: 26->1|29->1|31->3|31->3|31->3|33->5
                   -- GENERATED --
