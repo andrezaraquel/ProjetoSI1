@@ -55,39 +55,41 @@ Seq[Any](format.raw/*1.63*/("""
 		</div>
 	</div>
 	<div class="container">
-		<br /> <br /> <br /> <br />
 		
+		<br /> <br /> <br /> <br />
+		<br /> <br /> <br /> <br />
 		<div class="row">
 			
 			<div class="col-md-3">
 				<!-- Vazio -->
 			</div>
+				
 			
 			<div class="col-md-6">	
-				"""),_display_(/*39.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*39.65*/ {_display_(Seq[Any](format.raw/*39.67*/("""
-				"""),format.raw/*40.5*/("""<div class="alert alert-danger">
-					<p>"""),_display_(/*41.10*/(mensagemErro)),format.raw/*41.24*/("""</p>
+				"""),_display_(/*41.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*41.65*/ {_display_(Seq[Any](format.raw/*41.67*/("""
+				"""),format.raw/*42.5*/("""<div class="alert alert-danger">
+					<p>"""),_display_(/*43.10*/(mensagemErro)),format.raw/*43.24*/("""</p>
 				</div>
-			""")))}),format.raw/*43.5*/(""" 
+			""")))}),format.raw/*45.5*/(""" 
 			
-			"""),_display_(/*45.5*/if(mensagem != null && !mensagem.trim().equals(""))/*45.56*/ {_display_(Seq[Any](format.raw/*45.58*/("""
-			"""),format.raw/*46.4*/("""<div class="alert alert-success">
-				<p>"""),_display_(/*47.9*/(mensagem)),format.raw/*47.19*/("""</p>
+			"""),_display_(/*47.5*/if(mensagem != null && !mensagem.trim().equals(""))/*47.56*/ {_display_(Seq[Any](format.raw/*47.58*/("""
+			"""),format.raw/*48.4*/("""<div class="alert alert-success">
+				<p>"""),_display_(/*49.9*/(mensagem)),format.raw/*49.19*/("""</p>
 			</div>
-		""")))}),format.raw/*49.4*/("""
+		""")))}),format.raw/*51.4*/("""
 		
-		"""),format.raw/*51.3*/("""<div class="panel panel-default">
+		"""),format.raw/*53.3*/("""<div class="panel panel-default">
 			<div class="panel-heading">Cadastre-se aqui</div>
 			<div class="panel-body">
-				"""),_display_(/*54.6*/helper/*54.12*/.form(routes.AutenticacaoController.cadastrar)/*54.58*/ {_display_(Seq[Any](format.raw/*54.60*/("""
-				"""),format.raw/*55.5*/("""<form role="form">
+				"""),_display_(/*56.6*/helper/*56.12*/.form(routes.AutenticacaoController.cadastrar)/*56.58*/ {_display_(Seq[Any](format.raw/*56.60*/("""
+				"""),format.raw/*57.5*/("""<form role="form">
 					<div class="form-group">
-						<input type="text" class="form-control" name="nome"
-						value='"""),_display_(/*58.15*/form("nome")/*58.27*/.value),format.raw/*58.33*/("""' placeholder="Digite seu nome" required>
+						<input maxlength="50" type="text" class="form-control" name="nome"
+						value='"""),_display_(/*60.15*/form("nome")/*60.27*/.value),format.raw/*60.33*/("""' placeholder="Digite seu nome" required>
 					</div>
 					<div class="form-group">
 						<input type="email" class="form-control" name="email"
-						value='"""),_display_(/*62.15*/form("email")/*62.28*/.value),format.raw/*62.34*/("""' placeholder="Digite seu email" required>
+						value='"""),_display_(/*64.15*/form("email")/*64.28*/.value),format.raw/*64.34*/("""' placeholder="Digite seu email" required>
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" name="senha"
@@ -100,8 +102,8 @@ Seq[Any](format.raw/*1.63*/("""
 					
 					<button type="submit" class="btn btn-primary">Cadastrar</button>
 				</form>
-			""")))}),format.raw/*75.5*/("""
-		"""),format.raw/*76.3*/("""</div>
+			""")))}),format.raw/*77.5*/("""
+		"""),format.raw/*78.3*/("""</div>
 	</div>
 </div>
 
@@ -111,7 +113,7 @@ Seq[Any](format.raw/*1.63*/("""
 
 </div>
 </div>
-""")))}),format.raw/*86.2*/("""
+""")))}),format.raw/*88.2*/("""
 """))}
   }
 
@@ -124,11 +126,11 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 13 23:00:16 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/cadastro.scala.html
-                  HASH: b0d5d75b8c9fc68e2d6556650c2fb1862e481d1e
-                  MATRIX: 747->1|896->62|926->67|950->83|988->84|1018->88|2157->1201|2225->1260|2265->1262|2298->1268|2368->1311|2403->1325|2455->1347|2493->1359|2553->1410|2593->1412|2625->1417|2694->1460|2725->1470|2775->1490|2810->1498|2959->1621|2974->1627|3029->1673|3069->1675|3102->1681|3253->1805|3274->1817|3301->1823|3490->1985|3512->1998|3539->2004|4043->2478|4074->2482|4199->2577
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|67->39|67->39|67->39|68->40|69->41|69->41|71->43|73->45|73->45|73->45|74->46|75->47|75->47|77->49|79->51|82->54|82->54|82->54|82->54|83->55|86->58|86->58|86->58|90->62|90->62|90->62|103->75|104->76|114->86
+                  DATE: Mon Mar 16 20:18:42 BRT 2015
+                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi-16/ProjetoSI1/app/views/cadastro.scala.html
+                  HASH: 062ea04e16a6a2b89f5b3cb7025477b096d59bb4
+                  MATRIX: 747->1|896->62|926->67|950->83|988->84|1018->88|2194->1238|2262->1297|2302->1299|2335->1305|2405->1348|2440->1362|2492->1384|2530->1396|2590->1447|2630->1449|2662->1454|2731->1497|2762->1507|2812->1527|2847->1535|2996->1658|3011->1664|3066->1710|3106->1712|3139->1718|3305->1857|3326->1869|3353->1875|3542->2037|3564->2050|3591->2056|4095->2530|4126->2534|4251->2629
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|69->41|69->41|69->41|70->42|71->43|71->43|73->45|75->47|75->47|75->47|76->48|77->49|77->49|79->51|81->53|84->56|84->56|84->56|84->56|85->57|88->60|88->60|88->60|92->64|92->64|92->64|105->77|106->78|116->88
                   -- GENERATED --
               */
           

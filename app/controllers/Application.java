@@ -4,7 +4,6 @@ import java.util.List;
 
 import models.Usuario;
 import models.dao.GenericDAO;
-import models.dao.GenericDAOImpl;
 import play.*;
 import play.db.jpa.Transactional;
 import play.mvc.*;
@@ -12,15 +11,15 @@ import views.html.*;
 
 public class Application extends Controller {
 
-	private static GenericDAO dao = new GenericDAOImpl();
+	private static GenericDAO dao = new GenericDAO();
 
 	@Transactional
 	public static Result index() {
 		if (session().get("user") == null) {
 			return redirect(routes.AutenticacaoController.showLogin());
 		}
-		return ok(index.render("Portal do Leite"));
-		//return ok(views.html.index.render(getUsuarioLogado(), TemaController.getTemas(), ""));//Implementar getTema
+	//return ok(index.render("Portal do Leite"));
+	return ok(index.render(getUsuarioLogado(), TemaController.getTemas(), ""));
 	}
 
 	protected static Usuario getUsuarioLogado() {

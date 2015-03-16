@@ -12,15 +12,24 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	private static final int MAXIMO_SENHA = 30;
 	private static final int MINIMO_SENHA = 6;
+	private static final int MAXIMO_NOME = 50;
+	private static final int MINIMO_NOME = 3;
 
 	private String nome;
 	private String email;
 	private String senha;
 
-	public Usuario() {
-	}
+	public Usuario() {}
 
 	public Usuario(String nome, String email, String senha) throws Exception {
 		isNomeValido(nome);
@@ -83,6 +92,12 @@ public class Usuario {
 		if (nome.trim().equals("")) {
 			throw new Exception("Nome não pode ser vazio");
 		}
+		if (nome.length() < MINIMO_NOME) {
+			throw new Exception("Nome não pode ter tamanho menor que 3");
+		}
+		if (nome.length() > MAXIMO_NOME) {
+			throw new Exception("Nome não pode ter tamanho maior que 50");
+		}
 		if (!(nome.matches("[A-Za-zÇ-ú\\s]*+"))) {
 			throw new Exception("Nome só pode conter caracteres");
 		}
@@ -118,4 +133,7 @@ public class Usuario {
 		}
 		this.email = email;
 	}
+	
+	
+	
 }

@@ -55,39 +55,44 @@ Seq[Any](format.raw/*1.63*/("""
 	</div>
 	<div class="container">
 		<br /> <br /> <br /> <br />
+		<br /> <br /> <br /> <br />
+		<br /> <br /> <br /> <br />
 		<div class="row">
 			<div class="col-md-3">
 				<!-- Vazio -->
 			</div>
 
 			<div class="col-md-6">
-				"""),_display_(/*36.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*36.65*/ {_display_(Seq[Any](format.raw/*36.67*/("""
-				"""),format.raw/*37.5*/("""<div class="alert alert-danger">
-					<p>"""),_display_(/*38.10*/(mensagemErro)),format.raw/*38.24*/("""</p>
+				"""),_display_(/*38.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*38.65*/ {_display_(Seq[Any](format.raw/*38.67*/("""
+				"""),format.raw/*39.5*/("""<div class="alert alert-danger">
+					<p>"""),_display_(/*40.10*/(mensagemErro)),format.raw/*40.24*/("""</p>
 				</div>
-			""")))}),format.raw/*40.5*/(""" 
+			""")))}),format.raw/*42.5*/(""" 
 
-			"""),_display_(/*42.5*/if(mensagem != null && !mensagem.trim().equals(""))/*42.56*/ {_display_(Seq[Any](format.raw/*42.58*/("""
-			"""),format.raw/*43.4*/("""<div class="alert alert-success">
-				<p>"""),_display_(/*44.9*/(mensagem)),format.raw/*44.19*/("""</p>
+			"""),_display_(/*44.5*/if(mensagem != null && !mensagem.trim().equals(""))/*44.56*/ {_display_(Seq[Any](format.raw/*44.58*/("""
+			"""),format.raw/*45.4*/("""<div class="alert alert-success">
+				<p>"""),_display_(/*46.9*/(mensagem)),format.raw/*46.19*/("""</p>
 			</div>
-		""")))}),format.raw/*46.4*/("""
+		""")))}),format.raw/*48.4*/("""
 
-		"""),format.raw/*48.3*/("""<div class="panel panel-default">
+
+		"""),format.raw/*51.3*/("""<div class="panel panel-default">
+				
+		
 			<div class="panel-heading">Login</div>
 			<div class="panel-body">
-				"""),_display_(/*51.6*/helper/*51.12*/.form(routes.AutenticacaoController.autenticar)/*51.59*/ {_display_(Seq[Any](format.raw/*51.61*/("""
-				"""),format.raw/*52.5*/("""<form role="form">
+				"""),_display_(/*56.6*/helper/*56.12*/.form(routes.AutenticacaoController.autenticar)/*56.59*/ {_display_(Seq[Any](format.raw/*56.61*/("""
+				"""),format.raw/*57.5*/("""<form role="form">
 					<div class="form-group">
-						<input type="email" class="form-control" name="email" value='"""),_display_(/*54.69*/form("email")/*54.82*/.value),format.raw/*54.88*/("""' placeholder="Digite seu email" required>
+						<input type="email" class="form-control" name="email" value='"""),_display_(/*59.69*/form("email")/*59.82*/.value),format.raw/*59.88*/("""' placeholder="Digite seu email" required>
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" name="senha" placeholder="Digite sua senha" required>
 					</div>
 					<button type="submit" class="btn btn-primary">Entrar</button>
 				</form>
-			""")))}),format.raw/*61.5*/("""
-		"""),format.raw/*62.3*/("""</div>
+			""")))}),format.raw/*66.5*/("""
+		"""),format.raw/*67.3*/("""</div>
 	</div>
 </div>
 <div class="col-md-3">
@@ -107,11 +112,11 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 13 23:00:16 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/siProjeto/ProjetoSI1/app/views/login.scala.html
-                  HASH: 99b382326ac667e487e6cff4c9b39369af9c8a71
-                  MATRIX: 744->1|893->62|923->67|944->80|982->81|1012->85|2162->1209|2230->1268|2270->1270|2303->1276|2373->1319|2408->1333|2460->1355|2495->1364|2555->1415|2595->1417|2627->1422|2696->1465|2727->1475|2777->1495|2810->1501|2948->1613|2963->1619|3019->1666|3059->1668|3092->1674|3238->1793|3260->1806|3287->1812|3608->2103|3639->2107
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|64->36|64->36|64->36|65->37|66->38|66->38|68->40|70->42|70->42|70->42|71->43|72->44|72->44|74->46|76->48|79->51|79->51|79->51|79->51|80->52|82->54|82->54|82->54|89->61|90->62
+                  DATE: Mon Mar 16 20:18:42 BRT 2015
+                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi-16/ProjetoSI1/app/views/login.scala.html
+                  HASH: d1f0c9f80e7011adf406b8ae9fb0ea785a96e8ba
+                  MATRIX: 744->1|893->62|923->67|944->80|982->81|1012->85|2224->1271|2292->1330|2332->1332|2365->1338|2435->1381|2470->1395|2522->1417|2557->1426|2617->1477|2657->1479|2689->1484|2758->1527|2789->1537|2839->1557|2874->1565|3022->1687|3037->1693|3093->1740|3133->1742|3166->1748|3312->1867|3334->1880|3361->1886|3682->2177|3713->2181
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|66->38|66->38|66->38|67->39|68->40|68->40|70->42|72->44|72->44|72->44|73->45|74->46|74->46|76->48|79->51|84->56|84->56|84->56|84->56|85->57|87->59|87->59|87->59|94->66|95->67
                   -- GENERATED --
               */
           

@@ -1,4 +1,5 @@
-@(message: String)
+@(user: Usuario, temas: List[models.Tema],message: String) 
+
 
 @main("Portal do Leite") {
 
@@ -19,7 +20,8 @@
 						<li><a href="/contato">Contato</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>
+						<li><p>Olá, @user.getNome()&nbsp;&nbsp;</p></li>
+						<li>							
 							<button class="btn btn-danger navbar-btn" onclick="location.href='/logout'">
 							<span class="glyphicon glyphicon-log-out"></span>
 							</button>
@@ -28,6 +30,7 @@
 				</div>
 			</div>
 	</div>	
+     
      
 <div class="container">
 	<div class="row">
@@ -41,48 +44,28 @@
 				
 				<div>
 					<ul class="nav" id="main-menu">
-						<li>
-			
-						<a  href="">Análise x Projeto</a>
-						
-						</li>
-						<li>
-							<a  href="">Orientação a Objetos</a>
-						</li>
-						<li>
-							<a  href="">Padrões de Projeto GRASP</a>
-						</li>
-						<li>
-							<a   href="">Padrões de Projeto Gof</a>
-						</li>	
-						<li>
-							<a  href="">Arquitetura de Software</a>
-						</li>
-						<li>
-							<a  href="">Play Framework</a>
-						</li>		
-						<li>
-							<a  href="">Java Script </a>
-						</li>		
-						<li>
-							<a  href="">HTML + CSS + Bootstrap </a>
-						</li>		
-						<li>
-							<a  href="">Heroku </a>
-						</li>		
-						<li>
-							<a  href="">Laboratórios </a>
-						</li>		
-						<li>
-	 						<a  href="">Minitestes </a>
-						</li>
-						<li>
-							<a  href="">Projeto </a>
-						</li>
+						@for(tema <- temas){
+							<li>				
+							<a  class="temas" data-nome="@tema.getNome()" id ="@tema.getIdString()">@tema.getNome()</a>							
+							</li>
+						}
 					</ul>
 				</div>
 			</div>	
 		</div>
+		<div class="col-md-8 col-offset-1" id="campoTemas">
+		<br /> <br /> <br /> <br />
+		<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title" id ="temaSelecionado"></h3>
+				</div>
+		</div>		
+		
+		</div>
+	</div>
+</div>		
+		
+
 		
 	
 }

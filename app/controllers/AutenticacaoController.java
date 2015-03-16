@@ -4,15 +4,15 @@ import static play.data.Form.form;
 import java.util.List;
 import models.Usuario;
 import models.dao.GenericDAO;
-import models.dao.GenericDAOImpl;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.data.Form;
 import play.db.jpa.Transactional;
+import views.html.*;
 
 public class AutenticacaoController extends Controller {
 
-	private static GenericDAO dao = new GenericDAOImpl();
+	private static GenericDAO dao = new GenericDAO();
 	private static Form<Usuario> usuarioForm = form(Usuario.class).bindFromRequest();
 
 	@Transactional
@@ -94,6 +94,7 @@ public class AutenticacaoController extends Controller {
 			return okErroCadastro("Email já está em uso");
 		}
 
+		
 		Application.salvaObjeto(user);
 		return okSucessoLogin("Cadastrado com sucesso");
 
@@ -101,22 +102,22 @@ public class AutenticacaoController extends Controller {
 
 	@Transactional
 	public static Result okErroLogin(String mensagem) {
-		return ok(views.html.login.render(usuarioForm, mensagem, ""));
+		return ok(login.render(usuarioForm, mensagem, ""));
 	}
 
 	@Transactional
 	public static Result okErroCadastro(String mensagem) {
-		return ok(views.html.cadastro.render(usuarioForm, mensagem, ""));
+		return ok(cadastro.render(usuarioForm, mensagem, ""));
 	}
 
 	@Transactional
 	public static Result okSucessoLogin(String mensagem) {
-		return ok(views.html.login.render(usuarioForm, "", mensagem));
+		return ok(login.render(usuarioForm, "", mensagem));
 	}
 
 	@Transactional
 	public static Result okSucessoCadastro(String mensagem) {
-		return ok(views.html.cadastro.render(usuarioForm, "", mensagem));
+		return ok(cadastro.render(usuarioForm, "", mensagem));
 	}
 
 	private static boolean validacaoEmail(String email) {
