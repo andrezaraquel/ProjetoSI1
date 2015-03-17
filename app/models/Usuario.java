@@ -25,7 +25,7 @@ public class Usuario {
 	private static final int MAXIMO_NOME = 50;
 	private static final int MINIMO_NOME = 3;
 
-	private String name;
+	private String nome;
 	private String email;
 	private String senha;
 
@@ -54,7 +54,7 @@ public class Usuario {
 	}
 
 	public String getNome() {
-		return name;
+		return nome;
 	}
 
 	public void setNome(String nome) throws Exception {
@@ -66,7 +66,7 @@ public class Usuario {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
 	}
 
@@ -82,7 +82,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Nome = " + name + ", Email = " + email;
+		return "Nome = " + nome + ", Email = " + email;
 	}
 
 	private void isNomeValido(String nome) throws Exception {
@@ -101,7 +101,7 @@ public class Usuario {
 		if (!(nome.matches("[A-Za-zÇ-ú\\s]*+"))) {
 			throw new Exception("Nome só pode conter caracteres");
 		}
-		this.name = nome;
+		this.nome = nome;
 	}
 
 	private void isSenhaValida(String senha) throws Exception {

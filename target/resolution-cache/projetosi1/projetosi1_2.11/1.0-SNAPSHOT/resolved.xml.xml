@@ -4,10 +4,10 @@
 		module="projetosi1_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150317174617"
+		publication="20150317195400"
 	>
 		<description>
-		ProjetoSI1
+		projetosi1
 		</description>
 	</info>
 	<configurations>

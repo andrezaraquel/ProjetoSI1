@@ -1,7 +1,9 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -11,17 +13,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 
-@Entity(name = "Tema")
+@Entity(name = "tema")
 public class Tema {
  
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	
-//	@OneToMany
-//	private List<Dica> dicas;
+	@OneToMany
+	private List<Dica> dicas;
 	@ElementCollection
 	private Map<Usuario,Integer> valoresAvaliacoes;
 	@ElementCollection
@@ -37,7 +41,7 @@ public class Tema {
 
 
 	public Tema() {
-		//this.dicas = new ArrayList<Dica>();
+		this.dicas = new ArrayList<Dica>();
 		this.valoresAvaliacoes = new HashMap<Usuario, Integer>();
 		this.valoresAvaliacoesOrdenadas = new TreeMap<Usuario, Integer>(this.valoresAvaliacoes);
 	}
