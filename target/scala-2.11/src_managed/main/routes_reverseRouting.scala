@@ -1,6 +1,6 @@
 // @SOURCE:/home/mariadch/ProjetoSI/ProjetoSI1/conf/routes
 // @HASH:5528f2c1939623e8451098e00342efec22ec0e75
-// @DATE:Tue Mar 17 16:43:18 BRT 2015
+// @DATE:Tue Mar 17 17:46:17 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

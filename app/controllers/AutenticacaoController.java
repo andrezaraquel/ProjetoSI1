@@ -121,7 +121,7 @@ public class AutenticacaoController extends Controller {
 	}
 
 	private static boolean validacaoEmail(String email) {
-		List<Usuario> u = dao.findByAttributeName("Usuario", "email", email);
+		List<Usuario> u = dao.findByAttributeName(Usuario.class.getName(), "email", email);
 
 		for (Usuario usuario : u) {
 			if (usuario.getEmail().equals(email)) {
