@@ -1,4 +1,9 @@
-$(function() {
+$(function(){
+	recuperarId();
+	alterarEstrela();
+});
+
+function recuperarId() {
 	$("#campoTemas").hide();
 	
 	$(".temas").click(function(){
@@ -12,6 +17,14 @@ $(function() {
 		$(this).addClass("active-menu");
 	});
 	
-});
+};
 
 
+
+function alterarEstrela(){
+	$(".star1").click(function(){
+	
+		var objEstrela = document.getElementById("star1");
+		objEstrela.src ="star1.jpg";
+	});
+}

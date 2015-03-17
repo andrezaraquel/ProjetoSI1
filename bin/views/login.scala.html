@@ -1,19 +1,6 @@
 @(form: Form[Usuario], mensagemErro: String, mensagem: String)
 
-<html>
-<head>
-	<title>Portal do Leite</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-theme.min.css")">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/font-awesome.min.css")">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-notify.css")">
-	<script src="@routes.Assets.at("javascripts/jquery-2.1.1.min.js")" type="text/javascript"></script>
-	<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
-	<script src="@routes.Assets.at("javascripts/bootstrap-notify.js")" type="text/javascript"></script>
-	<body background="@routes.Assets.at("images/fundo.jpg")">
-	</head>
-	<body>
+@main("Login"){
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -22,7 +9,7 @@
 						<span class="icon-bar"></span> <span class="icon-bar"></span> 
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">Portal do Leite</a>
+					<a class="navbar-brand" href="/">Portal do Leite</a>	
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -39,6 +26,8 @@
 		</div>
 	</div>
 	<div class="container">
+		<br /> <br /> <br /> <br />
+		<br /> <br /> <br /> <br />
 		<br /> <br /> <br /> <br />
 		<div class="row">
 			<div class="col-md-3">
@@ -58,7 +47,10 @@
 			</div>
 		}
 
+
 		<div class="panel panel-default">
+				
+		
 			<div class="panel-heading">Login</div>
 			<div class="panel-body">
 				@helper.form(routes.AutenticacaoController.autenticar) {
@@ -80,5 +72,4 @@
 </div>
 </div>
 </div>
-</body>
-</html>
+}

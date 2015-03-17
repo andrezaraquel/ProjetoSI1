@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /              controllers.Application.index()
 GET    /logout         controllers.AutenticacaoController.logout()
 
 # Login
@@ -13,6 +13,9 @@ POST   /login          controllers.AutenticacaoController.autenticar()
 # Registro
 GET    /cadastro       controllers.AutenticacaoController.showCadastro()
 POST   /cadastro       controllers.AutenticacaoController.cadastrar()
+
+#Tema
+GET    /tema        controllers.TemaController.showTema(x$1)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
