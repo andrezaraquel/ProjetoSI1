@@ -2,24 +2,30 @@
 
 @main("Portal do Leite"){
 
+@modalAdicionarDica()
+
 <br /> <br /> <br /> <br />
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<h3 class="panel-title" id ="temaSelecionado">@tema.getNome()</h3>
+		<div class="row">
+			<h3 class="panel-title" id ="temaSelecionado">@tema.getNome()</h3>
+			
+			<button type="button" class="btn btn-info " data-toggle="modal" data-target="#adicionarDica">Adicionar dica</button>
+		</div>
 	</div>
 	<div class="panel">	
 		<div class="col-md-5 col-offset-1">
 			<select class="selectNivelDificuldade" data-max-options="1">
-				<option>Nível de Dificuldade do Tema</option>
-			    <option>Muito Fácil</option>
-			    <option>Fácil</option>
+				<option>NÃ­vel de Dificuldade do Tema</option>
+			    <option>Muito FÃ¡cil</option>
+			    <option>FÃ¡cil</option>
 			    <option>Normal</option>
-			    <option>Difícil</option>
-			    <option>Muito Difícil</option>
+			    <option>DifÃ­cil</option>
+			    <option>Muito DifÃ­cil</option>
 			</select>
 		</div>
 		<div class="col-md-2 col-md-offset-1">
-			<label>Média</label>
+			<label>MÃ©dia</label>
 			<div id="campoMedia">200</div>
 		</div>
 		<div class="col-md-2 col-md-offset-1">

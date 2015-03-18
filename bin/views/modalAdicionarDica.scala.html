@@ -1,19 +1,82 @@
-<!-- Modal - adicionar metas -->
-
-<div id="adicionarMeta" class="modal fade"> <!--1-->
+<!-- Modal - adicionar dicas -->
+<div id="adicionarDica" class="modal fade centralizarModal"> <!--1-->
     <div class="modal-dialog"><!--2-->
         <div class="modal-content"><!--3-->
-            <div><!--4-->
+            <div class="modal-header"><!--4-->
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Adicionando dica</h4>
-				<ul class="nav nav-tabs">
-					<li><a href="#">O que voc� precisa saber</a></li>
-					<li><a href="#">Conselho</a></li>
-					<li><a href="#">Disciplinas anteriores</a></li>
-					<li><a href="#">Material �til</a></li></ul>
+                <h4 class="modal-title">Adicionando dica</h4>				
             </div><!--4-->
 		
             <div class="modal-body"> <!--5-->
+            
+	            <ul class="nav nav-tabs row" id="tabDicas">
+					<li class="active"><a data-toggle="tab" href="#navPrecisoSaber">O que você precisa saber para não ter dificuldades</a></li>
+					<li><a data-toggle="tab" href="#navConselho">Conselho</a></li>
+					<li><a data-toggle="tab" href="#navDisciplinasAnteriores">Disciplinas anteriores que ajudarão aqui</a></li>
+					<li><a data-toggle="tab" href="#navMaterialUtil" >Material útil</a></li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div id="navPrecisoSaber" class="tab-pane fade active in"><!-- O que é preciso saber -->
+						 <p class="text-warning"><small>O que você precisa saber para não ter dificuldades.</small></p>
+						
+						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Nome do assunto</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="assunto" required>
+									</div>
+							</div>				
+						</form>	
+					</div>
+					
+					<div id="navConselho" class="tab-pane fade" ><!-- conselho -->
+						<p class="text-warning"><small>Conselho.</small></p>
+						
+						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Conselho</label>
+								<div class="col-sm-8">
+								<textarea class="form-control" name="conselho"
+										 placeholder="Digite seu conselho." required></textarea>						
+								</div>
+							</div>				
+						</form>				
+					</div>
+							
+		            <div id="navDisciplinasAnteriores" class="tab-pane fade">
+			            <p class="text-warning"><small>Disciplinas anteriores que ajudarão aqui.</small></p>
+						
+						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Nome da disciplina</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="disciplina" required />
+									</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Razão</label>
+								<div class="col-sm-8">
+									<textarea class="form-control" name="razao"
+										placeholder="Digite a razão pelo qual esta disciplina anterior ajudará." required></textarea>
+								</div>
+							</div>
+						</form>			
+					</div>
+					
+					<div id="navMaterialUtil" class="tab-pane fade"><!-- Material -->
+						<p class="text-warning"><small>Material útil.</small></p>
+						
+						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Endereço da web</label>
+								<div class="col-sm-8">
+									<input type="url" class="form-control" name="linkMaterial" requerid />	
+								</div>
+							</div>
+						</form>			
+					</div>
+				</div>
 			</div> <!--5-->
 			
             <div class="modal-footer">

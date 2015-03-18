@@ -4,6 +4,7 @@ import java.util.List;
 
 import models.dao.GenericDAO;
 import models.Tema;
+import models.Usuario;
 import play.*;
 import play.db.jpa.JPA;
 
@@ -11,6 +12,7 @@ public class Global extends GlobalSettings{
 	
 	private GenericDAO dao = new GenericDAO();
 	private List<Tema> temas = new LinkedList<Tema>();
+	private List<Usuario> usuarios = new LinkedList<Usuario>();
 	
 	public void onStart(Application app){
 		JPA.withTransaction(new play.libs.F.Callback0() {
@@ -18,7 +20,7 @@ public class Global extends GlobalSettings{
             public void invoke() throws Throwable {
             	Logger.info("Aplicacao inicializada...");
             	
-            	if(dao.findAllByClass(Tema.class).isEmpty()){
+            	if(dao.findAllByClass(Tema.class).isEmpty()){	
 	                temas.add(new Tema("Analise X Design"));
 					temas.add(new Tema("Arquitetura de Software"));
 					temas.add(new Tema("Heroku"));
@@ -32,10 +34,15 @@ public class Global extends GlobalSettings{
 	            	temas.add(new Tema("Play Framework"));
 					temas.add(new Tema("Projeto"));
 	            	
+					usuarios.add(new Usuario("Andreza Raquel", "andrezaraquel@gmail.com", "123456"));
 	            	
 	            	Iterator<Tema> it = temas.iterator();
 	            	while(it.hasNext()){
 	            	   salvaObjeto(it.next());
+	               }
+	            	Iterator<Usuario> it_u = usuarios.iterator();
+	            	while(it_u.hasNext()){
+	            	   salvaObjeto(it_u.next());
 	               }
             	}
             }

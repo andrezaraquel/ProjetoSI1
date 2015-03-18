@@ -31,7 +31,8 @@ Seq[Any](format.raw/*1.60*/("""
 
 """),_display_(/*4.2*/main("Portal do Leite")/*4.25*/ {_display_(Seq[Any](format.raw/*4.27*/("""
 
-	"""),format.raw/*6.2*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+
+	"""),format.raw/*7.2*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
 			<div class="container">
 				<div>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,7 +49,7 @@ Seq[Any](format.raw/*1.60*/("""
 						<li><a href="/contato">Contato</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><p>Olá, """),_display_(/*23.20*/user/*23.24*/.getNome()),format.raw/*23.34*/("""&nbsp;&nbsp;</p></li>
+						<li><p>Olá, """),_display_(/*24.20*/user/*24.24*/.getNome()),format.raw/*24.34*/("""&nbsp;&nbsp;</p></li>
 						<li>							
 							<button class="btn btn-danger navbar-btn" onclick="location.href='/logout'">
 							<span class="glyphicon glyphicon-log-out"></span>
@@ -72,13 +73,13 @@ Seq[Any](format.raw/*1.60*/("""
 				
 				<div>
 					<ul class="nav" id="main-menu">
-						"""),_display_(/*47.8*/for(tema <- temas) yield /*47.26*/{_display_(Seq[Any](format.raw/*47.27*/("""
-							"""),format.raw/*48.8*/("""<li>				
-							<a  class="temas" data-nome=""""),_display_(/*49.38*/tema/*49.42*/.getNome()),format.raw/*49.52*/("""" id =""""),_display_(/*49.60*/tema/*49.64*/.getIdString()),format.raw/*49.78*/("""">"""),_display_(/*49.81*/tema/*49.85*/.getNome()),format.raw/*49.95*/("""</a>							
+						"""),_display_(/*48.8*/for(tema <- temas) yield /*48.26*/{_display_(Seq[Any](format.raw/*48.27*/("""
+							"""),format.raw/*49.8*/("""<li>				
+							<a  class="temas" data-nome=""""),_display_(/*50.38*/tema/*50.42*/.getNome()),format.raw/*50.52*/("""" id =""""),_display_(/*50.60*/tema/*50.64*/.getIdString()),format.raw/*50.78*/("""">"""),_display_(/*50.81*/tema/*50.85*/.getNome()),format.raw/*50.95*/("""</a>							
 							</li>
 							
-						""")))}),format.raw/*52.8*/("""
-					"""),format.raw/*53.6*/("""</ul>
+						""")))}),format.raw/*53.8*/("""
+					"""),format.raw/*54.6*/("""</ul>
 				</div>
 			</div>	
 		</div>
@@ -98,11 +99,11 @@ Seq[Any](format.raw/*1.60*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 18 09:46:41 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-18/ProjetoSI1/app/views/index.scala.html
-                  HASH: e528afeb961c181ff05f7f71732b80d24a9d5fe0
-                  MATRIX: 749->1|895->59|928->67|959->90|998->92|1029->97|1784->825|1797->829|1828->839|2465->1450|2499->1468|2538->1469|2574->1478|2648->1525|2661->1529|2692->1539|2727->1547|2740->1551|2775->1565|2805->1568|2818->1572|2849->1582|2922->1625|2956->1632
-                  LINES: 26->1|29->1|32->4|32->4|32->4|34->6|51->23|51->23|51->23|75->47|75->47|75->47|76->48|77->49|77->49|77->49|77->49|77->49|77->49|77->49|77->49|77->49|80->52|81->53
+                  DATE: Wed Mar 18 13:59:23 BRT 2015
+                  SOURCE: /home/mariadch/projetosi-18/ProjetoSI1/app/views/index.scala.html
+                  HASH: ac7242bbbb39a6406bd208f22b77ef3538547924
+                  MATRIX: 749->1|895->59|925->64|956->87|995->89|1025->93|1763->804|1776->808|1807->818|2420->1405|2454->1423|2493->1424|2528->1432|2601->1478|2614->1482|2645->1492|2680->1500|2693->1504|2728->1518|2758->1521|2771->1525|2802->1535|2872->1575|2905->1581
+                  LINES: 26->1|29->1|32->4|32->4|32->4|35->7|52->24|52->24|52->24|76->48|76->48|76->48|77->49|78->50|78->50|78->50|78->50|78->50|78->50|78->50|78->50|78->50|81->53|82->54
                   -- GENERATED --
               */
           

@@ -34,11 +34,12 @@ Seq[Any](format.raw/*1.36*/("""
 
 """),format.raw/*7.1*/("""<br /> <br /> <br /> <br />
 <div class="panel panel-info">
-	<div class="panel-heading" 
-		<h3 class="panel-title" id ="temaSelecionado">"""),_display_(/*10.50*/tema/*10.54*/.getNome()),format.raw/*10.64*/("""</h3>
-		
-		<button type="button" class="btn btn-info " data-toggle="modal" data-target="#adicionarDica">Adicionar dica</button>
-		
+	<div class="panel-heading">
+		<div class="row">
+			<h3 class="panel-title" id ="temaSelecionado">"""),_display_(/*11.51*/tema/*11.55*/.getNome()),format.raw/*11.65*/("""</h3>
+			
+			<button type="button" class="btn btn-info " data-toggle="modal" data-target="#adicionarDica">Adicionar dica</button>
+		</div>
 	</div>
 	<div class="panel">	
 		<div class="col-md-5 col-offset-1">
@@ -74,11 +75,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 18 09:48:39 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-18/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 21747062c9f52609f175f1007abce8b9f4f2501f
-                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1061->93|1228->233|1241->237|1272->247
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|35->7|38->10|38->10|38->10
+                  DATE: Wed Mar 18 14:06:13 BRT 2015
+                  SOURCE: /home/mariadch/projetosi-18/ProjetoSI1/app/views/dicasTema.scala.html
+                  HASH: 69d7da661362b09a0e5257c1e419a5eaca75b51a
+                  MATRIX: 740->1|862->35|890->38|921->61|959->62|987->65|1027->85|1055->87|1240->245|1253->249|1284->259
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|35->7|39->11|39->11|39->11
                   -- GENERATED --
               */
           

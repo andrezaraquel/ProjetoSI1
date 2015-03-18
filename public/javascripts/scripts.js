@@ -1,5 +1,6 @@
 $(function() {
 	povoarDivTema();
+	alternaDivModal();
 });
 
 function povoarDivTema() {
@@ -25,8 +26,14 @@ function povoarDivTema() {
 			success:function(data){
 				document.getElementById("campoTemas").innerHTML = data;
 			}
-		});
-			
+		});		
 		
 	});	
+}
+
+function alternaDivModal() {
+    $('#tabDicas a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    })
 }

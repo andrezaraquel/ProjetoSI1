@@ -1,5 +1,14 @@
 /* Arquivo de folhas de estilos */
 
+
+a, button {
+	cursor: pointer;
+}
+
+textarea {
+	
+}
+
 .conteudo {
 	margin-top: 80px;
 	min-height: 450px;
@@ -13,10 +22,11 @@
 	margin-top: 12px;
 }
 
-a, button {
-	cursor: pointer;
-}
-
 .active-menu {	
 	background-color: #CFCFCF;
 }
+
+.centralizarModal {
+	margin-top: 10%;
+}
+
