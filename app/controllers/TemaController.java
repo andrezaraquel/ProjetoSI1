@@ -13,7 +13,6 @@ import views.html.*;
 
 public class TemaController extends Controller {
 
-
 	@Transactional
 	public static Result showTema(String id) {
 

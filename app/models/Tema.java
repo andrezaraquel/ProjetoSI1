@@ -19,11 +19,11 @@ import javax.persistence.OrderBy;
 
 @Entity(name = "tema")
 public class Tema {
- 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
-	
+
 	@OneToMany
 	private List<Dica> dicas;
 	@ElementCollection
@@ -31,13 +31,13 @@ public class Tema {
 	@ElementCollection
 	private Map<Usuario, Integer> valoresAvaliacoesOrdenadas;
 	private String nome;
-//	
-//	private String texto;
-//	
-//	private int quantAvaliacao;
-//	private boolean temaAvaliado;
-//	private TipoDeDica tipo;
-//	
+	//	
+	//	private String texto;
+	//	
+	//	private int quantAvaliacao;
+	//	private boolean temaAvaliado;
+	//	private TipoDeDica tipo;
+	//	
 
 
 	public Tema() {
@@ -45,12 +45,12 @@ public class Tema {
 		this.valoresAvaliacoes = new HashMap<Usuario, Integer>();
 		this.valoresAvaliacoesOrdenadas = new TreeMap<Usuario, Integer>(this.valoresAvaliacoes);
 	}
-	
+
 	public Tema(String nome) {
 		this();
 		this.nome = nome;		
 	}
-	
+
 	public long getId() {
 		return id;
 	}
@@ -59,11 +59,11 @@ public class Tema {
 		this.id = id;
 	}
 
-	
+
 	public String getIdString() {
 		return "" + id;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -71,7 +71,7 @@ public class Tema {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public Map<Usuario, Integer> getValoresAvaliacoes() {
 		return valoresAvaliacoes;
 	}
@@ -88,7 +88,7 @@ public class Tema {
 			Map<Usuario, Integer> valoresAvaliacoesOrdenadas) {
 		this.valoresAvaliacoesOrdenadas = valoresAvaliacoesOrdenadas;
 	}
-	
+
 	public void avaliarTema(Usuario usuario, AvaliacaoDoTema nota) {
 		if (valoresAvaliacoes.containsKey(usuario)) {
 			editarAvaliacao(usuario, nota);
@@ -96,17 +96,17 @@ public class Tema {
 			this.valoresAvaliacoes.put(usuario, nota.getNota());
 		}		
 	}	
-	
+
 	public void editarAvaliacao(Usuario user, AvaliacaoDoTema novaAvaliacao) {
 		for (Iterator<Entry<Usuario, Integer>> it = valoresAvaliacoes.entrySet().iterator(); it.hasNext(); ) {  
-            Map.Entry<Usuario, Integer> entry = (Map.Entry<Usuario, Integer>) it.next();  
-            
-            if (user.equals ((Usuario)entry.getKey())) {
-            	entry.setValue (novaAvaliacao.getNota()); 
-            }                 
-        }  
+			Map.Entry<Usuario, Integer> entry = (Map.Entry<Usuario, Integer>) it.next();  
+
+			if (user.equals ((Usuario)entry.getKey())) {
+				entry.setValue (novaAvaliacao.getNota()); 
+			}                 
+		}  
 	}
-	
+
 	public double getAvaliacaoMedia(){
 		double soma = 0;
 		for (int nota : getValoresAvaliacoes().values()) {
@@ -118,7 +118,7 @@ public class Tema {
 	public int numAvaliacoes() {
 		return (int) Math.floor(getValoresAvaliacoesOrdenadas().size());
 	}
-	
+
 	public Integer getAvaliacaoMediana(){
 		Integer mediana = 0;		
 		if (getValoresAvaliacoesOrdenadas().size() % 2 != 0){
@@ -130,11 +130,25 @@ public class Tema {
 		}
 		return mediana; 
 	}
-	
-	
-	
 
-	/*-------------------------------------US 3 ------------------------------*/
+	public boolean isEmpty() {
+		if (dicas.isEmpty()) {
+			return true;
+		}
+		return false;
+	}
+	
+	public List<Dica> getDicas() {
+		return dicas;
+	}
+	
+	
+}
+
+
+
+
+/*-------------------------------------US 3 ------------------------------*/
 //	
 //	
 //
@@ -205,9 +219,7 @@ public class Tema {
 //
 //	
 //	/*------------------------------------------------------------------------------------------*/
-//	public List<Dica> getDicas() {
-//		return dicas;
-//	}
+
 //
 //	
 //	/*------------------------------US 7-------------------------------------------------------*/
@@ -244,4 +256,4 @@ public class Tema {
 //
 //	
 //	
-}
+

@@ -16,7 +16,10 @@ public abstract class Dica implements Comparable<Dica> {
 	private boolean dicaDiscordada;
 	private int conteudoInapropriado;
 	
+
+	
 	public Dica(){		
+		
 	}
 		
 	/*------------------------- US 4 ---------------------------------------*/
