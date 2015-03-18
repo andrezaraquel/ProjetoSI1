@@ -15,7 +15,7 @@ GET    /cadastro       controllers.AutenticacaoController.showCadastro()
 POST   /cadastro       controllers.AutenticacaoController.cadastrar()
 
 #Tema
-#GET    /tema       		controllers.TemaController.showTema(x$1)
+GET    /tema     		controllers.TemaController.showTema($id)
 
 
 # Map static resources from the /public folder to the /assets URL path

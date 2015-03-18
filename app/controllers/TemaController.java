@@ -19,7 +19,7 @@ public class TemaController extends Controller {
 
 		long idLong = Long.parseLong(id);
 		
-		return ok(dicasTema.render(Application.getUsuarioLogado(), getTema(idLong), ""));
+		return ok(dicasTema.render(Application.getUsuarioLogado(), getTema(idLong)));
 	}
 	
 	private static Tema getTema(Long id) {

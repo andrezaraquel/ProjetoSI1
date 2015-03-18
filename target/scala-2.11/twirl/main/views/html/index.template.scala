@@ -81,33 +81,7 @@ Seq[Any](format.raw/*1.60*/("""
 				</div>
 			</div>	
 		</div>
-		<div class="col-md-8 col-offset-1" id="campoTemas">
-			<br /> <br /> <br /> <br />
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<h3 class="panel-title" id ="temaSelecionado"></h3>
-				</div>
-				<div class="panel">	
-					<div class="col-md-5 col-offset-1">
-						<select class="selectNivelDificuldade" data-max-options="1">
-							<option>N�vel de Dificuldade do Tema</option>
-						    <option>Muito F�cil</option>
-						    <option>F�cil</option>
-						    <option>Normal</option>
-						    <option>Dif�cil</option>
-						    <option>Muito Dif�cil</option>
-						</select>
-					</div>
-					<div class="col-md-2 col-md-offset-1">
-						<label>M�dia</label>
-						<div id="campoMedia"></div>
-					</div>
-					<div class="col-md-2 col-md-offset-1">
-						<label>Mediana</label>
-						<div id="campoMediana"></div>
-					</div>	
-				</div>		
-			</div>
+		<div class="col-md-8 col-offset-1" id="campoTemas">			
 		</div>
 	</div>
 </div>		
@@ -127,9 +101,9 @@ Seq[Any](format.raw/*1.60*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 17 22:04:26 BRT 2015
+                  DATE: Tue Mar 17 23:03:02 BRT 2015
                   SOURCE: C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/app/views/index.scala.html
-                  HASH: 3640a639c75dc882a1ec54e9c2dbf657ea15eb6c
+                  HASH: 94934e76027d74e606637b8c6332127c1a02e1f2
                   MATRIX: 749->1|895->59|925->64|956->87|995->89|1024->92|1762->803|1775->807|1806->817|2419->1404|2453->1422|2492->1423|2527->1431|2600->1477|2613->1481|2644->1491|2679->1499|2692->1503|2727->1517|2757->1520|2770->1524|2801->1534|2863->1566|2896->1572
                   LINES: 26->1|29->1|32->4|32->4|32->4|34->6|51->23|51->23|51->23|75->47|75->47|75->47|76->48|77->49|77->49|77->49|77->49|77->49|77->49|77->49|77->49|77->49|79->51|80->52
                   -- GENERATED --

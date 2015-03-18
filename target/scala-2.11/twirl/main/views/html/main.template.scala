@@ -47,13 +47,12 @@ Seq[Any](format.raw/*1.32*/("""
 		<body background=""""),_display_(/*19.22*/routes/*19.28*/.Assets.at("images/fundo.jpg")),format.raw/*19.58*/(""""> 
 		
 	
-	    <link rel="stylesheet" media="screen" href=""""),_display_(/*22.51*/routes/*22.57*/.Assets.at("stylesheets/bootstrap.css")),format.raw/*22.96*/("""">
-		<link rel="stylesheet" media="screen" href=""""),_display_(/*23.48*/routes/*23.54*/.Assets.at("stylesheets/font-awesome.css")),format.raw/*23.96*/("""">
-		<link rel="stylesheet" media="screen" href=""""),_display_(/*24.48*/routes/*24.54*/.Assets.at("javascripts/morris-0.4.3.min.css")),format.raw/*24.100*/("""">
-	    <link rel="stylesheet" media="screen" href=""""),_display_(/*25.51*/routes/*25.57*/.Assets.at("stylesheets/custom.css")),format.raw/*25.93*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*22.48*/routes/*22.54*/.Assets.at("stylesheets/font-awesome.css")),format.raw/*22.96*/("""">
+		<link rel="stylesheet" media="screen" href=""""),_display_(/*23.48*/routes/*23.54*/.Assets.at("javascripts/morris-0.4.3.min.css")),format.raw/*23.100*/("""">
+	    <link rel="stylesheet" media="screen" href=""""),_display_(/*24.51*/routes/*24.57*/.Assets.at("stylesheets/custom.css")),format.raw/*24.93*/("""">
 	       
-	    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*27.56*/routes/*27.62*/.Assets.at("images/favicon.png")),format.raw/*27.94*/("""">
-	    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*28.56*/routes/*28.62*/.Assets.at("images/star2.jpg")),format.raw/*28.92*/("""">
+	    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*26.56*/routes/*26.62*/.Assets.at("images/favicon.png")),format.raw/*26.94*/("""">
+	    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*27.56*/routes/*27.62*/.Assets.at("images/star2.jpg")),format.raw/*27.92*/("""">
 	    
 		
 		<!-- GOOGLE FONTS-->
@@ -64,16 +63,16 @@ Seq[Any](format.raw/*1.32*/("""
 
 	<body>
 		<div>
-			"""),_display_(/*39.5*/content),format.raw/*39.12*/("""
-		"""),format.raw/*40.3*/("""</div>
+			"""),_display_(/*38.5*/content),format.raw/*38.12*/("""
+		"""),format.raw/*39.3*/("""</div>
 	</body>
-		<script src=""""),_display_(/*42.17*/routes/*42.23*/.Assets.at("javascripts/scripts.js")),format.raw/*42.59*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*43.17*/routes/*43.23*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*43.65*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*44.17*/routes/*44.23*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*44.65*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*45.17*/routes/*45.23*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*45.68*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*46.17*/routes/*46.23*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*46.69*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*47.17*/routes/*47.23*/.Assets.at("javascripts/morris.js")),format.raw/*47.58*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*48.17*/routes/*48.23*/.Assets.at("javascripts/custom.js")),format.raw/*48.58*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*41.17*/routes/*41.23*/.Assets.at("javascripts/scripts.js")),format.raw/*41.59*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*42.17*/routes/*42.23*/.Assets.at("javascripts/jquery-1.10.2.js")),format.raw/*42.65*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*43.17*/routes/*43.23*/.Assets.at("javascripts/bootstrap.min.js")),format.raw/*43.65*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*44.17*/routes/*44.23*/.Assets.at("javascripts/jquery.metisMenu.js")),format.raw/*44.68*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*45.17*/routes/*45.23*/.Assets.at("javascripts/raphael-2.1.0.min.js")),format.raw/*45.69*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*46.17*/routes/*46.23*/.Assets.at("javascripts/morris.js")),format.raw/*46.58*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*47.17*/routes/*47.23*/.Assets.at("javascripts/custom.js")),format.raw/*47.58*/("""" type="text/javascript"></script>
 	         
 </html>"""))}
   }
@@ -87,11 +86,11 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 17 20:56:10 BRT 2015
+                  DATE: Tue Mar 17 23:29:30 BRT 2015
                   SOURCE: C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/app/views/main.scala.html
-                  HASH: 9f1a3b2e81facfb7aa7bdace366e36f73393d2a7
-                  MATRIX: 727->1|845->31|876->36|996->130|1021->135|1229->316|1244->322|1315->371|1393->422|1408->428|1472->471|1550->522|1565->528|1633->574|1711->625|1726->631|1794->677|1872->728|1887->734|1943->769|1990->789|2005->795|2071->840|2150->892|2165->898|2228->940|2307->992|2322->998|2388->1043|2472->1100|2487->1106|2538->1136|2627->1198|2642->1204|2702->1243|2780->1294|2795->1300|2858->1342|2936->1393|2951->1399|3019->1445|3100->1499|3115->1505|3172->1541|3268->1610|3283->1616|3336->1648|3422->1707|3437->1713|3488->1743|3697->1926|3725->1933|3756->1937|3817->1971|3832->1977|3889->2013|3968->2065|3983->2071|4046->2113|4125->2165|4140->2171|4203->2213|4282->2265|4297->2271|4363->2316|4442->2368|4457->2374|4524->2420|4603->2472|4618->2478|4674->2513|4753->2565|4768->2571|4824->2606
-                  LINES: 26->1|29->1|31->3|34->6|34->6|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|50->22|50->22|50->22|51->23|51->23|51->23|52->24|52->24|52->24|53->25|53->25|53->25|55->27|55->27|55->27|56->28|56->28|56->28|67->39|67->39|68->40|70->42|70->42|70->42|71->43|71->43|71->43|72->44|72->44|72->44|73->45|73->45|73->45|74->46|74->46|74->46|75->47|75->47|75->47|76->48|76->48|76->48
+                  HASH: 2772261df1edba405aa9cd5066c29a9378a22bd3
+                  MATRIX: 727->1|845->31|876->36|996->130|1021->135|1229->316|1244->322|1315->371|1393->422|1408->428|1472->471|1550->522|1565->528|1633->574|1711->625|1726->631|1794->677|1872->728|1887->734|1943->769|1990->789|2005->795|2071->840|2150->892|2165->898|2228->940|2307->992|2322->998|2388->1043|2472->1100|2487->1106|2538->1136|2624->1195|2639->1201|2702->1243|2780->1294|2795->1300|2863->1346|2944->1400|2959->1406|3016->1442|3112->1511|3127->1517|3180->1549|3266->1608|3281->1614|3332->1644|3541->1827|3569->1834|3600->1838|3661->1872|3676->1878|3733->1914|3812->1966|3827->1972|3890->2014|3969->2066|3984->2072|4047->2114|4126->2166|4141->2172|4207->2217|4286->2269|4301->2275|4368->2321|4447->2373|4462->2379|4518->2414|4597->2466|4612->2472|4668->2507
+                  LINES: 26->1|29->1|31->3|34->6|34->6|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|50->22|50->22|50->22|51->23|51->23|51->23|52->24|52->24|52->24|54->26|54->26|54->26|55->27|55->27|55->27|66->38|66->38|67->39|69->41|69->41|69->41|70->42|70->42|70->42|71->43|71->43|71->43|72->44|72->44|72->44|73->45|73->45|73->45|74->46|74->46|74->46|75->47|75->47|75->47
                   -- GENERATED --
               */
           
