@@ -33,14 +33,20 @@ Seq[Any](format.raw/*1.36*/("""
 """),_display_(/*5.2*/modalAdicionarDica()),format.raw/*5.22*/("""
 
 """),format.raw/*7.1*/("""<br /> <br /> <br /> <br />
-<div class="panel panel-info">
+<div class="panel panel-info ">
 	<div class="panel-heading">
 		<div class="row">
-			<h3 class="panel-title" id ="temaSelecionado">"""),_display_(/*11.51*/tema/*11.55*/.getNome()),format.raw/*11.65*/("""</h3>
+			<div class="col-md-10 ">
+			<h1 class="panel-title" id ="temaSelecionado">"""),_display_(/*12.51*/tema/*12.55*/.getNome()),format.raw/*12.65*/("""</h1>
+			</div>
 			
-			<button type="button" class="btn btn-info " data-toggle="modal" data-target="#adicionarDica">Adicionar dica</button>
+			<div >
+			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
+			</div>
+			
 		</div>
 	</div>
+	
 	<div class="panel">	
 		<div class="col-md-5 col-offset-1">
 			<select class="selectNivelDificuldade" data-max-options="1">
@@ -75,11 +81,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 18 14:06:13 BRT 2015
+                  DATE: Wed Mar 18 16:30:00 BRT 2015
                   SOURCE: /home/mariadch/projetosi-18/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 69d7da661362b09a0e5257c1e419a5eaca75b51a
-                  MATRIX: 740->1|862->35|890->38|921->61|959->62|987->65|1027->85|1055->87|1240->245|1253->249|1284->259
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|35->7|39->11|39->11|39->11
+                  HASH: d0d0cbae83823c0af1ec372d6151e6ee4c92485f
+                  MATRIX: 740->1|862->35|890->38|921->61|959->62|987->65|1027->85|1055->87|1269->274|1282->278|1313->288
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|35->7|40->12|40->12|40->12
                   -- GENERATED --
               */
           
