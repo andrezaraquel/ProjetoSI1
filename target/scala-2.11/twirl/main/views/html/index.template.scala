@@ -23,10 +23,10 @@ import views.html._
 object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[Usuario,List[models.Tema],String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(user: Usuario, temas: List[models.Tema],message: String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: Usuario, temas: List[models.Tema], message: String):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.59*/(""" 
+Seq[Any](format.raw/*1.60*/(""" 
 
 
 """),_display_(/*4.2*/main("Portal do Leite")/*4.25*/ {_display_(Seq[Any](format.raw/*4.27*/("""
@@ -82,13 +82,32 @@ Seq[Any](format.raw/*1.59*/("""
 			</div>	
 		</div>
 		<div class="col-md-8 col-offset-1" id="campoTemas">
-		<br /> <br /> <br /> <br />
-		<div class="panel panel-info">
+			<br /> <br /> <br /> <br />
+			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h3 class="panel-title" id ="temaSelecionado"></h3>
 				</div>
-		</div>		
-		
+				<div class="panel">	
+					<div class="col-md-5 col-offset-1">
+						<select class="selectNivelDificuldade" data-max-options="1">
+							<option>N�vel de Dificuldade do Tema</option>
+						    <option>Muito F�cil</option>
+						    <option>F�cil</option>
+						    <option>Normal</option>
+						    <option>Dif�cil</option>
+						    <option>Muito Dif�cil</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<label>M�dia</label>
+						<div id="campoMedia"></div>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<label>Mediana</label>
+						<div id="campoMediana"></div>
+					</div>	
+				</div>		
+			</div>
 		</div>
 	</div>
 </div>		
@@ -108,10 +127,10 @@ Seq[Any](format.raw/*1.59*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 17 19:58:28 BRT 2015
+                  DATE: Tue Mar 17 22:04:26 BRT 2015
                   SOURCE: C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/app/views/index.scala.html
-                  HASH: 5edfabca5eaa3c0a4177284e1db6c1a2cc45aac2
-                  MATRIX: 749->1|894->58|924->63|955->86|994->88|1023->91|1761->802|1774->806|1805->816|2418->1403|2452->1421|2491->1422|2526->1430|2599->1476|2612->1480|2643->1490|2678->1498|2691->1502|2726->1516|2756->1519|2769->1523|2800->1533|2862->1565|2895->1571
+                  HASH: 3640a639c75dc882a1ec54e9c2dbf657ea15eb6c
+                  MATRIX: 749->1|895->59|925->64|956->87|995->89|1024->92|1762->803|1775->807|1806->817|2419->1404|2453->1422|2492->1423|2527->1431|2600->1477|2613->1481|2644->1491|2679->1499|2692->1503|2727->1517|2757->1520|2770->1524|2801->1534|2863->1566|2896->1572
                   LINES: 26->1|29->1|32->4|32->4|32->4|34->6|51->23|51->23|51->23|75->47|75->47|75->47|76->48|77->49|77->49|77->49|77->49|77->49|77->49|77->49|77->49|77->49|79->51|80->52
                   -- GENERATED --
               */

@@ -21,7 +21,7 @@ public class TemaController extends Controller {
 		
 		return ok(dicasTema.render(Application.getUsuarioLogado(), getTema(idLong), ""));
 	}
-
+	
 	private static Tema getTema(Long id) {
 		return Application.getDAO().findByEntityId(Tema.class, id);
 	}

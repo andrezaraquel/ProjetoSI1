@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/conf/routes
-// @HASH:8a96f80ce9015e2bacd7e6e110977895bba631e8
-// @DATE:Tue Mar 17 19:54:00 BRT 2015
+// @HASH:fa84edf96db0504f59e26a1f81be2e9b78b4713a
+// @DATE:Tue Mar 17 22:18:37 BRT 2015
 
 
 import play.core._
@@ -74,20 +74,13 @@ controllers.AutenticacaoController.cadastrar(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.AutenticacaoController", "cadastrar", Nil,"POST", """""", Routes.prefix + """cadastro"""))
         
 
-// @LINE:18
-private[this] lazy val controllers_TemaController_showTema6_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tema"))))
-private[this] lazy val controllers_TemaController_showTema6_invoker = createInvoker(
-controllers.TemaController.showTema(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "showTema", Seq(classOf[String]),"GET", """Tema""", Routes.prefix + """tema"""))
-        
-
-// @LINE:21
-private[this] lazy val controllers_Assets_at7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at7_invoker = createInvoker(
+// @LINE:22
+private[this] lazy val controllers_Assets_at6_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at6_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.AutenticacaoController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.showLogin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.showCadastro()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.cadastrar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tema""","""controllers.TemaController.showTema(x$1:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.AutenticacaoController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.showLogin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.showCadastro()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.cadastrar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -143,18 +136,10 @@ case controllers_AutenticacaoController_cadastrar5_route(params) => {
 }
         
 
-// @LINE:18
-case controllers_TemaController_showTema6_route(params) => {
-   call(params.fromQuery[String]("x$1", None)) { (x$1) =>
-        controllers_TemaController_showTema6_invoker.call(controllers.TemaController.showTema(x$1))
-   }
-}
-        
-
-// @LINE:21
-case controllers_Assets_at7_route(params) => {
+// @LINE:22
+case controllers_Assets_at6_route(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at7_invoker.call(controllers.Assets.at(path, file))
+        controllers_Assets_at6_invoker.call(controllers.Assets.at(path, file))
    }
 }
         

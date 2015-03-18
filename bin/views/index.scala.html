@@ -1,4 +1,4 @@
-@(user: Usuario, temas: List[models.Tema],message: String) 
+@(user: Usuario, temas: List[models.Tema], message: String) 
 
 
 @main("Portal do Leite") {
@@ -54,13 +54,32 @@
 			</div>	
 		</div>
 		<div class="col-md-8 col-offset-1" id="campoTemas">
-		<br /> <br /> <br /> <br />
-		<div class="panel panel-info">
+			<br /> <br /> <br /> <br />
+			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h3 class="panel-title" id ="temaSelecionado"></h3>
 				</div>
-		</div>		
-		
+				<div class="panel">	
+					<div class="col-md-5 col-offset-1">
+						<select class="selectNivelDificuldade" data-max-options="1">
+							<option>Nível de Dificuldade do Tema</option>
+						    <option>Muito Fácil</option>
+						    <option>Fácil</option>
+						    <option>Normal</option>
+						    <option>Difícil</option>
+						    <option>Muito Difícil</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<label>Média</label>
+						<div id="campoMedia"></div>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<label>Mediana</label>
+						<div id="campoMediana"></div>
+					</div>	
+				</div>		
+			</div>
 		</div>
 	</div>
 </div>		

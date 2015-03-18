@@ -10,8 +10,16 @@ function povoarDivTema() {
 			$(this).removeClass("active-menu");
 		});
 		$("#campoTemas").show();
+		
 		var nomeTema = $(this).data("nome");
 		document.getElementById("temaSelecionado").innerHTML = nomeTema;
 		$(this).addClass("active-menu");
+		
+		
+		var idTema = $(this).attr("id");
+		
+		getTema(idTema);
+		
 	});	
 }
+
