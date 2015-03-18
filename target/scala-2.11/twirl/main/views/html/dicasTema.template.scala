@@ -30,24 +30,29 @@ Seq[Any](format.raw/*1.36*/("""
 
 """),_display_(/*3.2*/main("Portal do Leite")/*3.25*/{_display_(Seq[Any](format.raw/*3.26*/("""
 
-"""),format.raw/*5.1*/("""<br /> <br /> <br /> <br />
+"""),_display_(/*5.2*/modalAdicionarDica()),format.raw/*5.22*/("""
+
+"""),format.raw/*7.1*/("""<br /> <br /> <br /> <br />
 <div class="panel panel-info">
-	<div class="panel-heading">
-		<h3 class="panel-title" id ="temaSelecionado">"""),_display_(/*8.50*/tema/*8.54*/.getNome()),format.raw/*8.64*/("""</h3>
+	<div class="panel-heading" 
+		<h3 class="panel-title" id ="temaSelecionado">"""),_display_(/*10.50*/tema/*10.54*/.getNome()),format.raw/*10.64*/("""</h3>
+		
+		<button type="button" class="btn btn-info " data-toggle="modal" data-target="#adicionarDica">Adicionar dica</button>
+		
 	</div>
 	<div class="panel">	
 		<div class="col-md-5 col-offset-1">
 			<select class="selectNivelDificuldade" data-max-options="1">
-				<option>N�vel de Dificuldade do Tema</option>
-			    <option>Muito F�cil</option>
-			    <option>F�cil</option>
+				<option>Nível de Dificuldade do Tema</option>
+			    <option>Muito Fácil</option>
+			    <option>Fácil</option>
 			    <option>Normal</option>
-			    <option>Dif�cil</option>
-			    <option>Muito Dif�cil</option>
+			    <option>Difícil</option>
+			    <option>Muito Difícil</option>
 			</select>
 		</div>
 		<div class="col-md-2 col-md-offset-1">
-			<label>M�dia</label>
+			<label>Média</label>
 			<div id="campoMedia">200</div>
 		</div>
 		<div class="col-md-2 col-md-offset-1">
@@ -69,11 +74,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 17 23:28:45 BRT 2015
-                  SOURCE: C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 5cbf70b7b55e7924a86d59aa8b8024fc41a7c9a4
-                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->68|1157->208|1169->212|1199->222
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|36->8|36->8|36->8
+                  DATE: Wed Mar 18 09:48:39 BRT 2015
+                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-18/ProjetoSI1/app/views/dicasTema.scala.html
+                  HASH: 21747062c9f52609f175f1007abce8b9f4f2501f
+                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1061->93|1228->233|1241->237|1272->247
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|35->7|38->10|38->10|38->10
                   -- GENERATED --
               */
           
