@@ -43,7 +43,7 @@ public class DicaConselho extends Dica {
 
 	@Override
 	public String exibir() {
-		return "Dica Conselho";
+		return "<h1>" + this.conselho + "</h1>";
 	}
 	
 }

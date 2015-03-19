@@ -42,17 +42,23 @@
 </div>
 
 
-<div class="panel ">
+<div class="panel col-md-12 ">
 	@if(tema.isEmpty()){
-		<p>Nenhuma dica para este tema.</p>
-			
-		
-		
-		
+		<p>Nenhuma dica para este tema.</p>	
+		<div class="panel panel-info ">Concordo  Discordo </div>
 	}else{
 		@for(dica <- tema.getDicas()){
-			@dica.exibir()
-			<div class="panel panel-info ">Concordo  Discordo </div>
+			<div class="panel panel-default centralizarPanel ">
+				@Html(dica.exibir())
+			
+			<legend></legend>
+			<a href="#" >Concordar <img src="/assets/images/curtir_icon.jpg">@dica.getQuantConcordancia()</a>&nbsp;&nbsp;
+			<a href="#" >Discordar <img src="/assets/images/curtir_icon.jpg">@dica.getQuantDiscordancia()</a>
+			<a href="#" >Denunciar </a>
+			</div>
+
+			
+			
 		}	
 	}
 </div>
