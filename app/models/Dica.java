@@ -1,96 +1,76 @@
 package models;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.HashMap;
+import java.util.Iterator;
 
 @Entity
 public abstract class Dica implements Comparable<Dica> {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
-	private int quantConcordancia;
-	private int quantDiscordancia;
-	private boolean dicaConcordada;
-	private boolean dicaDiscordada;
-	private int conteudoInapropriado;
+	@ElementCollection
+	private Map<Usuario, Boolean> relacaoConcordancia;
+	@ElementCollection
+	private Map<Usuario, Boolean> relacaoDiscordancia;
 	
-
+	public Dica() {
+		this.relacaoConcordancia = new HashMap<Usuario, Boolean>();
+		this.relacaoDiscordancia = new HashMap<Usuario, Boolean>();		
+	}	
 	
-	public Dica(){		
-		
-	}
-		
-	/*------------------------- US 4 ---------------------------------------*/
-	public int quantConcordancia(){
-		return quantConcordancia; //
-	}
-
-	public int quantDiscordancia(){
-		return quantDiscordancia();
-	}
-
-	public double indiceDeConcordancia(){
-		return quantConcordancia/(quantConcordancia + quantDiscordancia);
-
-	}
-	
-	public boolean isConcordada(){
-		return dicaConcordada;
-	}
-	
-	public boolean isDiscordada(){
-		return dicaDiscordada;
-	}
-	
-	public void concordarDica(){
-		if(!this.dicaConcordada){
-			this.dicaConcordada =  true;
-		} 		
-	}
-	
-	public void discordarDica(){
-		if(!this.dicaDiscordada){
-			this.dicaDiscordada =  true;
-		} 		
-	}
-	
-	public int getQuantCondordancia(){
-		return quantConcordancia;
-	}
-	
-	public int getQuantDisordancia(){
-		return quantDiscordancia;
-	}
-	
-	public void addFrase(){
-		
-	}
-	
-	/*---------------------------------US 5----------------------------------------------------*/
-	
-	@Override
-	public int compareTo(Dica dica) {
-		if (this.quantConcordancia() > dica.quantConcordancia()){
-			return 1;
+	public void concordar(Usuario user) throws Exception {		
+		if (!relacaoConcordancia.containsKey(user) || !relacaoDiscordancia.containsKey(user)) {
+			this.relacaoConcordancia.put(user, true);
+		} else {
+			throw new Exception("Você só pode concordar/discordar uma vez!");
 		}
-		else if (this.quantConcordancia() < dica.quantConcordancia()) {
-			return -1;
-		}
-		return 0;
 	}
 	
-	
-	/*-------------------------US 7 -----------------------------------------------------------*/
-	
-	public void marcarDicaInapropriado(){
-		conteudoInapropriado += 1;
-		
+	public void discordar(Usuario user) throws Exception {
+		if (!relacaoConcordancia.containsKey(user) || !relacaoDiscordancia.containsKey(user)) {
+			this.relacaoDiscordancia.put(user, true);
+		} else {
+			throw new Exception("Você só pode concordar/discordar uma vez!");
+		}		
+	}	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 	
-	public int getConteudoInapropriado(){
-		return conteudoInapropriado;
+	public int getQuantConcordancia() {
+		return relacaoConcordancia.size(); 
 	}
+
+	public int getQuantDiscordancia() {
+		return relacaoDiscordancia.size();
+	}
+
+	public Map<Usuario, Boolean> getRelacaoConcordancia() {
+		return relacaoConcordancia;
+	}
+
+	public Map<Usuario, Boolean> getRelacaoDiscordancia() {
+		return relacaoDiscordancia;
+	}
+	
+	public void comentar(Usuario user, String comentario) {
+		//comentar uma dica
+	}
+	
+	public abstract String exibir();
 	
 }

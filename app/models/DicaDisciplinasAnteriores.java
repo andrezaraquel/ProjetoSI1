@@ -3,12 +3,11 @@ package models;
 import javax.persistence.Entity;
 
 @Entity
-public class DicaDisciplinasAnteriores extends DicaSimples{
+public class DicaDisciplinasAnteriores extends Dica {
 
 	private String nomeDaDisciplina, razao;
 	
-	public DicaDisciplinasAnteriores() {
-	}
+	public DicaDisciplinasAnteriores() {}
 	
 	public DicaDisciplinasAnteriores(String nomeDaDisciplina, String razao) {
 		this.nomeDaDisciplina = nomeDaDisciplina;
@@ -32,30 +31,29 @@ public class DicaDisciplinasAnteriores extends DicaSimples{
 	}
 	
 	
-	public void isDicaValida(String razao) throws Exception{
-		if (razao == null) {
-			throw new Exception("Nome ou Razao não pode ser nulo");
-		}
-		if (razao.trim().equals("")) {
-			throw new Exception("Nome ou razão não pode ser vazio");
-		}
-		if (razao.length() > 50) { //Decidir o tamanho
-			throw new Exception("Nome ou razão muito longa");
-		}
-		this.razao = razao;
+//	public void isDicaValida(String razao) throws Exception{
+//		if (razao == null) {
+//			throw new Exception("Nome ou Razao não pode ser nulo");
+//		}
+//		if (razao.trim().equals("")) {
+//			throw new Exception("Nome ou razão não pode ser vazio");
+//		}
+//		if (razao.length() > 50) { //Decidir o tamanho
+//			throw new Exception("Nome ou razão muito longa");
+//		}
+//		this.razao = razao;
+//	}
+
+	@Override
+	public int compareTo(Dica o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
-	public void cadastrar(Usuario usuario, Dica dica) throws Exception {
+	public String exibir() {
 		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void isDicaValida(Dica dica) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
-	
+		return null;
+	}	
 	
 }

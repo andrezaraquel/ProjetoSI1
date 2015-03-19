@@ -3,13 +3,12 @@ package models;
 import javax.persistence.Entity;
 
 @Entity
-public class DicaConselho extends DicaSimples {
+public class DicaConselho extends Dica {
 
 		
 	private String conselho;
 	
-	public DicaConselho() {
-	}
+	public DicaConselho() {}
 	
 	public DicaConselho(String conselho) {
 		this.conselho = conselho;
@@ -23,33 +22,29 @@ public class DicaConselho extends DicaSimples {
 		this.conselho = conselho;
 	}
 	
-	
-	
-	
-	public void isDicaValida(String conselho) throws Exception{
-		if (conselho == null) {
-			throw new Exception("Conselho não pode ser nulo");
-		}
-		if (conselho.trim().equals("")) {
-			throw new Exception("Conselho não pode ser vazio");
-		}
-		if (conselho.length() > 100) { //Decidir o tamanho
-			throw new Exception("Conselho muito longo");
-		}
-		this.conselho = conselho;
+//	public void isDicaValida(String conselho) throws Exception{
+//		if (conselho == null) {
+//			throw new Exception("Conselho não pode ser nulo");
+//		}
+//		if (conselho.trim().equals("")) {
+//			throw new Exception("Conselho não pode ser vazio");
+//		}
+//		if (conselho.length() > 100) { //Decidir o tamanho
+//			throw new Exception("Conselho muito longo");
+//		}
+//		this.conselho = conselho;
+//	}
+
+	@Override
+	public int compareTo(Dica o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
-	public void cadastrar(Usuario usuario, Dica dica) throws Exception {
+	public String exibir() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
-
-	@Override
-	public void isDicaValida(Dica dica) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 }

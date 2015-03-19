@@ -3,12 +3,11 @@ package models;
 import javax.persistence.Entity;
 
 @Entity
-public class DicaSemDificuldades extends DicaSimples {
+public class DicaSemDificuldades extends Dica {
 
 	private String nomeDoAssunto;
 	
-	public DicaSemDificuldades() {
-	}
+	public DicaSemDificuldades() {}
 	
 	public DicaSemDificuldades(String nomeDoAssunto) {	
 		this.nomeDoAssunto = nomeDoAssunto;
@@ -23,15 +22,15 @@ public class DicaSemDificuldades extends DicaSimples {
 	}
 
 	@Override
-	public void cadastrar(Usuario usuario, Dica dica) throws Exception {
+	public int compareTo(Dica o) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
-	public void isDicaValida(Dica dica) throws Exception {
+	public String exibir() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
-	
+
 }

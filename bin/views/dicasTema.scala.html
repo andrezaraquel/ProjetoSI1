@@ -3,16 +3,21 @@
 @main("Portal do Leite"){
 
 @modalAdicionarDica()
-
 <br /> <br /> <br /> <br />
-<div class="panel panel-info">
+<div class="panel panel-info ">
 	<div class="panel-heading">
 		<div class="row">
-			<h3 class="panel-title" id ="temaSelecionado">@tema.getNome()</h3>
+			<div class="col-md-10 ">
+			<h1 class="panel-title" id ="temaSelecionado">@tema.getNome()</h1>
+			</div>
 			
-			<button type="button" class="btn btn-info " data-toggle="modal" data-target="#adicionarDica">Adicionar dica</button>
+			<div class="col-md-1.5 " >
+			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
+			</div>
+			
 		</div>
 	</div>
+	
 	<div class="panel">	
 		<div class="col-md-5 col-offset-1">
 			<select class="selectNivelDificuldade" data-max-options="1">
@@ -24,6 +29,7 @@
 			    <option>Muito Difícil</option>
 			</select>
 		</div>
+		
 		<div class="col-md-2 col-md-offset-1">
 			<label>Média</label>
 			<div id="campoMedia">200</div>
@@ -34,5 +40,23 @@
 		</div>	
 	</div>		
 </div>
+
+
+<div class="panel ">
+	@if(tema.isEmpty()){
+		<p>Nenhuma dica para este tema.</p>
+			
+		
+		
+		
+	}else{
+		@for(dica <- tema.getDicas()){
+			<div class="panel panel-info ">Concordo  Discordo </div>
+			<legend></legend>	
+		}	
+	}
+</div>
+
+
 
 }
