@@ -45,7 +45,9 @@ public class DicaMaterialUtil extends Dica {
 
 	@Override
 	public String exibir() {
-		return "Retorno do Material Util";
+		String label = "<span class=\"label label-info\">" + "Material Útil" + "</span>";
+		String textUrl = "<h5>" + urlDoMaterial + "</h5>";
+		return  textUrl +  label + "<br>";
 	}
 
 }

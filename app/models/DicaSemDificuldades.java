@@ -28,8 +28,10 @@ public class DicaSemDificuldades extends Dica {
 	}
 
 	@Override
-	public String exibir() {		
-		return "<h1>"+nomeDoAssunto+"</h1>";
+	public String exibir() {
+		String label = "<span class=\"label label-info\">" + "O que você precisa saber para não ter dificuldades" + "</span>";
+		String textAssunto = "<h5>" + nomeDoAssunto + "</h5>";
+		return textAssunto + label + "<br>" ;
 	}
 
 }

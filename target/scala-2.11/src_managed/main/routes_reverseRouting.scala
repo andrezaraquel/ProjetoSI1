@@ -1,6 +1,6 @@
-// @SOURCE:/home/mariadch/projetosi-18/ProjetoSI1/conf/routes
-// @HASH:f3090e478631b09903118e6a5891e04cf5776dca
-// @DATE:Thu Mar 19 14:56:21 BRT 2015
+// @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-19/ProjetoSI1/conf/routes
+// @HASH:0bae45fdc507a395a7e43788b53abe3ffd3f54e7
+// @DATE:Thu Mar 19 19:56:02 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

@@ -1,6 +1,7 @@
 $(function() {
 	povoarDivTema();
 	alternaDivModal();
+	enviaFormAjax();
 });
 
 function povoarDivTema() {	

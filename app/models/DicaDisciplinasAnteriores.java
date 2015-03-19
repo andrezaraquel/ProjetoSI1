@@ -52,9 +52,10 @@ public class DicaDisciplinasAnteriores extends Dica {
 
 	@Override
 	public String exibir() {
-		return "<h1>Nome da Disciplina: "+ nomeDaDisciplina+"</h1>" +
-	
-				"<h4>Motivo: " +getRazao()+" </h4>";
-	}	
+		String label = "<span class=\"label label-info\">" + "Disciplinas anteriores que te ajudarão aqui" + "</span>";
+		String textDisciplina = "<h5>" + "Disciplina: " + nomeDaDisciplina + "</h5>";
+		String textRazao = "<h5>" + razao + "</h5>";
+		return  textDisciplina  + textRazao + label + "<br>";
+	}
 	
 }

@@ -30,8 +30,7 @@ textarea {
 	margin-top: 10%;
 }
 
-.centralizarPanel {
-	width: 99%;
-	border-color: blue;
-	
+.nomes {
+	text-color: black;
+	font-weight: bold;
 }

@@ -70,7 +70,7 @@ public abstract class Dica implements Comparable<Dica> {
 	public void comentar(Usuario user, String comentario) {
 		//comentar uma dica
 	}
-	
+		
 	public abstract String exibir();
 	
 }

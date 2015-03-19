@@ -41,9 +41,12 @@ public class DicaConselho extends Dica {
 		return 0;
 	}
 
+	
 	@Override
 	public String exibir() {
-		return "<h1>" + this.conselho + "</h1>";
+		String label = "<span class=\"label label-info\">" + "Conselho" + "</span>";
+		String textConselho = "<h5>" + conselho + "</h5>";
+		return textConselho + label + "<br>";
 	}
 	
 }
