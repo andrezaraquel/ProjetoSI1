@@ -16,24 +16,31 @@
 					<li><a data-toggle="tab" href="#navDisciplinasAnteriores">Disciplinas anteriores que ajudarão aqui</a></li>
 					<li><a data-toggle="tab" href="#navMaterialUtil" >Material útil</a></li>
 				</ul>
+				
 				<div class="tab-content" id="myTabContent">
 					<div id="navPrecisoSaber" class="tab-pane fade active in"><!-- O que é preciso saber -->
 						 <p class="text-warning"><small>O que você precisa saber para não ter dificuldades.</small></p>
 						
-						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+						<form class="form-horizontal" method="POST" role="form" id="addDicaSemDificuldade" action="/addDicaSemDificuldade">
 							<div class="form-group">
+								<input type="hidden" class="idDoTema" name="idTema" value="" />
 								<label class="col-sm-3 control-label">Nome do assunto</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control" name="assunto" required>
 									</div>
 							</div>				
-						</form>	
+						</form>
+						<div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			                <input type="submit" class="btn btn-primary enviarForm" form="addDicaSemDificuldade" value="Adicionar" />
+						</div>		
 					</div>
 					
 					<div id="navConselho" class="tab-pane fade" ><!-- conselho -->
 						<p class="text-warning"><small>Conselho.</small></p>
 						
-						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+						<form class="form-horizontal" method="POST" role="form" id="addDicaConselho" action="/addDicaConselho">
+							<input type="hidden" class="idDoTema" name="idTema" value="" />
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Conselho</label>
 								<div class="col-sm-8">
@@ -41,13 +48,18 @@
 										 placeholder="Digite seu conselho." required></textarea>						
 								</div>
 							</div>				
-						</form>				
+						</form>
+						<div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			                <input type="submit" class="btn btn-primary enviarForm" form="addDicaConselho" value="Adicionar" />
+						</div>				
 					</div>
 							
 		            <div id="navDisciplinasAnteriores" class="tab-pane fade">
 			            <p class="text-warning"><small>Disciplinas anteriores que ajudarão aqui.</small></p>
 						
-						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+						<form class="form-horizontal" method="POST" role="form" id="addDicaDiscAnteriores" action="/addDicaDiscAnteriores">
+							<input type="hidden" class="idDoTema" name="idTema" value="" />
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Nome da disciplina</label>
 									<div class="col-sm-8">
@@ -62,28 +74,33 @@
 										placeholder="Digite a razão pela qual esta disciplina ajudará." required></textarea>
 								</div>
 							</div>
-						</form>			
+						</form>	
+						<div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			                <input type="submit" class="btn btn-primary enviarForm" form="addDicaDiscAnteriores" value="Adicionar" />
+						</div>			
 					</div>
 					
 					<div id="navMaterialUtil" class="tab-pane fade"><!-- Material -->
 						<p class="text-warning"><small>Material útil.</small></p>
 						
-						<form class="form-horizontal" method="post" role="form" id="form-adicionar-dica" action="/">
+						<form class="form-horizontal" method="POST" role="form" id="addDicaMaterialUtil" action="/addDicaMaterialUtil">
+							<input type="hidden" class="idDoTema" name="idTema" value="" />
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Endereço da web</label>
 								<div class="col-sm-8">
-									<input type="url" class="form-control" name="linkMaterial" requerid />	
+									<input type="url" class="form-control" name="urlMaterial" requerid />	
 								</div>
-							</div>
-						</form>			
+							</div>							
+						</form>	
+						<div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			                <input type="submit" class="btn btn-primary enviarForm"  form="addDicaMaterialUtil"value="Adicionar" />
+						</div>		
 					</div>
 				</div>
-			</div> <!--5-->
-			
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Adicionar</button>
-			</div>
+			</div> <!--5-->	
+            
         </div> <!--3-->
     </div> <!--2-->
 </div><!--1-->

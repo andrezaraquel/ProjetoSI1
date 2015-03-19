@@ -1,15 +1,491 @@
-2015-03-19 10:27:30,207 - [INFO] - from play in pool-6-thread-3 
+2015-03-19 12:46:38,061 - [INFO] - from play in pool-6-thread-5 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-19 10:27:35,100 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-19 12:49:00,546 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-03-19 10:27:35,212 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-19 12:49:00,658 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-19 10:27:36,357 - [INFO] - from application in play-internal-execution-context-1 
+2015-03-19 12:49:01,850 - [INFO] - from application in play-internal-execution-context-1 
 Aplicacao inicializada...
 
-2015-03-19 10:27:36,500 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-19 12:49:01,987 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-19 12:49:10,142 - [ERROR] - from play in play-akka.actor.default-dispatcher-3 
+Cannot invoke the action, eventually got an error: java.lang.NumberFormatException: For input string: ""
+
+2015-03-19 12:49:10,151 - [ERROR] - from application in play-akka.actor.default-dispatcher-3 
+
+
+! @6lghb4nn2 - Internal server error, for (POST) [/addDicaSemDificuldade] ->
+
+play.api.Application$$anon$1: Execution exception[[NumberFormatException: For input string: ""]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.7.0_65]
+	at java.lang.Long.parseLong(Long.java:453) ~[na:1.7.0_65]
+	at java.lang.Long.parseLong(Long.java:483) ~[na:1.7.0_65]
+	at controllers.TemaController.addDicaSemDificuldade(TemaController.java:43) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$8$$anonfun$apply$8.apply(routes_routing.scala:185) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$8$$anonfun$apply$8.apply(routes_routing.scala:185) ~[classes/:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.TransactionalAction$1.apply(TransactionalAction.java:23) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.TransactionalAction$1.apply(TransactionalAction.java:21) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.JPA.withTransactionAsync(JPA.java:180) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:18) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-03-19 12:50:39,782 - [INFO] - from play in play-internal-execution-context-1 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 12:50:39,783 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 12:50:40,183 - [INFO] - from application in play-internal-execution-context-1 
+Aplicacao inicializada...
+
+2015-03-19 12:50:40,187 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-19 12:59:21,481 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 12:59:21,483 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 12:59:21,825 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 12:59:21,832 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:00:15,574 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:00:15,576 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:00:15,848 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:00:15,852 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:00:24,543 - [ERROR] - from play in play-akka.actor.default-dispatcher-57 
+Cannot invoke the action, eventually got an error: java.lang.NumberFormatException: For input string: ""
+
+2015-03-19 13:00:24,546 - [ERROR] - from application in play-akka.actor.default-dispatcher-57 
+
+
+! @6lghch7dc - Internal server error, for (POST) [/addDicaSemDificuldade] ->
+
+play.api.Application$$anon$1: Execution exception[[NumberFormatException: For input string: ""]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.7.0_65]
+	at java.lang.Long.parseLong(Long.java:453) ~[na:1.7.0_65]
+	at java.lang.Long.parseLong(Long.java:483) ~[na:1.7.0_65]
+	at controllers.TemaController.addDicaSemDificuldade(TemaController.java:43) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$8$$anonfun$apply$8.apply(routes_routing.scala:185) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$8$$anonfun$apply$8.apply(routes_routing.scala:185) ~[classes/:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.TransactionalAction$1.apply(TransactionalAction.java:23) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.TransactionalAction$1.apply(TransactionalAction.java:21) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.JPA.withTransactionAsync(JPA.java:180) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:18) ~[play-java-jpa_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-03-19 13:01:16,015 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:01:16,016 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:01:16,352 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:01:16,359 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:03:21,425 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:03:21,427 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:03:21,762 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:03:21,766 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:05:53,664 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:05:53,666 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:05:53,973 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:05:53,977 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:11:49,891 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:11:49,893 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:11:50,205 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:11:50,208 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:12:48,686 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:12:48,688 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:12:48,959 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:12:48,964 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:15:52,610 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:15:52,612 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:15:52,936 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:15:52,940 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:20:24,948 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:20:24,957 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:20:25,280 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:20:25,284 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:20:46,226 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:20:46,228 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:20:46,474 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:20:46,479 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:21:29,101 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:21:29,103 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:21:29,402 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:21:29,405 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:25:15,751 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:25:15,753 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:25:16,112 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:25:16,116 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:26:48,603 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:26:48,605 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:26:48,971 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:26:48,974 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:27:56,736 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:27:56,738 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:27:57,078 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:27:57,083 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:32:07,120 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:32:07,121 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:32:07,479 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:32:07,482 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:34:41,615 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:34:41,616 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:34:41,917 - [INFO] - from application in play-internal-execution-context-3 
+Aplicacao inicializada...
+
+2015-03-19 13:34:41,921 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-03-19 13:38:54,034 - [INFO] - from play in play-internal-execution-context-8 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:38:54,035 - [INFO] - from play in play-internal-execution-context-8 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:38:54,331 - [INFO] - from application in play-internal-execution-context-8 
+Aplicacao inicializada...
+
+2015-03-19 13:38:54,334 - [INFO] - from play in play-internal-execution-context-8 
+Application started (Dev)
+
+2015-03-19 13:48:09,650 - [ERROR] - from application in New I/O worker #9 
+
+
+! @6lghio7lf - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[value addDicaDiscAnteriores is not a member of object controllers.TemaController]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-03-19 13:49:23,900 - [ERROR] - from application in New I/O worker #9 
+
+
+! @6lghj2dhc - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[value addDicaDiscAnteriores is not a member of object controllers.TemaController]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-03-19 13:50:12,108 - [INFO] - from play in play-internal-execution-context-8 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 13:50:12,110 - [INFO] - from play in play-internal-execution-context-8 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 13:50:12,492 - [INFO] - from application in play-internal-execution-context-8 
+Aplicacao inicializada...
+
+2015-03-19 13:50:12,496 - [INFO] - from play in play-internal-execution-context-8 
+Application started (Dev)
+
+2015-03-19 14:02:32,195 - [INFO] - from play in play-internal-execution-context-8 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 14:02:32,196 - [INFO] - from play in play-internal-execution-context-8 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 14:02:32,885 - [INFO] - from application in play-internal-execution-context-8 
+Aplicacao inicializada...
+
+2015-03-19 14:02:32,889 - [INFO] - from play in play-internal-execution-context-8 
+Application started (Dev)
+
+2015-03-19 14:03:10,863 - [INFO] - from play in play-internal-execution-context-8 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 14:03:10,865 - [INFO] - from play in play-internal-execution-context-8 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 14:03:11,160 - [INFO] - from application in play-internal-execution-context-8 
+Aplicacao inicializada...
+
+2015-03-19 14:03:11,163 - [INFO] - from play in play-internal-execution-context-8 
+Application started (Dev)
+
+2015-03-19 14:04:05,904 - [INFO] - from play in play-internal-execution-context-9 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-19 14:04:05,906 - [INFO] - from play in play-internal-execution-context-9 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-19 14:04:06,205 - [INFO] - from application in play-internal-execution-context-9 
+Aplicacao inicializada...
+
+2015-03-19 14:04:06,208 - [INFO] - from play in play-internal-execution-context-9 
 Application started (Dev)
 

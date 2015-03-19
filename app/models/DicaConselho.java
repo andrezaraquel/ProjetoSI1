@@ -43,8 +43,7 @@ public class DicaConselho extends Dica {
 
 	@Override
 	public String exibir() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Dica Conselho";
 	}
 	
 }

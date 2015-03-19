@@ -1,6 +1,6 @@
 // @SOURCE:/home/andrezarmq/Documentos/SI1/ProjetoSI1/conf/routes
-// @HASH:273ea52a1d1e2575542429b956769298e611fe32
-// @DATE:Thu Mar 19 10:27:15 BRT 2015
+// @HASH:f3090e478631b09903118e6a5891e04cf5776dca
+// @DATE:Thu Mar 19 12:46:20 BRT 2015
 
 package controllers;
 

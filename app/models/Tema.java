@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -142,6 +143,11 @@ public class Tema {
 		return dicas;
 	}
 	
+	public void adicionarDica(Dica dica) {
+		dicas.add(dica);
+		Collections.sort(this.getDicas());
+	}
+	
 	
 }
 
@@ -207,10 +213,7 @@ public class Tema {
 //
 //	
 //	/*---------------------------------US 2---------------------------------------------------*/
-//	public void adicionarDica(Dica dica) {
-//		dicas.add(dica);
-//		Collections.sort(this.getDicas());
-//	}
+//	
 //
 //	
 //	public void removerDica(Dica dica){

@@ -1,6 +1,6 @@
 // @SOURCE:/home/andrezarmq/Documentos/SI1/ProjetoSI1/conf/routes
-// @HASH:273ea52a1d1e2575542429b956769298e611fe32
-// @DATE:Thu Mar 19 10:27:15 BRT 2015
+// @HASH:f3090e478631b09903118e6a5891e04cf5776dca
+// @DATE:Thu Mar 19 12:46:20 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,11 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:28
+// @LINE:24
+// @LINE:23
 // @LINE:22
+// @LINE:21
 // @LINE:18
 // @LINE:15
 // @LINE:14
@@ -71,11 +75,11 @@ def autenticar(): Call = {
 }
                           
 
-// @LINE:22
+// @LINE:28
 class ReverseAssets {
 
 
-// @LINE:22
+// @LINE:28
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -85,14 +89,46 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:24
+// @LINE:23
+// @LINE:22
+// @LINE:21
 // @LINE:18
 class ReverseTemaController {
 
+
+// @LINE:24
+def addDicaDiscAnteriores(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "addDicaDiscAnteriores")
+}
+                        
 
 // @LINE:18
 def showTema($id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "tema" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
+}
+                        
+
+// @LINE:22
+def addDicaConselho(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "addDicaConselho")
+}
+                        
+
+// @LINE:23
+def addDicaMaterialUtil(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "addDicaMaterialUtil")
+}
+                        
+
+// @LINE:21
+def addDicaSemDificuldade(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "addDicaSemDificuldade")
 }
                         
 
@@ -116,7 +152,11 @@ def index(): Call = {
                   
 
 
+// @LINE:28
+// @LINE:24
+// @LINE:23
 // @LINE:22
+// @LINE:21
 // @LINE:18
 // @LINE:15
 // @LINE:14
@@ -193,11 +233,11 @@ def autenticar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:22
+// @LINE:28
 class ReverseAssets {
 
 
-// @LINE:22
+// @LINE:28
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -211,9 +251,24 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:24
+// @LINE:23
+// @LINE:22
+// @LINE:21
 // @LINE:18
 class ReverseTemaController {
 
+
+// @LINE:24
+def addDicaDiscAnteriores : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.addDicaDiscAnteriores",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addDicaDiscAnteriores"})
+      }
+   """
+)
+                        
 
 // @LINE:18
 def showTema : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -221,6 +276,39 @@ def showTema : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function($id) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tema" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
+      }
+   """
+)
+                        
+
+// @LINE:22
+def addDicaConselho : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.addDicaConselho",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addDicaConselho"})
+      }
+   """
+)
+                        
+
+// @LINE:23
+def addDicaMaterialUtil : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.addDicaMaterialUtil",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addDicaMaterialUtil"})
+      }
+   """
+)
+                        
+
+// @LINE:21
+def addDicaSemDificuldade : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.addDicaSemDificuldade",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addDicaSemDificuldade"})
       }
    """
 )
@@ -250,7 +338,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:28
+// @LINE:24
+// @LINE:23
 // @LINE:22
+// @LINE:21
 // @LINE:18
 // @LINE:15
 // @LINE:14
@@ -302,11 +394,11 @@ def autenticar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:22
+// @LINE:28
 class ReverseAssets {
 
 
-// @LINE:22
+// @LINE:28
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -315,13 +407,41 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:24
+// @LINE:23
+// @LINE:22
+// @LINE:21
 // @LINE:18
 class ReverseTemaController {
 
 
+// @LINE:24
+def addDicaDiscAnteriores(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.addDicaDiscAnteriores(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaDiscAnteriores", Seq(), "POST", """""", _prefix + """addDicaDiscAnteriores""")
+)
+                      
+
 // @LINE:18
 def showTema($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.showTema($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "showTema", Seq(classOf[String]), "GET", """Tema""", _prefix + """tema""")
+)
+                      
+
+// @LINE:22
+def addDicaConselho(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.addDicaConselho(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaConselho", Seq(), "POST", """""", _prefix + """addDicaConselho""")
+)
+                      
+
+// @LINE:23
+def addDicaMaterialUtil(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.addDicaMaterialUtil(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaMaterialUtil", Seq(), "POST", """""", _prefix + """addDicaMaterialUtil""")
+)
+                      
+
+// @LINE:21
+def addDicaSemDificuldade(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.addDicaSemDificuldade(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaSemDificuldade", Seq(), "POST", """Dicas""", _prefix + """addDicaSemDificuldade""")
 )
                       
 

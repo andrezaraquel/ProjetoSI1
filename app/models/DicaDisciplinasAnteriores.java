@@ -52,8 +52,9 @@ public class DicaDisciplinasAnteriores extends Dica {
 
 	@Override
 	public String exibir() {
-		// TODO Auto-generated method stub
-		return null;
+		return "<h1>Nome da Disciplina: "+ nomeDaDisciplina+"</h1>" +
+	
+				"<h4>Motivo: " +getRazao()+" </h4>";
 	}	
 	
 }

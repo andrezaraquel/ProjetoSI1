@@ -22,6 +22,8 @@ public class Application extends Controller {
 	return ok(index.render(getUsuarioLogado(), TemaController.getTemas(), ""));
 	}
 
+	
+	
 	protected static Usuario getUsuarioLogado() {
 		Usuario user = new Usuario();
 		if (listaUsuariosLogados().size() > 0) {

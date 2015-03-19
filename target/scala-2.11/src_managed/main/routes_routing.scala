@@ -1,6 +1,6 @@
 // @SOURCE:/home/andrezarmq/Documentos/SI1/ProjetoSI1/conf/routes
-// @HASH:273ea52a1d1e2575542429b956769298e611fe32
-// @DATE:Thu Mar 19 10:27:15 BRT 2015
+// @HASH:f3090e478631b09903118e6a5891e04cf5776dca
+// @DATE:Thu Mar 19 12:46:20 BRT 2015
 
 
 import play.core._
@@ -81,13 +81,41 @@ controllers.TemaController.showTema(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "showTema", Seq(classOf[String]),"GET", """Tema""", Routes.prefix + """tema"""))
         
 
+// @LINE:21
+private[this] lazy val controllers_TemaController_addDicaSemDificuldade7_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addDicaSemDificuldade"))))
+private[this] lazy val controllers_TemaController_addDicaSemDificuldade7_invoker = createInvoker(
+controllers.TemaController.addDicaSemDificuldade(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaSemDificuldade", Nil,"POST", """Dicas""", Routes.prefix + """addDicaSemDificuldade"""))
+        
+
 // @LINE:22
-private[this] lazy val controllers_Assets_at7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at7_invoker = createInvoker(
+private[this] lazy val controllers_TemaController_addDicaConselho8_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addDicaConselho"))))
+private[this] lazy val controllers_TemaController_addDicaConselho8_invoker = createInvoker(
+controllers.TemaController.addDicaConselho(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaConselho", Nil,"POST", """""", Routes.prefix + """addDicaConselho"""))
+        
+
+// @LINE:23
+private[this] lazy val controllers_TemaController_addDicaMaterialUtil9_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addDicaMaterialUtil"))))
+private[this] lazy val controllers_TemaController_addDicaMaterialUtil9_invoker = createInvoker(
+controllers.TemaController.addDicaMaterialUtil(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaMaterialUtil", Nil,"POST", """""", Routes.prefix + """addDicaMaterialUtil"""))
+        
+
+// @LINE:24
+private[this] lazy val controllers_TemaController_addDicaDiscAnteriores10_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addDicaDiscAnteriores"))))
+private[this] lazy val controllers_TemaController_addDicaDiscAnteriores10_invoker = createInvoker(
+controllers.TemaController.addDicaDiscAnteriores(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaDiscAnteriores", Nil,"POST", """""", Routes.prefix + """addDicaDiscAnteriores"""))
+        
+
+// @LINE:28
+private[this] lazy val controllers_Assets_at11_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at11_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.AutenticacaoController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.showLogin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.showCadastro()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.cadastrar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tema""","""controllers.TemaController.showTema($id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.AutenticacaoController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.showLogin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.showCadastro()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.cadastrar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tema""","""controllers.TemaController.showTema($id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaSemDificuldade""","""controllers.TemaController.addDicaSemDificuldade()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaConselho""","""controllers.TemaController.addDicaConselho()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaMaterialUtil""","""controllers.TemaController.addDicaMaterialUtil()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaDiscAnteriores""","""controllers.TemaController.addDicaDiscAnteriores()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -151,10 +179,42 @@ case controllers_TemaController_showTema6_route(params) => {
 }
         
 
+// @LINE:21
+case controllers_TemaController_addDicaSemDificuldade7_route(params) => {
+   call { 
+        controllers_TemaController_addDicaSemDificuldade7_invoker.call(controllers.TemaController.addDicaSemDificuldade())
+   }
+}
+        
+
 // @LINE:22
-case controllers_Assets_at7_route(params) => {
+case controllers_TemaController_addDicaConselho8_route(params) => {
+   call { 
+        controllers_TemaController_addDicaConselho8_invoker.call(controllers.TemaController.addDicaConselho())
+   }
+}
+        
+
+// @LINE:23
+case controllers_TemaController_addDicaMaterialUtil9_route(params) => {
+   call { 
+        controllers_TemaController_addDicaMaterialUtil9_invoker.call(controllers.TemaController.addDicaMaterialUtil())
+   }
+}
+        
+
+// @LINE:24
+case controllers_TemaController_addDicaDiscAnteriores10_route(params) => {
+   call { 
+        controllers_TemaController_addDicaDiscAnteriores10_invoker.call(controllers.TemaController.addDicaDiscAnteriores())
+   }
+}
+        
+
+// @LINE:28
+case controllers_Assets_at11_route(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at7_invoker.call(controllers.Assets.at(path, file))
+        controllers_Assets_at11_invoker.call(controllers.Assets.at(path, file))
    }
 }
         

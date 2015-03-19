@@ -28,9 +28,8 @@ public class DicaSemDificuldades extends Dica {
 	}
 
 	@Override
-	public String exibir() {
-		// TODO Auto-generated method stub
-		return null;
+	public String exibir() {		
+		return "<h1>"+nomeDoAssunto+"</h1>";
 	}
 
 }
