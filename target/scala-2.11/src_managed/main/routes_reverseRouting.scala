@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-19/ProjetoSI1/conf/routes
-// @HASH:0bae45fdc507a395a7e43788b53abe3ffd3f54e7
-// @DATE:Thu Mar 19 19:56:02 BRT 2015
+// @HASH:82a867bc328e23f81ec86427959f5ca6e1b65bb9
+// @DATE:Thu Mar 19 22:43:34 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:28
+// @LINE:29
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -75,11 +76,11 @@ def autenticar(): Call = {
 }
                           
 
-// @LINE:28
+// @LINE:29
 class ReverseAssets {
 
 
-// @LINE:28
+// @LINE:29
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -89,6 +90,7 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -108,6 +110,13 @@ def addDicaDiscAnteriores(): Call = {
 def showTema($id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "tema" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
+}
+                        
+
+// @LINE:25
+def concordar($id:String): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "concordar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
 }
                         
 
@@ -152,7 +161,8 @@ def index(): Call = {
                   
 
 
-// @LINE:28
+// @LINE:29
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -233,11 +243,11 @@ def autenticar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:28
+// @LINE:29
 class ReverseAssets {
 
 
-// @LINE:28
+// @LINE:29
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -251,6 +261,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -276,6 +287,17 @@ def showTema : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function($id) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tema" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
+      }
+   """
+)
+                        
+
+// @LINE:25
+def concordar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.concordar",
+   """
+      function($id) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "concordar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
       }
    """
 )
@@ -338,7 +360,8 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:28
+// @LINE:29
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -394,11 +417,11 @@ def autenticar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:28
+// @LINE:29
 class ReverseAssets {
 
 
-// @LINE:28
+// @LINE:29
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -407,6 +430,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -424,6 +448,12 @@ def addDicaDiscAnteriores(): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handl
 // @LINE:18
 def showTema($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.showTema($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "showTema", Seq(classOf[String]), "GET", """Tema""", _prefix + """tema""")
+)
+                      
+
+// @LINE:25
+def concordar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.concordar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "concordar", Seq(classOf[String]), "POST", """""", _prefix + """concordar""")
 )
                       
 

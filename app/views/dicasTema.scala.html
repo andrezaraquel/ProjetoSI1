@@ -50,17 +50,19 @@
 				<div class="nomes" >@user.getNome()</div>
 				@Html(dica.exibir())
 			
-				<a href="#" >Concordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantConcordancia()&nbsp;&nbsp;
-				<a href="#denunciar" >Discordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantDiscordancia()
-				<a href="#" >Denunciar </a>
-				<legend></legend>			
+				<a href="#">Concordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantConcordancia()&nbsp;&nbsp;
+				<a href="#">Discordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantDiscordancia()
+				<a href="#" data-toggle="modal" data-target="#denunciar">Denunciar </a>
+				<legend></legend>		
+
 		}	
 	}
+	
 </div>
 
 <!-- Modal  Denunciar dica -->
 
-<div id="#denunciar"  class="modal fade "> <!--1-->
+<div id="denunciar" class="modal fade "> <!--1-->
     <div class="modal-dialog centralizarModal"><!--2-->
         <div class="modal-content"><!--3-->
             <div class="modal-header"><!--4-->
@@ -81,13 +83,11 @@
             
             <div class="modal-footer">
 			    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			    <input type="submit" class="btn btn-primary enviarForm" form="denunciarDica" value="Adicionar" />
+			    <button type="button" class="btn btn-default">Denunciar</button>
 			</div>	
 			
          </div> <!--3-->
     </div> <!--2-->
 </div><!--1-->
-
-
 
 }

@@ -42,21 +42,52 @@
 </div>
 
 
-<div class="panel ">
+<div class="panel col-md-12 ">
 	@if(tema.isEmpty()){
-		<p>Nenhuma dica para este tema.</p>
-			
-		
-		
-		
+		<p>Nenhuma dica para este tema.</p>	
 	}else{
 		@for(dica <- tema.getDicas()){
-			@dica.exibir()
-			<div class="panel panel-info ">Concordo  Discordo </div>
+				<div class="nomes" >@user.getNome()</div>
+				@Html(dica.exibir())
+			
+				<a href="@dica.concordar(user)">Concordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantConcordancia()&nbsp;&nbsp;
+				<a href="@dica.discordar(user)" >Discordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantDiscordancia()
+				<a href="#" data-toggle="modal" data-target="#denunciar">Denunciar </a>
+				<legend></legend>		
+
 		}	
 	}
+
+<!-- Modal  Denunciar dica -->
+
+<div id="denunciar" class="modal fade "> <!--1-->
+    <div class="modal-dialog centralizarModal"><!--2-->
+        <div class="modal-content"><!--3-->
+            <div class="modal-header"><!--4-->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Informe-nos o que está acontecendo</h4>				
+            </div><!--4-->
+            
+        	<p class="text-warning"><small>Por que você não quer ver essa informação? </small></p>
+            
+            <div class="modal-body"> <!--5-->
+            	<form class="form-horizontal" method="POST" role="form" id="addDicaSemDificuldade" action="/addDicaSemDificuldade">
+            		<input type="radio" name="informacao" value="ofensivo" checked>A dica possui conteúdo ofensivo.
+            		<br>
+					<input type="radio" name="informacao" value="antietico">A dica possui conteúdo antiético.
+				</form> 
+				
+             </div> <!--5-->	
+            
+            <div class="modal-footer">
+			    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			    <button type="button" class="btn btn-default">Denunciar</button>
+			</div>	
+			
+         </div> <!--3-->
+    </div> <!--2-->
+</div><!--1-->
+
 </div>
-
-
 
 }

@@ -78,17 +78,19 @@ Seq[Any](format.raw/*1.36*/("""
 				"""),format.raw/*50.5*/("""<div class="nomes" >"""),_display_(/*50.26*/user/*50.30*/.getNome()),format.raw/*50.40*/("""</div>
 				"""),_display_(/*51.6*/Html(dica.exibir())),format.raw/*51.25*/("""
 			
-				"""),format.raw/*53.5*/("""<a href="#" >Concordar</a> <img src="/assets/images/curtir_icon.jpg">"""),_display_(/*53.75*/dica/*53.79*/.getQuantConcordancia()),format.raw/*53.102*/("""&nbsp;&nbsp;
-				<a href="#denunciar" >Discordar</a> <img src="/assets/images/curtir_icon.jpg">"""),_display_(/*54.84*/dica/*54.88*/.getQuantDiscordancia()),format.raw/*54.111*/("""
-				"""),format.raw/*55.5*/("""<a href="#" >Denunciar </a>
-				<legend></legend>			
-		""")))}),format.raw/*57.4*/("""	
-	""")))}),format.raw/*58.3*/("""
-"""),format.raw/*59.1*/("""</div>
+				"""),format.raw/*53.5*/("""<a href="#">Concordar</a> <img src="/assets/images/curtir_icon.jpg">"""),_display_(/*53.74*/dica/*53.78*/.getQuantConcordancia()),format.raw/*53.101*/("""&nbsp;&nbsp;
+				<a href="#">Discordar</a> <img src="/assets/images/curtir_icon.jpg">"""),_display_(/*54.74*/dica/*54.78*/.getQuantDiscordancia()),format.raw/*54.101*/("""
+				"""),format.raw/*55.5*/("""<a href="#" data-toggle="modal" data-target="#denunciar">Denunciar </a>
+				<legend></legend>		
+
+		""")))}),format.raw/*58.4*/("""	
+	""")))}),format.raw/*59.3*/("""
+	
+"""),format.raw/*61.1*/("""</div>
 
 <!-- Modal  Denunciar dica -->
 
-<div id="#denunciar"  class="modal fade "> <!--1-->
+<div id="denunciar" class="modal fade "> <!--1-->
     <div class="modal-dialog centralizarModal"><!--2-->
         <div class="modal-content"><!--3-->
             <div class="modal-header"><!--4-->
@@ -109,14 +111,12 @@ Seq[Any](format.raw/*1.36*/("""
             
             <div class="modal-footer">
 			    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			    <input type="submit" class="btn btn-primary enviarForm" form="denunciarDica" value="Adicionar" />
+			    <button type="button" class="btn btn-default">Denunciar</button>
 			</div>	
 			
          </div> <!--3-->
     </div> <!--2-->
 </div><!--1-->
-
-
 
 """)))}))}
   }
@@ -130,11 +130,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 19 20:16:52 BRT 2015
+                  DATE: Thu Mar 19 22:43:36 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-19/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 5b00cfcfb9ae149969516ee8c2544e619503c38b
-                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2222->1171|2249->1189|2288->1190|2319->1194|2377->1234|2389->1238|2427->1239|2458->1244|2502->1272|2541->1273|2574->1279|2622->1300|2635->1304|2666->1314|2705->1327|2745->1346|2783->1357|2880->1427|2893->1431|2938->1454|3062->1551|3075->1555|3120->1578|3153->1584|3241->1642|3276->1647|3305->1649
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|78->50|79->51|79->51|81->53|81->53|81->53|81->53|82->54|82->54|82->54|83->55|85->57|86->58|87->59
+                  HASH: 149f9af22f16c3e5601e95534172de61942a15a8
+                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2222->1171|2249->1189|2288->1190|2319->1194|2377->1234|2389->1238|2427->1239|2458->1244|2502->1272|2541->1273|2574->1279|2622->1300|2635->1304|2666->1314|2705->1327|2745->1346|2783->1357|2879->1426|2892->1430|2937->1453|3051->1540|3064->1544|3109->1567|3142->1573|3275->1676|3310->1681|3342->1686
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|78->50|79->51|79->51|81->53|81->53|81->53|81->53|82->54|82->54|82->54|83->55|86->58|87->59|89->61
                   -- GENERATED --
               */
           

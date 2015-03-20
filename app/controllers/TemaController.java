@@ -29,6 +29,21 @@ public class TemaController extends Controller {
 	}
 	
 	@Transactional
+	public static Result concordar(String id) {
+
+		long idLong = Long.parseLong(id);
+		Dica dica = getDica(idLong);
+		try {
+			dica.concordar(Application.getUsuarioLogado());
+		} catch (Exception e) {
+			return ok(index.render(Application.getUsuarioLogado(), getTemas(), e.getMessage()));
+			
+		}
+		return ok();	
+	}
+	
+	
+	@Transactional
     public static Result addDicaSemDificuldade(){    	
     	
 		DynamicForm form = Form.form().bindFromRequest();
@@ -108,12 +123,12 @@ public class TemaController extends Controller {
     } 
 	
 
-	
-	
-	
-	
 	private static Tema getTema(Long id) {
 		return Application.getDAO().findByEntityId(Tema.class, id);
+	}
+	
+	private static Dica getDica(Long id) {
+		return Application.getDAO().findByEntityId(Dica.class, id);
 	}
 	
 	protected static List<Tema> getTemas() {
