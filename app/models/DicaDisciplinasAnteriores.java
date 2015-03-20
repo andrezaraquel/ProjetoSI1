@@ -9,7 +9,8 @@ public class DicaDisciplinasAnteriores extends Dica {
 	
 	public DicaDisciplinasAnteriores() {}
 	
-	public DicaDisciplinasAnteriores(String nomeDaDisciplina, String razao) {
+	public DicaDisciplinasAnteriores(Usuario user, String nomeDaDisciplina, String razao) {
+		super(user);
 		this.nomeDaDisciplina = nomeDaDisciplina;
 		this.razao = razao;
 	}

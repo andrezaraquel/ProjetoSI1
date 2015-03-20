@@ -10,7 +10,8 @@ public class DicaConselho extends Dica {
 	
 	public DicaConselho() {}
 	
-	public DicaConselho(String conselho) {
+	public DicaConselho(Usuario user, String conselho) {
+		super(user);
 		this.conselho = conselho;
 	}
 

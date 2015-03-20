@@ -73,20 +73,23 @@ Seq[Any](format.raw/*1.36*/("""
 <div class="panel col-md-12 ">
 	"""),_display_(/*46.3*/if(tema.isEmpty())/*46.21*/{_display_(Seq[Any](format.raw/*46.22*/("""
 		"""),format.raw/*47.3*/("""<p>Nenhuma dica para este tema.</p>	
-	""")))}/*48.3*/else/*48.7*/{_display_(Seq[Any](format.raw/*48.8*/("""
+	""")))}/*48.3*/else/*48.7*/{_display_(Seq[Any](format.raw/*48.8*/("""	
 		"""),_display_(/*49.4*/for(dica <- tema.getDicas()) yield /*49.32*/{_display_(Seq[Any](format.raw/*49.33*/("""
-				"""),format.raw/*50.5*/("""<div class="nomes" >"""),_display_(/*50.26*/user/*50.30*/.getNome()),format.raw/*50.40*/("""</div>
-				"""),_display_(/*51.6*/Html(dica.exibir())),format.raw/*51.25*/("""
+			"""),_display_(/*50.5*/if(!tema.removeDica(dica))/*50.31*/{_display_(Seq[Any](format.raw/*50.32*/("""			
+				"""),format.raw/*51.5*/("""<p>"""),_display_(/*51.9*/dica/*51.13*/.getNameUser()),format.raw/*51.27*/("""</p>
+				"""),_display_(/*52.6*/Html(dica.exibir())),format.raw/*52.25*/("""
 			
-				"""),format.raw/*53.5*/("""<a href="#">Concordar</a> <img src="/assets/images/curtir_icon.jpg">"""),_display_(/*53.74*/dica/*53.78*/.getQuantConcordancia()),format.raw/*53.101*/("""&nbsp;&nbsp;
-				<a href="#">Discordar</a> <img src="/assets/images/curtir_icon.jpg">"""),_display_(/*54.74*/dica/*54.78*/.getQuantDiscordancia()),format.raw/*54.101*/("""
-				"""),format.raw/*55.5*/("""<a href="#" data-toggle="modal" data-target="#denunciar">Denunciar </a>
-				<legend></legend>		
+				"""),format.raw/*54.5*/("""<a onClick="location.href='"""),_display_(/*54.33*/routes/*54.39*/.TemaController.concordar(dica.getIdString())),format.raw/*54.84*/("""'">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*54.146*/dica/*54.150*/.getQuantConcordancia()),format.raw/*54.173*/("""&nbsp;&nbsp;
+				<a onClick="location.href='"""),_display_(/*55.33*/routes/*55.39*/.TemaController.discordar(dica.getIdString())),format.raw/*55.84*/("""'">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>"""),_display_(/*55.145*/dica/*55.149*/.getQuantDiscordancia()),format.raw/*55.172*/("""&nbsp;&nbsp;
+				<a onClick="location.href='"""),_display_(/*56.33*/routes/*56.39*/.TemaController.denunciar(dica.getIdString())),format.raw/*56.84*/("""'"  data-toggle="modal" data-target="#denunciar">Denunciar </a>"""),_display_(/*56.148*/dica/*56.152*/.getQuantDenuncia()),format.raw/*56.171*/("""
+				"""),format.raw/*57.5*/("""<legend></legend>
+							
+			""")))}),format.raw/*59.5*/("""		
 
-		""")))}),format.raw/*58.4*/("""	
-	""")))}),format.raw/*59.3*/("""
+		""")))}),format.raw/*61.4*/("""	
+	""")))}),format.raw/*62.3*/("""
 	
-"""),format.raw/*61.1*/("""</div>
+"""),format.raw/*64.1*/("""</div>
 
 <!-- Modal  Denunciar dica -->
 
@@ -111,7 +114,8 @@ Seq[Any](format.raw/*1.36*/("""
             
             <div class="modal-footer">
 			    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			    <button type="button" class="btn btn-default">Denunciar</button>
+			    <button type="button" class="btn btn-default" >Denunciar</button>
+			    <!--  Preciso do id da dica, como pegar?  Para colocar dentro de denunciar, concordar e discordar-->
 			</div>	
 			
          </div> <!--3-->
@@ -130,11 +134,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 19 22:43:36 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-19/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 149f9af22f16c3e5601e95534172de61942a15a8
-                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2222->1171|2249->1189|2288->1190|2319->1194|2377->1234|2389->1238|2427->1239|2458->1244|2502->1272|2541->1273|2574->1279|2622->1300|2635->1304|2666->1314|2705->1327|2745->1346|2783->1357|2879->1426|2892->1430|2937->1453|3051->1540|3064->1544|3109->1567|3142->1573|3275->1676|3310->1681|3342->1686
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|78->50|79->51|79->51|81->53|81->53|81->53|81->53|82->54|82->54|82->54|83->55|86->58|87->59|89->61
+                  DATE: Fri Mar 20 17:07:02 BRT 2015
+                  SOURCE: /home/mariadch/projetosi1-20/ProjetoSI1/app/views/dicasTema.scala.html
+                  HASH: 6e123cfa33c5608ca9003618b4344b2028766915
+                  MATRIX: 740->1|862->35|890->38|921->61|959->62|987->65|1027->85|1054->86|1268->273|1281->277|1312->287|2177->1126|2204->1144|2243->1145|2273->1148|2330->1187|2342->1191|2380->1192|2411->1197|2455->1225|2494->1226|2525->1231|2560->1257|2599->1258|2634->1266|2664->1270|2677->1274|2712->1288|2748->1298|2788->1317|2824->1326|2879->1354|2894->1360|2960->1405|3050->1467|3064->1471|3109->1494|3181->1539|3196->1545|3262->1590|3351->1651|3365->1655|3410->1678|3482->1723|3497->1729|3563->1774|3655->1838|3669->1842|3710->1861|3742->1866|3802->1896|3839->1903|3873->1907|3903->1910
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|79->51|79->51|79->51|79->51|80->52|80->52|82->54|82->54|82->54|82->54|82->54|82->54|82->54|83->55|83->55|83->55|83->55|83->55|83->55|84->56|84->56|84->56|84->56|84->56|84->56|85->57|87->59|89->61|90->62|92->64
                   -- GENERATED --
               */
           

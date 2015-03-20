@@ -45,18 +45,23 @@
 <div class="panel col-md-12 ">
 	@if(tema.isEmpty()){
 		<p>Nenhuma dica para este tema.</p>	
-	}else{
+	}else{	
 		@for(dica <- tema.getDicas()){
-				<div class="nomes" >@user.getNome()</div>
+			@if(!tema.removeDica(dica)){			
+				<p>@dica.getNameUser()</p>
 				@Html(dica.exibir())
 			
-				<a href="@dica.concordar(user)">Concordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantConcordancia()&nbsp;&nbsp;
-				<a href="@dica.discordar(user)" >Discordar</a> <img src="/assets/images/curtir_icon.jpg">@dica.getQuantDiscordancia()
-				<a href="#" data-toggle="modal" data-target="#denunciar">Denunciar </a>
-				<legend></legend>		
+				<a onClick="location.href='@routes.TemaController.concordar(dica.getIdString())'">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancia()&nbsp;&nbsp;
+				<a onClick="location.href='@routes.TemaController.discordar(dica.getIdString())'">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>@dica.getQuantDiscordancia()&nbsp;&nbsp;
+				<a onClick="location.href='@routes.TemaController.denunciar(dica.getIdString())'"  data-toggle="modal" data-target="#denunciar">Denunciar </a>@dica.getQuantDenuncia()
+				<legend></legend>
+							
+			}		
 
 		}	
 	}
+	
+</div>
 
 <!-- Modal  Denunciar dica -->
 
@@ -81,13 +86,12 @@
             
             <div class="modal-footer">
 			    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			    <button type="button" class="btn btn-default">Denunciar</button>
+			    <button type="button" class="btn btn-default" >Denunciar</button>
+			    <!--  Preciso do id da dica, como pegar?  Para colocar dentro de denunciar, concordar e discordar-->
 			</div>	
 			
          </div> <!--3-->
     </div> <!--2-->
 </div><!--1-->
-
-</div>
 
 }

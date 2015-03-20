@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
 
-@Entity(name = "tema")
+@Entity
 public class Tema {
 
 	@Id
@@ -32,14 +32,8 @@ public class Tema {
 	@ElementCollection
 	private Map<Usuario, Integer> valoresAvaliacoesOrdenadas;
 	private String nome;
-	//	
-	//	private String texto;
-	//	
-	//	private int quantAvaliacao;
-	//	private boolean temaAvaliado;
-	//	private TipoDeDica tipo;
-	//	
-
+	
+	private final int MAX_DENUNCIAS = 3;
 
 	public Tema() {
 		this.dicas = new ArrayList<Dica>();
@@ -148,115 +142,11 @@ public class Tema {
 		Collections.sort(this.getDicas());
 	}
 	
-	
+	public boolean removeDica(Dica dica) {
+		if (dica.getQuantDenuncia() == MAX_DENUNCIAS) {
+			dicas.remove(dica);
+			return true;
+		} 
+		return false;
+	}	
 }
-
-
-
-
-/*-------------------------------------US 3 ------------------------------*/
-//	
-//	
-//
-//	public String getTexto() {
-//		return texto;
-//	}
-//
-//	public void setTexto(String texto) {
-//		this.texto = texto;
-//	}
-//
-//	public int getQuantAvaliacao() {
-//		return quantAvaliacao;
-//	}
-//
-//	public void setQuantAvaliacao(int quantAvaliacao) {
-//		this.quantAvaliacao = quantAvaliacao;
-//	}
-//
-//	public boolean isTemaAvaliado() {
-//		return temaAvaliado;
-//	}
-//
-//	public void setTemaAvaliado(boolean temaAvaliado) {
-//		this.temaAvaliado = temaAvaliado;
-//	}
-//
-//	public TipoDeDica getTipo() {
-//		return tipo;
-//	}
-//
-//	public void setTipo(TipoDeDica tipo) {
-//		this.tipo = tipo;
-//	}
-//
-//	public void setDicas(List<Dica> dicas) {
-//		this.dicas = dicas;
-//	}
-//
-//	public void avaliarTema(){
-//		if(!this.temaAvaliado){
-//			this.temaAvaliado =  true;
-//		} 		
-//	}
-//	
-//	public boolean isAvaliado(){
-//		return temaAvaliado;
-//	}
-//	
-//	public boolean isEmpty() {
-//		if (dicas.isEmpty()) {
-//			return true;
-//		}
-//		return false;
-//	}
-//
-//	
-//	/*---------------------------------US 2---------------------------------------------------*/
-//	
-//
-//	
-//	public void removerDica(Dica dica){
-//
-//	}
-//
-//	
-//	/*------------------------------------------------------------------------------------------*/
-
-//
-//	
-//	/*------------------------------US 7-------------------------------------------------------*/
-//	public void fecharDica(Dica dica){
-//		if (dica.getConteudoInapropriado() == 3){
-//			dicas.remove(dica);
-//		}
-//	if (dica.getQuantCondordancia() == 20 || dica.getQuantDisordancia() == 20){
-//		//desabilitar opção de concordar ou discordar com aquele tema
-//	}
-//	}
-//
-//	
-//	private void isDicaValida(String texto) throws Exception {
-//		if (texto == null) {
-//			throw new Exception("Dica não pode ser nula");
-//		}
-//		if (texto.trim().equals("")) {
-//			throw new Exception("Dica não pode ser vazia");
-//		}
-//		if (texto.length() > 500) {
-//			throw new Exception("Dica muito longa");
-//		}
-//		this.texto = texto;
-//	}
-//	
-//	public String getDica() {
-//		return texto;
-//	}
-//
-//	public void setDescricao(String dica) throws Exception {
-//		isDicaValida(texto);
-//	}
-//
-//	
-//	
-

@@ -9,7 +9,8 @@ public class DicaSemDificuldades extends Dica {
 	
 	public DicaSemDificuldades() {}
 	
-	public DicaSemDificuldades(String nomeDoAssunto) {	
+	public DicaSemDificuldades(Usuario user, String nomeDoAssunto) {	
+		super(user);
 		this.nomeDoAssunto = nomeDoAssunto;
 	}
 

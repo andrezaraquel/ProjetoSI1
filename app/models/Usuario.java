@@ -5,20 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "Usuario")
+@Entity
 public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	private long id;
 
 	private static final int MAXIMO_SENHA = 30;
 	private static final int MINIMO_SENHA = 6;
@@ -37,6 +29,14 @@ public class Usuario {
 		isSenhaValida(senha);
 	}
 
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 	public String getEmail() {
 		return email;
 	}

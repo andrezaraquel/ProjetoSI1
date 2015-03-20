@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-19/ProjetoSI1/conf/routes
-// @HASH:82a867bc328e23f81ec86427959f5ca6e1b65bb9
-// @DATE:Thu Mar 19 22:43:34 BRT 2015
+// @SOURCE:/home/mariadch/projetosi1-20/ProjetoSI1/conf/routes
+// @HASH:d1a7b03226e9be3f10fad6f27b6b59686fc72787
+// @DATE:Fri Mar 20 17:07:02 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,8 +15,10 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:29
-// @LINE:25
+// @LINE:32
+// @LINE:28
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -76,11 +78,11 @@ def autenticar(): Call = {
 }
                           
 
-// @LINE:29
+// @LINE:32
 class ReverseAssets {
 
 
-// @LINE:29
+// @LINE:32
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -90,7 +92,9 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:25
+// @LINE:28
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -113,10 +117,24 @@ def showTema($id:String): Call = {
 }
                         
 
-// @LINE:25
+// @LINE:27
+def discordar($id:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "discordar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
+}
+                        
+
+// @LINE:26
 def concordar($id:String): Call = {
    import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "concordar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
+   Call("GET", _prefix + { _defaultPrefix } + "concordar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
+}
+                        
+
+// @LINE:28
+def denunciar($id:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "denunciar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
 }
                         
 
@@ -161,8 +179,10 @@ def index(): Call = {
                   
 
 
-// @LINE:29
-// @LINE:25
+// @LINE:32
+// @LINE:28
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -243,11 +263,11 @@ def autenticar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:29
+// @LINE:32
 class ReverseAssets {
 
 
-// @LINE:29
+// @LINE:32
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -261,7 +281,9 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:25
+// @LINE:28
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -292,12 +314,34 @@ def showTema : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:25
+// @LINE:27
+def discordar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.discordar",
+   """
+      function($id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "discordar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
+      }
+   """
+)
+                        
+
+// @LINE:26
 def concordar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.concordar",
    """
       function($id) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "concordar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "concordar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
+      }
+   """
+)
+                        
+
+// @LINE:28
+def denunciar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.denunciar",
+   """
+      function($id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "denunciar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
       }
    """
 )
@@ -360,8 +404,10 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:29
-// @LINE:25
+// @LINE:32
+// @LINE:28
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -417,11 +463,11 @@ def autenticar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:29
+// @LINE:32
 class ReverseAssets {
 
 
-// @LINE:29
+// @LINE:32
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -430,7 +476,9 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:25
+// @LINE:28
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:22
@@ -451,9 +499,21 @@ def showTema($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 )
                       
 
-// @LINE:25
+// @LINE:27
+def discordar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.discordar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "discordar", Seq(classOf[String]), "GET", """""", _prefix + """discordar""")
+)
+                      
+
+// @LINE:26
 def concordar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.TemaController.concordar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "concordar", Seq(classOf[String]), "POST", """""", _prefix + """concordar""")
+   controllers.TemaController.concordar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "concordar", Seq(classOf[String]), "GET", """""", _prefix + """concordar""")
+)
+                      
+
+// @LINE:28
+def denunciar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.denunciar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "denunciar", Seq(classOf[String]), "GET", """""", _prefix + """denunciar""")
 )
                       
 

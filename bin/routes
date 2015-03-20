@@ -23,6 +23,10 @@ POST    /addDicaConselho           	controllers.TemaController.addDicaConselho()
 POST    /addDicaMaterialUtil       	controllers.TemaController.addDicaMaterialUtil()
 POST    /addDicaDiscAnteriores		controllers.TemaController.addDicaDiscAnteriores()
 
+GET		/concordar					controllers.TemaController.concordar($id)
+GET		/discordar					controllers.TemaController.discordar($id)
+GET		/denunciar					controllers.TemaController.denunciar($id)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

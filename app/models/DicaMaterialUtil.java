@@ -1,8 +1,5 @@
 package models;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import javax.persistence.Entity;
 
 @Entity
@@ -12,7 +9,8 @@ public class DicaMaterialUtil extends Dica {
 	
 	public DicaMaterialUtil() {}
 	
-	public DicaMaterialUtil(String url) {
+	public DicaMaterialUtil(Usuario user, String url) {
+		super(user);
 		this.urlDoMaterial = url;
 	}
 

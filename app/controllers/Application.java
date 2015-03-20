@@ -3,7 +3,7 @@ package controllers;
 import java.util.List;
 
 import models.Usuario;
-import models.dao.GenericDAO;
+import models.dao.*;
 import play.*;
 import play.db.jpa.Transactional;
 import play.mvc.*;
@@ -11,7 +11,7 @@ import views.html.*;
 
 public class Application extends Controller {
 
-	private static GenericDAO dao = new GenericDAO();
+	private static GenericDAO dao = new GenericDAOImpl();
 
 	@Transactional
 	public static Result index() {
