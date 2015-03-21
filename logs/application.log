@@ -1,15 +1,159 @@
-2015-03-20 23:25:18,644 - [INFO] - from play in pool-6-thread-6 
+2015-03-20 23:42:44,937 - [INFO] - from play in pool-6-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-20 23:25:29,780 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-20 23:43:23,141 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-03-20 23:25:29,996 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-20 23:43:23,321 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-20 23:25:32,031 - [INFO] - from application in play-internal-execution-context-1 
+2015-03-20 23:43:25,423 - [INFO] - from application in play-internal-execution-context-1 
 Aplicacao inicializada...
 
-2015-03-20 23:25:32,593 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-20 23:43:26,102 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-20 23:51:26,088 - [INFO] - from play in play-internal-execution-context-10 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-20 23:51:26,097 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-20 23:51:26,845 - [INFO] - from application in play-internal-execution-context-10 
+Aplicacao inicializada...
+
+2015-03-20 23:51:26,870 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2015-03-20 23:52:33,618 - [INFO] - from play in play-internal-execution-context-10 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-20 23:52:33,629 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-20 23:52:33,956 - [INFO] - from application in play-internal-execution-context-10 
+Aplicacao inicializada...
+
+2015-03-20 23:52:33,965 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2015-03-20 23:56:03,297 - [INFO] - from play in play-internal-execution-context-10 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-20 23:56:03,304 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-20 23:56:03,512 - [INFO] - from application in play-internal-execution-context-10 
+Aplicacao inicializada...
+
+2015-03-20 23:56:03,519 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2015-03-20 23:57:42,024 - [INFO] - from play in play-internal-execution-context-17 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-20 23:57:42,029 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-20 23:57:42,219 - [INFO] - from application in play-internal-execution-context-17 
+Aplicacao inicializada...
+
+2015-03-20 23:57:42,225 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2015-03-20 23:58:56,096 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-20 23:58:56,099 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-20 23:58:56,324 - [INFO] - from application in play-internal-execution-context-18 
+Aplicacao inicializada...
+
+2015-03-20 23:58:56,329 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-03-21 00:06:29,859 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:06:29,861 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:06:30,016 - [INFO] - from application in play-internal-execution-context-18 
+Aplicacao inicializada...
+
+2015-03-21 00:06:30,023 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-03-21 00:20:02,434 - [INFO] - from play in play-internal-execution-context-22 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:20:02,437 - [INFO] - from play in play-internal-execution-context-22 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:20:02,645 - [INFO] - from application in play-internal-execution-context-22 
+Aplicacao inicializada...
+
+2015-03-21 00:20:02,652 - [INFO] - from play in play-internal-execution-context-22 
+Application started (Dev)
+
+2015-03-21 00:23:12,129 - [INFO] - from play in play-internal-execution-context-24 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:23:12,132 - [INFO] - from play in play-internal-execution-context-24 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:23:12,262 - [INFO] - from application in play-internal-execution-context-24 
+Aplicacao inicializada...
+
+2015-03-21 00:23:12,266 - [INFO] - from play in play-internal-execution-context-24 
+Application started (Dev)
+
+2015-03-21 00:25:21,437 - [INFO] - from play in play-internal-execution-context-27 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:25:21,439 - [INFO] - from play in play-internal-execution-context-27 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:25:21,616 - [INFO] - from application in play-internal-execution-context-27 
+Aplicacao inicializada...
+
+2015-03-21 00:25:21,622 - [INFO] - from play in play-internal-execution-context-27 
+Application started (Dev)
+
+2015-03-21 00:26:16,827 - [INFO] - from play in play-internal-execution-context-27 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:26:16,829 - [INFO] - from play in play-internal-execution-context-27 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:26:16,946 - [INFO] - from application in play-internal-execution-context-27 
+Aplicacao inicializada...
+
+2015-03-21 00:26:16,949 - [INFO] - from play in play-internal-execution-context-27 
+Application started (Dev)
+
+2015-03-21 00:29:40,828 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:29:40,830 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:29:40,964 - [INFO] - from application in play-internal-execution-context-32 
+Aplicacao inicializada...
+
+2015-03-21 00:29:40,968 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-03-21 00:57:49,681 - [INFO] - from play in play-internal-execution-context-41 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-21 00:57:49,684 - [INFO] - from play in play-internal-execution-context-41 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-21 00:57:49,822 - [INFO] - from application in play-internal-execution-context-41 
+Aplicacao inicializada...
+
+2015-03-21 00:57:49,825 - [INFO] - from play in play-internal-execution-context-41 
 Application started (Dev)
 

@@ -50,9 +50,9 @@
 			<p>@dica.getNameUser()</p>
 			@Html(dica.exibir())
 		
-			<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
-			<a onClick="location.href='@routes.TemaController.discordar(dica.getIdDicaString())'">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
-			<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())'"  data-toggle="modal" data-target="#denunciar">Denunciar </a>@dica.getQuantDenuncias()
+			<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'"  class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
+			<a onClick="location.href='@routes.TemaController.discordar(dica.getIdDicaString())'" class="acaoRota linkDiscordar">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
+			<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())'" class="acaoRota linkDenunciar" data-toggle="modal" data-target="#denunciar">Denunciar </a>@dica.getQuantDenuncias()
 			<legend></legend>
 		}	
 	}
@@ -69,7 +69,7 @@
                 <h4 class="modal-title">Informe-nos o que estÃ¡ acontecendo</h4>				
             </div><!--4-->
             
-        	<p class="text-warning"><small>Por que vocÊ não quer ver essa informação? </small></p>
+        	<p class="text-warning"><small>Por que você não quer ver essa informação? </small></p>
             
             <div class="modal-body"> <!--5-->
             	<form class="form-horizontal" method="POST" role="form" id="addDicaSemDificuldade" action="/addDicaSemDificuldade">

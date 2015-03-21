@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/conf/routes
 // @HASH:fa059c67612fb864fa204730b43b283398e42f6a
-// @DATE:Fri Mar 20 23:24:53 BRT 2015
+// @DATE:Fri Mar 20 23:58:49 BRT 2015
 
 
 import play.core._

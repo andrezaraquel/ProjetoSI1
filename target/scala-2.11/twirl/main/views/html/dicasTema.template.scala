@@ -78,9 +78,9 @@ Seq[Any](format.raw/*1.36*/("""
 			"""),format.raw/*50.4*/("""<p>"""),_display_(/*50.8*/dica/*50.12*/.getNameUser()),format.raw/*50.26*/("""</p>
 			"""),_display_(/*51.5*/Html(dica.exibir())),format.raw/*51.24*/("""
 		
-			"""),format.raw/*53.4*/("""<a onClick="location.href='"""),_display_(/*53.32*/routes/*53.38*/.TemaController.concordar(dica.getIdDicaString())),format.raw/*53.87*/("""'">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*53.149*/dica/*53.153*/.getQuantConcordancias()),format.raw/*53.177*/("""&nbsp;&nbsp;
-			<a onClick="location.href='"""),_display_(/*54.32*/routes/*54.38*/.TemaController.discordar(dica.getIdDicaString())),format.raw/*54.87*/("""'">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>"""),_display_(/*54.148*/dica/*54.152*/.getQuantDiscordancias()),format.raw/*54.176*/("""&nbsp;&nbsp;
-			<a onClick="location.href='"""),_display_(/*55.32*/routes/*55.38*/.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())),format.raw/*55.106*/("""'"  data-toggle="modal" data-target="#denunciar">Denunciar </a>"""),_display_(/*55.170*/dica/*55.174*/.getQuantDenuncias()),format.raw/*55.194*/("""
+			"""),format.raw/*53.4*/("""<a onClick="location.href='"""),_display_(/*53.32*/routes/*53.38*/.TemaController.concordar(dica.getIdDicaString())),format.raw/*53.87*/("""'"  class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*53.181*/dica/*53.185*/.getQuantConcordancias()),format.raw/*53.209*/("""&nbsp;&nbsp;
+			<a onClick="location.href='"""),_display_(/*54.32*/routes/*54.38*/.TemaController.discordar(dica.getIdDicaString())),format.raw/*54.87*/("""'" class="acaoRota linkDiscordar">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>"""),_display_(/*54.179*/dica/*54.183*/.getQuantDiscordancias()),format.raw/*54.207*/("""&nbsp;&nbsp;
+			<a onClick="location.href='"""),_display_(/*55.32*/routes/*55.38*/.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())),format.raw/*55.106*/("""'" class="acaoRota linkDenunciar" data-toggle="modal" data-target="#denunciar">Denunciar </a>"""),_display_(/*55.200*/dica/*55.204*/.getQuantDenuncias()),format.raw/*55.224*/("""
 			"""),format.raw/*56.4*/("""<legend></legend>
 		""")))}),format.raw/*57.4*/("""	
 	""")))}),format.raw/*58.3*/("""
@@ -97,7 +97,7 @@ Seq[Any](format.raw/*1.36*/("""
                 <h4 class="modal-title">Informe-nos o que estÃ¡ acontecendo</h4>				
             </div><!--4-->
             
-        	<p class="text-warning"><small>Por que vocÊ não quer ver essa informação? </small></p>
+        	<p class="text-warning"><small>Por que você não quer ver essa informação? </small></p>
             
             <div class="modal-body"> <!--5-->
             	<form class="form-horizontal" method="POST" role="form" id="addDicaSemDificuldade" action="/addDicaSemDificuldade">
@@ -130,10 +130,10 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 20 23:24:55 BRT 2015
+                  DATE: Sat Mar 21 00:23:10 BRT 2015
                   SOURCE: C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 2b85321e1fe4b07290a1a597e56e6e3368a8ca91
-                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2222->1171|2249->1189|2288->1190|2319->1194|2377->1234|2389->1238|2427->1239|2459->1245|2503->1273|2542->1274|2574->1279|2604->1283|2617->1287|2652->1301|2688->1311|2728->1330|2764->1339|2819->1367|2834->1373|2904->1422|2994->1484|3008->1488|3054->1512|3126->1557|3141->1563|3211->1612|3300->1673|3314->1677|3360->1701|3432->1746|3447->1752|3537->1820|3629->1884|3643->1888|3685->1908|3717->1913|3769->1935|3804->1940|3836->1945
+                  HASH: 50c9ce1b46e0cf238275c915dbe3ca6ca76d4632
+                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2222->1171|2249->1189|2288->1190|2319->1194|2377->1234|2389->1238|2427->1239|2459->1245|2503->1273|2542->1274|2574->1279|2604->1283|2617->1287|2652->1301|2688->1311|2728->1330|2764->1339|2819->1367|2834->1373|2904->1422|3026->1516|3040->1520|3086->1544|3158->1589|3173->1595|3243->1644|3363->1736|3377->1740|3423->1764|3495->1809|3510->1815|3600->1883|3722->1977|3736->1981|3778->2001|3810->2006|3862->2028|3897->2033|3929->2038
                   LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|78->50|79->51|79->51|81->53|81->53|81->53|81->53|81->53|81->53|81->53|82->54|82->54|82->54|82->54|82->54|82->54|83->55|83->55|83->55|83->55|83->55|83->55|84->56|85->57|86->58|88->60
                   -- GENERATED --
               */

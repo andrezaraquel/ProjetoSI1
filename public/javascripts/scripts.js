@@ -1,7 +1,6 @@
 $(function() {
 	povoarDivTema();
 	alternaDivModal();
-	enviaFormAjax();
 });
 
 function povoarDivTema() {	
@@ -22,29 +21,23 @@ function povoarDivTema() {
 			success:function(data){
 				document.getElementById("campoTemas").innerHTML = data;
 				$(".idDoTema").attr("value", idTema);
+				carregaRota();
 			}
 		});			
 	});	
-}
-
-function enviaFormAjax() {
-	$(".enviarForm").click(function() {
-		var rota = $(this).attr("form");
-		
-		$.ajax({
-			type:'GET',
-			url:'/'+rota,
-			success:function(data){
-				document.getElementById("campoTemas").innerHTML = data;
-				$(".idDoTema").attr("value", idTema);
-			}
-		});
-	});
 }
 
 function alternaDivModal() {
     $('#tabDicas a').click(function (e) {
         e.preventDefault();
         $(this).tab('show');
-    })
+    });
 }
+
+function carregaRota() {
+	$(".acaoRota").click(function(e) {
+		e.preventDefault();			
+	});
+}
+
+
