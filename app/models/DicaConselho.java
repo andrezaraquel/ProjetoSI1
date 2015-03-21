@@ -36,18 +36,17 @@ public class DicaConselho extends Dica {
 //		this.conselho = conselho;
 //	}
 
-	@Override
-	public int compareTo(Dica o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	
 	@Override
 	public String exibir() {
 		String label = "<span class=\"label label-info\">" + "Conselho" + "</span>";
 		String textConselho = "<h5>" + conselho + "</h5>";
 		return textConselho + label + "<br>";
+	}
+
+	public int compareTo(Dica arg0) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

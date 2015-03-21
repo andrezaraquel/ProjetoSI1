@@ -37,7 +37,8 @@ public class Global extends GlobalSettings{
 	            	
 					usuarios.add(new Usuario("Andreza Raquel", "andrezaraquel@gmail.com", "123456"));
 					usuarios.add(new Usuario("Daniela Costa", "danielacosta@gmail.com", "123456"));
-			
+					usuarios.add(new Usuario("Maria Helena", "maria@gmail.com", "123456"));
+
 	            	
 	            	Iterator<Tema> it = temas.iterator();
 	            	while(it.hasNext()){

@@ -1,6 +1,6 @@
-// @SOURCE:/home/mariadch/projetosi1-20/ProjetoSI1/conf/routes
-// @HASH:d1a7b03226e9be3f10fad6f27b6b59686fc72787
-// @DATE:Fri Mar 20 17:07:02 BRT 2015
+// @SOURCE:C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/conf/routes
+// @HASH:fa059c67612fb864fa204730b43b283398e42f6a
+// @DATE:Fri Mar 20 23:24:53 BRT 2015
 
 
 import play.core._
@@ -126,8 +126,8 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "disc
 // @LINE:28
 private[this] lazy val controllers_TemaController_denunciar13_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("denunciar"))))
 private[this] lazy val controllers_TemaController_denunciar13_invoker = createInvoker(
-controllers.TemaController.denunciar(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "denunciar", Seq(classOf[String]),"GET", """""", Routes.prefix + """denunciar"""))
+controllers.TemaController.denunciar(fakeValue[String], fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "denunciar", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """denunciar"""))
         
 
 // @LINE:32
@@ -136,7 +136,7 @@ private[this] lazy val controllers_Assets_at14_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.AutenticacaoController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.showLogin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.showCadastro()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.cadastrar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tema""","""controllers.TemaController.showTema($id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaSemDificuldade""","""controllers.TemaController.addDicaSemDificuldade()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaConselho""","""controllers.TemaController.addDicaConselho()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaMaterialUtil""","""controllers.TemaController.addDicaMaterialUtil()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaDiscAnteriores""","""controllers.TemaController.addDicaDiscAnteriores()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """concordar""","""controllers.TemaController.concordar($id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """discordar""","""controllers.TemaController.discordar($id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """denunciar""","""controllers.TemaController.denunciar($id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.AutenticacaoController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.showLogin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.AutenticacaoController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.showCadastro()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastro""","""controllers.AutenticacaoController.cadastrar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tema""","""controllers.TemaController.showTema($id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaSemDificuldade""","""controllers.TemaController.addDicaSemDificuldade()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaConselho""","""controllers.TemaController.addDicaConselho()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaMaterialUtil""","""controllers.TemaController.addDicaMaterialUtil()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addDicaDiscAnteriores""","""controllers.TemaController.addDicaDiscAnteriores()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """concordar""","""controllers.TemaController.concordar($id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """discordar""","""controllers.TemaController.discordar($id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """denunciar""","""controllers.TemaController.denunciar($idTema:String, $idDica:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -250,8 +250,8 @@ case controllers_TemaController_discordar12_route(params) => {
 
 // @LINE:28
 case controllers_TemaController_denunciar13_route(params) => {
-   call(params.fromQuery[String]("$id", None)) { ($id) =>
-        controllers_TemaController_denunciar13_invoker.call(controllers.TemaController.denunciar($id))
+   call(params.fromQuery[String]("$idTema", None), params.fromQuery[String]("$idDica", None)) { ($idTema, $idDica) =>
+        controllers_TemaController_denunciar13_invoker.call(controllers.TemaController.denunciar($idTema, $idDica))
    }
 }
         

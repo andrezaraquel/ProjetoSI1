@@ -75,21 +75,17 @@ Seq[Any](format.raw/*1.36*/("""
 		"""),format.raw/*47.3*/("""<p>Nenhuma dica para este tema.</p>	
 	""")))}/*48.3*/else/*48.7*/{_display_(Seq[Any](format.raw/*48.8*/("""	
 		"""),_display_(/*49.4*/for(dica <- tema.getDicas()) yield /*49.32*/{_display_(Seq[Any](format.raw/*49.33*/("""
-			"""),_display_(/*50.5*/if(!tema.removeDica(dica))/*50.31*/{_display_(Seq[Any](format.raw/*50.32*/("""			
-				"""),format.raw/*51.5*/("""<p>"""),_display_(/*51.9*/dica/*51.13*/.getNameUser()),format.raw/*51.27*/("""</p>
-				"""),_display_(/*52.6*/Html(dica.exibir())),format.raw/*52.25*/("""
-			
-				"""),format.raw/*54.5*/("""<a onClick="location.href='"""),_display_(/*54.33*/routes/*54.39*/.TemaController.concordar(dica.getIdString())),format.raw/*54.84*/("""'">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*54.146*/dica/*54.150*/.getQuantConcordancia()),format.raw/*54.173*/("""&nbsp;&nbsp;
-				<a onClick="location.href='"""),_display_(/*55.33*/routes/*55.39*/.TemaController.discordar(dica.getIdString())),format.raw/*55.84*/("""'">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>"""),_display_(/*55.145*/dica/*55.149*/.getQuantDiscordancia()),format.raw/*55.172*/("""&nbsp;&nbsp;
-				<a onClick="location.href='"""),_display_(/*56.33*/routes/*56.39*/.TemaController.denunciar(dica.getIdString())),format.raw/*56.84*/("""'"  data-toggle="modal" data-target="#denunciar">Denunciar </a>"""),_display_(/*56.148*/dica/*56.152*/.getQuantDenuncia()),format.raw/*56.171*/("""
-				"""),format.raw/*57.5*/("""<legend></legend>
-							
-			""")))}),format.raw/*59.5*/("""		
-
-		""")))}),format.raw/*61.4*/("""	
-	""")))}),format.raw/*62.3*/("""
+			"""),format.raw/*50.4*/("""<p>"""),_display_(/*50.8*/dica/*50.12*/.getNameUser()),format.raw/*50.26*/("""</p>
+			"""),_display_(/*51.5*/Html(dica.exibir())),format.raw/*51.24*/("""
+		
+			"""),format.raw/*53.4*/("""<a onClick="location.href='"""),_display_(/*53.32*/routes/*53.38*/.TemaController.concordar(dica.getIdDicaString())),format.raw/*53.87*/("""'">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*53.149*/dica/*53.153*/.getQuantConcordancias()),format.raw/*53.177*/("""&nbsp;&nbsp;
+			<a onClick="location.href='"""),_display_(/*54.32*/routes/*54.38*/.TemaController.discordar(dica.getIdDicaString())),format.raw/*54.87*/("""'">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>"""),_display_(/*54.148*/dica/*54.152*/.getQuantDiscordancias()),format.raw/*54.176*/("""&nbsp;&nbsp;
+			<a onClick="location.href='"""),_display_(/*55.32*/routes/*55.38*/.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())),format.raw/*55.106*/("""'"  data-toggle="modal" data-target="#denunciar">Denunciar </a>"""),_display_(/*55.170*/dica/*55.174*/.getQuantDenuncias()),format.raw/*55.194*/("""
+			"""),format.raw/*56.4*/("""<legend></legend>
+		""")))}),format.raw/*57.4*/("""	
+	""")))}),format.raw/*58.3*/("""
 	
-"""),format.raw/*64.1*/("""</div>
+"""),format.raw/*60.1*/("""</div>
 
 <!-- Modal  Denunciar dica -->
 
@@ -98,10 +94,10 @@ Seq[Any](format.raw/*1.36*/("""
         <div class="modal-content"><!--3-->
             <div class="modal-header"><!--4-->
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Informe-nos o que está acontecendo</h4>				
+                <h4 class="modal-title">Informe-nos o que estÃ¡ acontecendo</h4>				
             </div><!--4-->
             
-        	<p class="text-warning"><small>Por que você não quer ver essa informação? </small></p>
+        	<p class="text-warning"><small>Por que vocÊ não quer ver essa informação? </small></p>
             
             <div class="modal-body"> <!--5-->
             	<form class="form-horizontal" method="POST" role="form" id="addDicaSemDificuldade" action="/addDicaSemDificuldade">
@@ -134,11 +130,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 20 17:07:02 BRT 2015
-                  SOURCE: /home/mariadch/projetosi1-20/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 6e123cfa33c5608ca9003618b4344b2028766915
-                  MATRIX: 740->1|862->35|890->38|921->61|959->62|987->65|1027->85|1054->86|1268->273|1281->277|1312->287|2177->1126|2204->1144|2243->1145|2273->1148|2330->1187|2342->1191|2380->1192|2411->1197|2455->1225|2494->1226|2525->1231|2560->1257|2599->1258|2634->1266|2664->1270|2677->1274|2712->1288|2748->1298|2788->1317|2824->1326|2879->1354|2894->1360|2960->1405|3050->1467|3064->1471|3109->1494|3181->1539|3196->1545|3262->1590|3351->1651|3365->1655|3410->1678|3482->1723|3497->1729|3563->1774|3655->1838|3669->1842|3710->1861|3742->1866|3802->1896|3839->1903|3873->1907|3903->1910
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|79->51|79->51|79->51|79->51|80->52|80->52|82->54|82->54|82->54|82->54|82->54|82->54|82->54|83->55|83->55|83->55|83->55|83->55|83->55|84->56|84->56|84->56|84->56|84->56|84->56|85->57|87->59|89->61|90->62|92->64
+                  DATE: Fri Mar 20 23:24:55 BRT 2015
+                  SOURCE: C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/app/views/dicasTema.scala.html
+                  HASH: 2b85321e1fe4b07290a1a597e56e6e3368a8ca91
+                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2222->1171|2249->1189|2288->1190|2319->1194|2377->1234|2389->1238|2427->1239|2459->1245|2503->1273|2542->1274|2574->1279|2604->1283|2617->1287|2652->1301|2688->1311|2728->1330|2764->1339|2819->1367|2834->1373|2904->1422|2994->1484|3008->1488|3054->1512|3126->1557|3141->1563|3211->1612|3300->1673|3314->1677|3360->1701|3432->1746|3447->1752|3537->1820|3629->1884|3643->1888|3685->1908|3717->1913|3769->1935|3804->1940|3836->1945
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|74->46|74->46|74->46|75->47|76->48|76->48|76->48|77->49|77->49|77->49|78->50|78->50|78->50|78->50|79->51|79->51|81->53|81->53|81->53|81->53|81->53|81->53|81->53|82->54|82->54|82->54|82->54|82->54|82->54|83->55|83->55|83->55|83->55|83->55|83->55|84->56|85->57|86->58|88->60
                   -- GENERATED --
               */
           

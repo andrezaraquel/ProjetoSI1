@@ -22,7 +22,7 @@ public class DicaSemDificuldades extends Dica {
 		this.nomeDoAssunto = nomeDoAssunto;
 	}
 
-	@Override
+	
 	public int compareTo(Dica o) {
 		// TODO Auto-generated method stub
 		return 0;

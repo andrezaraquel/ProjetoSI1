@@ -58,17 +58,26 @@ public class TemaController extends Controller {
 
 		}
 		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
-	
 	}
 	
 	
 	@Transactional
-	public static Result denunciar(String id) {
-
-		long idLong = Long.parseLong(id);
-		Dica dica = getDica(idLong);
+	public static Result denunciar(String idTema, String idDica) {
+		
+		long idTemaLong = Long.parseLong(idTema);
+		long idDicaLong = Long.parseLong(idDica);
+		
+		Tema tema = getTema(idTemaLong);
+		Dica dica = getDica(idDicaLong);
+		
 		try {
 			dica.denunciar( Application.getUsuarioLogado());
+			if(dica.isDicaInapropriada()) {
+				tema.removerDica(dica);
+				Application.salvaObjeto(tema);	
+				Application.salvaObjeto(Application.getUsuarioLogado());
+				
+			}
 		} catch (Exception e) {
 			return ok(index.render(Application.getUsuarioLogado(), getTemas(), e.getMessage()));
 

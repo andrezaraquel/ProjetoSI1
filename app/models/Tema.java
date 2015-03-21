@@ -9,11 +9,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
@@ -25,7 +28,8 @@ public class Tema {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 
-	@OneToMany
+	@ManyToMany
+	@JoinTable(name="listaDeDicas")
 	private List<Dica> dicas;
 	@ElementCollection
 	private Map<Usuario,Integer> valoresAvaliacoes;
@@ -142,11 +146,7 @@ public class Tema {
 		Collections.sort(this.getDicas());
 	}
 	
-	public boolean removeDica(Dica dica) {
-		if (dica.getQuantDenuncia() == MAX_DENUNCIAS) {
-			dicas.remove(dica);
-			return true;
-		} 
-		return false;
+	public void removerDica(Dica dica) {
+		dicas.remove(dica);
 	}	
 }

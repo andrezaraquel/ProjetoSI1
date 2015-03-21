@@ -1,6 +1,6 @@
-// @SOURCE:/home/mariadch/projetosi1-20/ProjetoSI1/conf/routes
-// @HASH:d1a7b03226e9be3f10fad6f27b6b59686fc72787
-// @DATE:Fri Mar 20 17:07:02 BRT 2015
+// @SOURCE:C:/Users/Andreza/Desktop/projetoSI/ProjetoSI1/conf/routes
+// @HASH:fa059c67612fb864fa204730b43b283398e42f6a
+// @DATE:Fri Mar 20 23:24:53 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -131,13 +131,6 @@ def concordar($id:String): Call = {
 }
                         
 
-// @LINE:28
-def denunciar($id:String): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "denunciar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
-}
-                        
-
 // @LINE:22
 def addDicaConselho(): Call = {
    import ReverseRouteContext.empty
@@ -156,6 +149,13 @@ def addDicaMaterialUtil(): Call = {
 def addDicaSemDificuldade(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "addDicaSemDificuldade")
+}
+                        
+
+// @LINE:28
+def denunciar($idTema:String, $idDica:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "denunciar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$idTema", $idTema)), Some(implicitly[QueryStringBindable[String]].unbind("$idDica", $idDica)))))
 }
                         
 
@@ -336,17 +336,6 @@ def concordar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:28
-def denunciar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.TemaController.denunciar",
-   """
-      function($id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "denunciar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
-      }
-   """
-)
-                        
-
 // @LINE:22
 def addDicaConselho : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.addDicaConselho",
@@ -375,6 +364,17 @@ def addDicaSemDificuldade : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addDicaSemDificuldade"})
+      }
+   """
+)
+                        
+
+// @LINE:28
+def denunciar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.denunciar",
+   """
+      function($idTema,$idDica) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "denunciar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$idTema", $idTema), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$idDica", $idDica)])})
       }
    """
 )
@@ -511,12 +511,6 @@ def concordar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handler
 )
                       
 
-// @LINE:28
-def denunciar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.TemaController.denunciar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "denunciar", Seq(classOf[String]), "GET", """""", _prefix + """denunciar""")
-)
-                      
-
 // @LINE:22
 def addDicaConselho(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.addDicaConselho(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaConselho", Seq(), "POST", """""", _prefix + """addDicaConselho""")
@@ -532,6 +526,12 @@ def addDicaMaterialUtil(): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handler
 // @LINE:21
 def addDicaSemDificuldade(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.addDicaSemDificuldade(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaSemDificuldade", Seq(), "POST", """Dicas""", _prefix + """addDicaSemDificuldade""")
+)
+                      
+
+// @LINE:28
+def denunciar($idTema:String, $idDica:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.denunciar($idTema, $idDica), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "denunciar", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """denunciar""")
 )
                       
 

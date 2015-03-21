@@ -22,7 +22,7 @@ public abstract class Dica implements Comparable<Dica> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private long id;
+	private long idDica;
 	
 	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable(name="listaConcordancia")
@@ -32,12 +32,15 @@ public abstract class Dica implements Comparable<Dica> {
 	@JoinTable(name="listaDiscordancia")
 	private List<Usuario> listaDiscordancia;
 	
-	@OneToMany(cascade=CascadeType.ALL)
+	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable(name="listaDenuncias")
 	private List<Usuario> listaDenuncias;
 	
 	private long idUser;
 	private String nameUser;
+	
+	private static final int MAX_DENUNCIAS = 3;
+	
 	
 	public Dica() {
 		this.listaConcordancia = new ArrayList<Usuario>();
@@ -81,19 +84,29 @@ public abstract class Dica implements Comparable<Dica> {
 		return nameUser;
 	}
 	
-	public void concordar(Usuario user) {		
-		if (!listaConcordancia.contains(user) && !listaDiscordancia.contains(user)) {			
-			this.listaConcordancia.add(user);
+	public void concordar(Usuario user) {	
+		if(listaDiscordancia.contains(user)) {
+			listaDiscordancia.remove(user);
+			listaConcordancia.add(user);
+			
 		} else if(listaConcordancia.contains(user)){
 			listaConcordancia.remove(user);
-		}
+			
+		} else {			
+			this.listaConcordancia.add(user);
+		} 
 	}
 	
 	public void discordar(Usuario user) {
-		if (!listaConcordancia.contains(user) && !listaDiscordancia.contains(user)) {
-			this.listaDiscordancia.add(user);
-		}  else if(listaDiscordancia.contains(user)) {
-			listaDiscordancia.remove(user);
+		if(listaConcordancia.contains(user)) {
+			listaConcordancia.remove(user);
+			listaDiscordancia.add(user);
+			
+		} else if(listaDiscordancia.contains(user)) {
+			this.listaDiscordancia.remove(user);
+			
+		}  else {
+			listaDiscordancia.add(user);
 		}		
 	}	
 	
@@ -103,31 +116,31 @@ public abstract class Dica implements Comparable<Dica> {
 		}
 	}
 
-	public long getId() {
-		return id;
+	public long getIdDica() {
+		return idDica;
 	}
 
-	public String getIdString() {
-		return "" + id;
+	public String getIdDicaString() {
+		return "" + idDica;
 	}
 	
 	public long getIdUser(){
 		return idUser;
 	}
 	
-	public void setId(long id) {
-		this.id = id;
+	public void setIdDica(long id) {
+		this.idDica = id;
 	}
 	
-	public int getQuantDenuncia() {
+	public int getQuantDenuncias() {
 		return listaDenuncias.size();
 	}
 	
-	public int getQuantConcordancia() {
+	public int getQuantConcordancias() {
 		return listaConcordancia.size(); 
 	}
 
-	public int getQuantDiscordancia() {
+	public int getQuantDiscordancias() {
 		return listaDiscordancia.size();
 	}
 
@@ -142,7 +155,11 @@ public abstract class Dica implements Comparable<Dica> {
 	public void comentar(Usuario user, String comentario) {
 		//comentar uma dica
 	}
-		
+	
+	public boolean isDicaInapropriada() {
+		return this.getQuantDenuncias() == MAX_DENUNCIAS;
+	}
+	
 	public abstract String exibir();
 	
 }

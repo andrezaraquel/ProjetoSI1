@@ -24,12 +24,9 @@ public class DicaTest extends AbstractTest {
 		Dica dicaConselho = new DicaConselho(user, "Conselho");
 		dao.persist(user);
 		dao.persist(dicaConselho);
-		assertThat(dicaConselho.getListaConcordancia().size() == 0);
-		System.out.println("**************************");
-		System.out.println(dicaConselho.getListaConcordancia());
-		System.out.println(dicaConselho.getRelacaoDenuncia());
-		dicaConselho.concordar(user);	
 		
+		assertThat(dicaConselho.getListaConcordancia().size() == 0);
+		dicaConselho.concordar(user);			
 		assertThat(dicaConselho.getListaConcordancia().size() == 1);
 		
 		
