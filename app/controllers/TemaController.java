@@ -47,12 +47,17 @@ public class TemaController extends Controller {
 	}	
 	
 	@Transactional
-	public static Result discordar(String id) {
+	public static Result discordar() {
+		DynamicForm form = Form.form().bindFromRequest();
+		
+		String frase = form.field("frase").value();
+		String idDica = form.field("idDica").value();	
 
-		long idLong = Long.parseLong(id);
+		long idLong = Long.parseLong(idDica);
 		Dica dica = getDica(idLong);
+	
 		try {
-			dica.discordar(Application.getUsuarioLogado());
+			dica.discordar(Application.getUsuarioLogado(), frase);
 		} catch (Exception e) {
 			return ok(index.render(Application.getUsuarioLogado(), getTemas(), e.getMessage()));
 

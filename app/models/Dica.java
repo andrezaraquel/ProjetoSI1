@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +10,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Entity
@@ -30,49 +33,49 @@ public abstract class Dica implements Comparable<Dica> {
 	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable(name="listaDenuncias")
 	private List<Usuario> listaDenuncias;
+	
+	@ElementCollection
+	private Map<Usuario, String> frasesDicaDiscordada;
 
-	private long idUser;
 	private String nameUser;
-
 	private static final int MAX_DENUNCIAS = 3;
+	private final int MAX_CONCORDANDICAS_OU_DISCORDANCIAS = 20;
 
 
 	public Dica() {
 		this.listaConcordancia = new ArrayList<Usuario>();
 		this.listaDiscordancia = new ArrayList<Usuario>();	
 		this.listaDenuncias = new ArrayList<Usuario>();
+		this.frasesDicaDiscordada = new HashMap<Usuario, String>();
 	}	
 
 	public Dica(Usuario user){
 		this();
 		this.nameUser = new String(user.getNome());
 
+
 	}
 
+	public boolean isDicaFechada(){
+		if (getQuantConcordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS ||
+			getQuantDiscordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS){
+				return true;
+		}
+		return false;
+	}
+	
+	
 	public void concordar(Usuario user) {	
-		if(listaDiscordancia.contains(user)) {
-			listaDiscordancia.remove(user);
+		if(!listaDiscordancia.contains(user) && !listaConcordancia.contains(user)) {
 			listaConcordancia.add(user);
-
-		} else if(listaConcordancia.contains(user)){
-			listaConcordancia.remove(user);
-
-		} else {			
-			this.listaConcordancia.add(user);
-		} 
+		}
 	}
 
-	public void discordar(Usuario user) {
-		if(listaConcordancia.contains(user)) {
-			listaConcordancia.remove(user);
+	public void discordar(Usuario user, String frase) {
+		if(!listaConcordancia.contains(user) && !listaDiscordancia.contains(user)){ 
 			listaDiscordancia.add(user);
-
-		} else if(listaDiscordancia.contains(user)) {
-			this.listaDiscordancia.remove(user);
-
-		}  else {
-			listaDiscordancia.add(user);
-		}		
+			adicionarFrase(user, frase);
+		}
 	}	
 
 	public void denunciar(Usuario user){
@@ -81,7 +84,10 @@ public abstract class Dica implements Comparable<Dica> {
 		}
 	}
 
-
+	public void adicionarFrase(Usuario user, String frase) {
+		frasesDicaDiscordada.put(user, frase);
+	}
+	
 	public double getIndiceConcordancia(){
 		if (getQuantConcordancias() == 0){
 			return 0;
@@ -125,10 +131,6 @@ public abstract class Dica implements Comparable<Dica> {
 		return "" + idDica;
 	}
 
-	public long getIdUser(){
-		return idUser;
-	}
-
 	public void setIdDica(long id) {
 		this.idDica = id;
 	}
@@ -144,7 +146,10 @@ public abstract class Dica implements Comparable<Dica> {
 	public int getQuantDiscordancias() {
 		return listaDiscordancia.size();
 	}
-
+	
+	public Map<Usuario, String> getFrasesDicaDiscordada(){
+		return frasesDicaDiscordada;
+	}
 	public List<Usuario> getListaConcordancia() {
 		return listaConcordancia;
 	}
@@ -157,15 +162,16 @@ public abstract class Dica implements Comparable<Dica> {
 		return listaDenuncias;
 	}
 
-	public void comentar(Usuario user, String comentario) {
-		//comentar uma dica
-	}
-
 	public boolean isDicaInapropriada() {
 		return this.getQuantDenuncias() == MAX_DENUNCIAS;
 	}
 
 	public abstract String exibir();
+	
+	public String exibirFraseDeDiscordancia(Usuario user){
+		return frasesDicaDiscordada.get(user);
+		
+	}
 	
 	@Override
 	public int compareTo(Dica dica) {

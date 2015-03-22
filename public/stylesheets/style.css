@@ -30,7 +30,12 @@ textarea {
 	margin-top: 10%;
 }
 
-.nomes {
+.nomeUsuarios {
 	text-color: black;
 	font-weight: bold;
+}
+
+a[disabled="true"] {
+    pointer-events: none;
+	color: black;
 }

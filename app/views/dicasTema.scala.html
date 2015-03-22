@@ -47,47 +47,51 @@
 		<p>Nenhuma dica para este tema.</p>	
 	}else{	
 		@for(dica <- tema.getDicas()){
-			<p>@dica.getNameUser()</p>
+			<p class="nomeUsuarios">@dica.getNameUser()</p>
 			@Html(dica.exibir())
-		
-			<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'"  class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
-			<a onClick="location.href='@routes.TemaController.discordar(dica.getIdDicaString())'" class="acaoRota linkDiscordar">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
-			<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())'" class="acaoRota linkDenunciar" data-toggle="modal" data-target="#denunciar">Denunciar </a>@dica.getQuantDenuncias()
+
+			@for(user <- dica.getListaDiscordancia()){
+				<p class="nomeUsuarios">@user.getNome()</p> 
+				<h5>@dica.exibirFraseDeDiscordancia(user)</h5>
+			
+			}
+			
+			<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'" disabled="@dica.isDicaFechada()" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
+			<a disabled="@dica.isDicaFechada()" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
+			<p> Índicie de concordância </p>@dica.getIndiceConcordancia()
+			<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())'" class="acaoRota linkDenunciar">Denunciar </a>@dica.getQuantDenuncias()
 			<legend></legend>
+		
+
+			<div class="modal fade" id="discordar">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">Por que você discorda?</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" method="POST" role="form"  id="formDiscordar"  action="/discordar">
+								<input type="hidden"  name="idDica" value="@dica.getIdDicaString()" />
+								<div class="col-sm-8">
+									<textarea class="form-control" name="frase" maxlength="100"
+										placeholder="Digite a razão pela qual você discorda desta dica." required></textarea>
+								</div>
+							</form>						
+					</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary" form="formDiscordar" >Adicionar</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			}
 		}	
-	}
-	
 </div>
 
-<!-- Modal  Denunciar dica -->
 
-<div id="denunciar" class="modal fade "> <!--1-->
-    <div class="modal-dialog centralizarModal"><!--2-->
-        <div class="modal-content"><!--3-->
-            <div class="modal-header"><!--4-->
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Informe-nos o que estÃ¡ acontecendo</h4>				
-            </div><!--4-->
-            
-        	<p class="text-warning"><small>Por que você não quer ver essa informação? </small></p>
-            
-            <div class="modal-body"> <!--5-->
-            	<form class="form-horizontal" method="POST" role="form" id="addDicaSemDificuldade" action="/addDicaSemDificuldade">
-            		<input type="radio" name="informacao" value="ofensivo" checked>A dica possui conteúdo ofensivo.
-            		<br>
-					<input type="radio" name="informacao" value="antietico">A dica possui conteúdo antiético.
-				</form> 
-				
-             </div> <!--5-->	
-            
-            <div class="modal-footer">
-			    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			    <button type="button" class="btn btn-default" >Denunciar</button>
-			    <!--  Preciso do id da dica, como pegar?  Para colocar dentro de denunciar, concordar e discordar-->
-			</div>	
-			
-         </div> <!--3-->
-    </div> <!--2-->
-</div><!--1-->
+
 
 }
+

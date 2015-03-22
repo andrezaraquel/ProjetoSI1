@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-22/ProjetoSI1/conf/routes
-// @HASH:fa059c67612fb864fa204730b43b283398e42f6a
-// @DATE:Sun Mar 22 08:37:01 BRT 2015
+// @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/conf/routes
+// @HASH:aa9dea5f71ccde4816e448ece5384642656e63ca
+// @DATE:Sun Mar 22 18:42:14 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -110,17 +110,17 @@ def addDicaDiscAnteriores(): Call = {
 }
                         
 
+// @LINE:27
+def discordar(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "discordar")
+}
+                        
+
 // @LINE:18
 def showTema($id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "tema" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
-}
-                        
-
-// @LINE:27
-def discordar($id:String): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "discordar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
 }
                         
 
@@ -303,23 +303,23 @@ def addDicaDiscAnteriores : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:27
+def discordar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.discordar",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "discordar"})
+      }
+   """
+)
+                        
+
 // @LINE:18
 def showTema : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.showTema",
    """
       function($id) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tema" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
-      }
-   """
-)
-                        
-
-// @LINE:27
-def discordar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.TemaController.discordar",
-   """
-      function($id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "discordar" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("$id", $id)])})
       }
    """
 )
@@ -493,15 +493,15 @@ def addDicaDiscAnteriores(): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handl
 )
                       
 
-// @LINE:18
-def showTema($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.TemaController.showTema($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "showTema", Seq(classOf[String]), "GET", """Tema""", _prefix + """tema""")
+// @LINE:27
+def discordar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.discordar(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "discordar", Seq(), "POST", """""", _prefix + """discordar""")
 )
                       
 
-// @LINE:27
-def discordar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.TemaController.discordar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "discordar", Seq(classOf[String]), "GET", """""", _prefix + """discordar""")
+// @LINE:18
+def showTema($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.showTema($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "showTema", Seq(classOf[String]), "GET", """Tema""", _prefix + """tema""")
 )
                       
 

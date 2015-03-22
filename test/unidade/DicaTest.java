@@ -65,7 +65,7 @@ public class DicaTest extends AbstractTest {
 	@Test 
 	public void deveConcordarDica() throws Exception {
 		user = new Usuario("Joao", "joao@gmail.com", "123456");		
-		dicaConselho = new DicaConselho(user, "Conselho");
+		dicaConselho = new DicaConselho(user, "Assista todas as aulas");
 		dao.persist(user);
 		dao.persist(dicaConselho);
 		
@@ -81,7 +81,7 @@ public class DicaTest extends AbstractTest {
 		dicaConselho.concordar(user);
 		assertThat(dicaConselho.getQuantConcordancias() == 0);
 		assertThat(dicaConselho.getQuantDiscordancias() == 0);
-		dicaConselho.discordar(user);
+		dicaConselho.discordar(user, "");
 		assertThat(dicaConselho.getQuantConcordancias() == 0);
 		assertThat(dicaConselho.getQuantDiscordancias() == 1);
 		dicaConselho.concordar(user);
@@ -93,7 +93,7 @@ public class DicaTest extends AbstractTest {
 	@Test
 	public void deveDiscordarDica() throws Exception {
 		user = new Usuario("Joao", "joao@gmail.com", "123456");		
-		dicaConselho = new DicaConselho(user, "Conselho");
+		dicaConselho = new DicaConselho(user, "Assista todas as aulas");
 		dao.persist(user);
 		dao.persist(dicaConselho);
 		
@@ -101,17 +101,17 @@ public class DicaTest extends AbstractTest {
 		assertThat(dicaConselho.getQuantDiscordancias()== 0);
 		assertThat(dicaConselho.getIndiceConcordancia()).isEqualTo(0);
 		
-		dicaConselho.discordar(user);	
+		dicaConselho.discordar(user, "");	
 		assertThat(dicaConselho.getQuantConcordancias() == 0);
 		assertThat(dicaConselho.getQuantDiscordancias() == 1);
 		assertThat(dicaConselho.getIndiceConcordancia()).isEqualTo(0);
-		dicaConselho.discordar(user);
+		dicaConselho.discordar(user, "");
 		assertThat(dicaConselho.getQuantConcordancias() == 0);
 		assertThat(dicaConselho.getQuantDiscordancias() == 0);
 		dicaConselho.concordar(user);
 		assertThat(dicaConselho.getQuantConcordancias() == 1);
 		assertThat(dicaConselho.getQuantDiscordancias() == 0);
-		dicaConselho.discordar(user);
+		dicaConselho.discordar(user, "");
 		assertThat(dicaConselho.getQuantConcordancias() == 0);
 		assertThat(dicaConselho.getQuantDiscordancias() == 1);
 	}
@@ -122,7 +122,7 @@ public class DicaTest extends AbstractTest {
 		user = new Usuario("Joao", "joao@gmail.com", "123456");		
 		user2 = new Usuario("Maria", "maria@gmail.com", "123456");
 		user3 = new Usuario("Jose", "jose@gmail.com", "123456");	
-		dicaConselho = new DicaConselho(user, "Conselho");
+		dicaConselho = new DicaConselho(user, "Assista todas as aulas");
 		dao.persist(user);
 		dao.persist(dicaConselho);
 		assertThat(dicaConselho.getQuantDenuncias() == 0);
@@ -132,6 +132,25 @@ public class DicaTest extends AbstractTest {
 		assertThat(dicaConselho.getQuantDenuncias() == 2);
 		dicaConselho.denunciar(user3);
 		assertThat(dicaConselho.getQuantDenuncias() == 0);
+		
+	}
+	
+	@Test
+	public void deveAdicionarFrase() throws Exception{
+		user = new Usuario("Joao", "joao@gmail.com", "123456");
+		dicaConselho = new DicaConselho(user, "Não faça um miniteste se não tiver sabendo tudo.");
+		dao.persist(user);
+		dao.persist(dicaConselho);
+		assertThat(dicaConselho.getFrasesDicaDiscordada().size() == 0);
+		dicaConselho.discordar(user, "Faça todos os minitestes, no final do período será eliminado um percentual.");
+		assertThat(dicaConselho.getFrasesDicaDiscordada().size() == 1);
+		dicaConselho.discordar(user, "");
+		assertThat(dicaConselho.getFrasesDicaDiscordada().size() == 0);
+		dicaConselho.discordar(user, "Faça todos os minitestes, no final do período será eliminado um percentual.");
+		assertThat(dicaConselho.getFrasesDicaDiscordada().size() == 1);
+		dicaConselho.concordar(user);
+		assertThat(dicaConselho.getFrasesDicaDiscordada().size() == 0);
+		
 		
 	}
 }
