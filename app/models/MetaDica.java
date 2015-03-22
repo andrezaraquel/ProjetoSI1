@@ -11,10 +11,6 @@ public class MetaDica extends Dica {
 		super(user);
 	}
 	
-	public int compareTo(Dica arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public String exibir() {

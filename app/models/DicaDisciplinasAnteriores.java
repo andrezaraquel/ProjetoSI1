@@ -45,11 +45,6 @@ public class DicaDisciplinasAnteriores extends Dica {
 //		this.razao = razao;
 //	}
 
-	
-	public int compareTo(Dica o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public String exibir() {
@@ -59,4 +54,5 @@ public class DicaDisciplinasAnteriores extends Dica {
 		return  textDisciplina  + textRazao + label + "<br>";
 	}
 	
+
 }

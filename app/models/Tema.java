@@ -138,12 +138,15 @@ public class Tema {
 	}
 	
 	public List<Dica> getDicas() {
-		return dicas;
+		Collections.sort(dicas);
+        Collections.reverse(dicas);
+        return dicas;
 	}
 	
 	public void adicionarDica(Dica dica) {
 		dicas.add(dica);
-		Collections.sort(this.getDicas());
+	
+		
 	}
 	
 	public void removerDica(Dica dica) {

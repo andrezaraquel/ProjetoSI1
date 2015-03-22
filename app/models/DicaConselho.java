@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 @Entity
 public class DicaConselho extends Dica {
 
-		
 	private String conselho;
 	
 	public DicaConselho() {}
@@ -44,9 +43,7 @@ public class DicaConselho extends Dica {
 		return textConselho + label + "<br>";
 	}
 
-	public int compareTo(Dica arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
+
 	
 }

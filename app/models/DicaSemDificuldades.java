@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 @Entity
 public class DicaSemDificuldades extends Dica {
 
+
 	private String nomeDoAssunto;
 	
 	public DicaSemDificuldades() {}
@@ -23,10 +24,6 @@ public class DicaSemDificuldades extends Dica {
 	}
 
 	
-	public int compareTo(Dica o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public String exibir() {

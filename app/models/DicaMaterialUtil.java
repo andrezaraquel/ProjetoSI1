@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 @Entity
 public class DicaMaterialUtil extends Dica {
 
+
 	private String urlDoMaterial;
 	
 	public DicaMaterialUtil() {}
@@ -35,11 +36,6 @@ public class DicaMaterialUtil extends Dica {
 //		this.urlDoMaterial = urlDoMaterial;
 //	}
 
-	
-	public int compareTo(Dica o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public String exibir() {

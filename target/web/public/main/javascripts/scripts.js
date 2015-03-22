@@ -24,7 +24,7 @@ function povoarDivTema() {
 				carregaRota();
 			}
 		});			
-	});	
+	});		
 }
 
 function alternaDivModal() {
@@ -35,10 +35,8 @@ function alternaDivModal() {
 }
 
 function carregaRota() {
-	alert("oi");
 	$(".acaoRota").click(function(e) {
-		e.preventDefault();
-			
+		e.preventDefault();			
 	});
 }
 
