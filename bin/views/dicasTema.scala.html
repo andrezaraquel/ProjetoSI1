@@ -13,8 +13,7 @@
 			
 			<div class="col-md-1.5 " >
 			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
-			</div>
-			
+			</div>		
 			
 		</div>
 	</div>
@@ -23,8 +22,8 @@
 	<div  class=" avaliacoesTema">
 		<div class="row">
 			<div class="col-md-3"><label>Nível de dificuldade</label> </div>
-			<div class="col-md-2 "><label>Média</label>0.0 </div>
-			<div class="col-md-2 "><label>Mediana</label>0.0 </div>
+			<div class="col-md-2 "><label>Média: &nbsp;</label><label>@tema.getAvaliacaoMedia()</label></div>
+			<div class="col-md-2 "><label>Mediana:&nbsp;</label><label>@tema.getAvaliacaoMediana()</label></div>
 			<div class="col-md-offset-2.5 col-md-2"><button class="btn btn-small btn-default" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button></div>
 		</div>
 	</div>
@@ -35,8 +34,8 @@
 			<p>Nenhuma dica para este tema.</p>	
 		}else{	
 			@for(dica <- tema.getDicas()){
-				<p class="nomeUsuarios">@dica.getNameUser()</p>
-				@Html(dica.exibir())
+				<p class="nomeUsuarios">@dica.getNameUser()&nbsp;&nbsp;@Html(dica.exibirLabel())</p>
+				@Html(dica.exibirDica())
 
 				@for(user <- dica.getListaDiscordancia()){
 					<p class="nomeUsuarios">@user.getNome()</p> 

@@ -41,10 +41,7 @@ Seq[Any](format.raw/*1.63*/("""
 				<a class="navbar-brand" href="/">Portal do Leite</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
+				
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<b class="navbar-text">Já possui cadastro?</b>
@@ -66,30 +63,30 @@ Seq[Any](format.raw/*1.63*/("""
 				
 			
 			<div class="col-md-6">	
-				"""),_display_(/*41.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*41.65*/ {_display_(Seq[Any](format.raw/*41.67*/("""
-				"""),format.raw/*42.5*/("""<div class="alert alert-danger">
-					<p>"""),_display_(/*43.10*/(mensagemErro)),format.raw/*43.24*/("""</p>
+				"""),_display_(/*38.6*/if(mensagemErro != null && !mensagemErro.trim().equals(""))/*38.65*/ {_display_(Seq[Any](format.raw/*38.67*/("""
+				"""),format.raw/*39.5*/("""<div class="alert alert-danger">
+					<p>"""),_display_(/*40.10*/(mensagemErro)),format.raw/*40.24*/("""</p>
 				</div>
-			""")))}),format.raw/*45.5*/(""" 
+			""")))}),format.raw/*42.5*/(""" 
 			
-			"""),_display_(/*47.5*/if(mensagem != null && !mensagem.trim().equals(""))/*47.56*/ {_display_(Seq[Any](format.raw/*47.58*/("""
-			"""),format.raw/*48.4*/("""<div class="alert alert-success">
-				<p>"""),_display_(/*49.9*/(mensagem)),format.raw/*49.19*/("""</p>
+			"""),_display_(/*44.5*/if(mensagem != null && !mensagem.trim().equals(""))/*44.56*/ {_display_(Seq[Any](format.raw/*44.58*/("""
+			"""),format.raw/*45.4*/("""<div class="alert alert-success">
+				<p>"""),_display_(/*46.9*/(mensagem)),format.raw/*46.19*/("""</p>
 			</div>
-		""")))}),format.raw/*51.4*/("""
+		""")))}),format.raw/*48.4*/("""
 		
-		"""),format.raw/*53.3*/("""<div class="panel panel-default">
+		"""),format.raw/*50.3*/("""<div class="panel panel-default">
 			<div class="panel-heading">Cadastre-se aqui</div>
 			<div class="panel-body">
-				"""),_display_(/*56.6*/helper/*56.12*/.form(routes.AutenticacaoController.cadastrar)/*56.58*/ {_display_(Seq[Any](format.raw/*56.60*/("""
-				"""),format.raw/*57.5*/("""<form role="form">
+				"""),_display_(/*53.6*/helper/*53.12*/.form(routes.AutenticacaoController.cadastrar)/*53.58*/ {_display_(Seq[Any](format.raw/*53.60*/("""
+				"""),format.raw/*54.5*/("""<form role="form">
 					<div class="form-group">
 						<input maxlength="50" type="text" class="form-control" name="nome"
-						value='"""),_display_(/*60.15*/form("nome")/*60.27*/.value),format.raw/*60.33*/("""' placeholder="Digite seu nome" required>
+						value='"""),_display_(/*57.15*/form("nome")/*57.27*/.value),format.raw/*57.33*/("""' placeholder="Digite seu nome" required>
 					</div>
 					<div class="form-group">
 						<input type="email" class="form-control" name="email"
-						value='"""),_display_(/*64.15*/form("email")/*64.28*/.value),format.raw/*64.34*/("""' placeholder="Digite seu email" required>
+						value='"""),_display_(/*61.15*/form("email")/*61.28*/.value),format.raw/*61.34*/("""' placeholder="Digite seu email" required>
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" name="senha"
@@ -102,8 +99,8 @@ Seq[Any](format.raw/*1.63*/("""
 					
 					<button type="submit" class="btn btn-primary">Cadastrar</button>
 				</form>
-			""")))}),format.raw/*77.5*/("""
-		"""),format.raw/*78.3*/("""</div>
+			""")))}),format.raw/*74.5*/("""
+		"""),format.raw/*75.3*/("""</div>
 	</div>
 </div>
 
@@ -113,7 +110,7 @@ Seq[Any](format.raw/*1.63*/("""
 
 </div>
 </div>
-""")))}),format.raw/*88.2*/("""
+""")))}),format.raw/*85.2*/("""
 """))}
   }
 
@@ -126,11 +123,11 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 07:47:10 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/app/views/cadastro.scala.html
-                  HASH: 062ea04e16a6a2b89f5b3cb7025477b096d59bb4
-                  MATRIX: 747->1|896->62|926->67|950->83|988->84|1018->88|2194->1238|2262->1297|2302->1299|2335->1305|2405->1348|2440->1362|2492->1384|2530->1396|2590->1447|2630->1449|2662->1454|2731->1497|2762->1507|2812->1527|2847->1535|2996->1658|3011->1664|3066->1710|3106->1712|3139->1718|3305->1857|3326->1869|3353->1875|3542->2037|3564->2050|3591->2056|4095->2530|4126->2534|4251->2629
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|69->41|69->41|69->41|70->42|71->43|71->43|73->45|75->47|75->47|75->47|76->48|77->49|77->49|79->51|81->53|84->56|84->56|84->56|84->56|85->57|88->60|88->60|88->60|92->64|92->64|92->64|105->77|106->78|116->88
+                  DATE: Mon Mar 23 11:02:24 BRT 2015
+                  SOURCE: /home/andrezarmq/Documentos/SI1/ProjetoSI1/app/views/cadastro.scala.html
+                  HASH: 5af907dc7aa448242f9bfb59aba137bf0ea6c276
+                  MATRIX: 747->1|896->62|924->65|948->81|986->82|1015->85|2031->1075|2099->1134|2139->1136|2171->1141|2240->1183|2275->1197|2325->1217|2361->1227|2421->1278|2461->1280|2492->1284|2560->1326|2591->1336|2639->1354|2672->1360|2818->1480|2833->1486|2888->1532|2928->1534|2960->1539|3123->1675|3144->1687|3171->1693|3356->1851|3378->1864|3405->1870|3896->2331|3926->2334|4041->2419
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|66->38|66->38|66->38|67->39|68->40|68->40|70->42|72->44|72->44|72->44|73->45|74->46|74->46|76->48|78->50|81->53|81->53|81->53|81->53|82->54|85->57|85->57|85->57|89->61|89->61|89->61|102->74|103->75|113->85
                   -- GENERATED --
               */
           

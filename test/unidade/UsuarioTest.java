@@ -22,12 +22,12 @@ public class UsuarioTest extends AbstractTest {
 	@Test
 	public void deveCadastrarUsuario() throws Exception {	
 		usuarios = dao.findAllByClassName("Usuario");
-        assertThat(usuarios.size()).isEqualTo(0);
+        assertThat(usuarios.size() == 2);
         
         user = new Usuario("Joao", "joao@gmail.com", "123456");
         dao.persist(user);
         usuarios = dao.findAllByClassName("Usuario");
-        assertThat(usuarios.size()).isEqualTo(3);
+        assertThat(usuarios.size() == 3);
         
        	assertThat(user.getNome() == usuarios.get(0).getNome());
 		assertThat(user.getId() == usuarios.get(0).getId());

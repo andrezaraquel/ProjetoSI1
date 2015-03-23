@@ -129,7 +129,7 @@ public class TemaController extends Controller {
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
 
-		return showTema(idTema);
+		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
 	} 
 
 	@Transactional
@@ -149,7 +149,7 @@ public class TemaController extends Controller {
 		tema.adicionarDica(dica);
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
-		return showTema(idTema);
+		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
 	} 
 
 	@Transactional
@@ -169,7 +169,7 @@ public class TemaController extends Controller {
 		tema.adicionarDica(dica);
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
-		return showTema(idTema);
+		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
 	} 
 
 
@@ -192,7 +192,7 @@ public class TemaController extends Controller {
 		tema.adicionarDica(dica);
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
-		return showTema(idTema);
+		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
 
 	} 
 	

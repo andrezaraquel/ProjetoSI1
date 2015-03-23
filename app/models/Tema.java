@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -96,19 +97,28 @@ public class Tema {
 		for (int nota : getValoresAvaliacoes().values()) {
 			soma += nota;
 		}
-		return soma/getValoresAvaliacoes().size(); 
+		if(getValoresAvaliacoes().size() > 0) {
+			return soma/getValoresAvaliacoes().size(); 
+		}
+		return 0;
 	}
 
-	public Integer getAvaliacaoMediana(){
-		Integer mediana = 0;		
-		if (getValoresAvaliacoesOrdenadas().size() % 2 != 0){
-			int indexMediana = (int) Math.ceil(numAvaliacoes()/2);
-			mediana = getValoresAvaliacoesOrdenadas().get(indexMediana);
-		} else {
-			mediana = getValoresAvaliacoesOrdenadas().get(numAvaliacoes()/2) + 
-					(getValoresAvaliacoesOrdenadas().get((numAvaliacoes()/2) + 1));
-		}
-		return mediana; 
+	public int getAvaliacaoMediana(){
+		if(this.getValoresAvaliacoesOrdenadas().values().size() == 0) {
+            return 0;
+        }
+        Integer[] valores = new Integer[this.getValoresAvaliacoes().values().size()];
+        valores = getValoresAvaliacoes().values().toArray(valores);
+        Arrays.sort(valores);
+        int index = this.getValoresAvaliacoes().values().size();
+
+        if(this.getValoresAvaliacoes().values().size() > 1 && this.getValoresAvaliacoes().values().size()%2 == 0){
+            return (valores[(index/2)-1] + valores[(index/2)])/2;
+        }
+        else if (this.getValoresAvaliacoes().values().size() > 1 && this.getValoresAvaliacoes().values().size()%2 != 0){
+            return valores[(index/2)-1];
+        }
+        return valores[index-1];
 	}
 
 	public Map<Usuario, Integer> getValoresAvaliacoes() {

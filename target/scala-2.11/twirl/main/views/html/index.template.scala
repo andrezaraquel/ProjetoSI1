@@ -43,13 +43,9 @@ Seq[Any](format.raw/*1.60*/("""
 					<a class="navbar-brand" href="/">Portal do Leite</a>
 				</div>
 				
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="/sobre">Sobre</a></li>
-						<li><a href="/contato">Contato</a></li>
-					</ul>
+				<div class="navbar-collapse collapse">					
 					<ul class="nav navbar-nav navbar-right">
-						<li><p>"""),_display_(/*24.15*/user/*24.19*/.getNome()),format.raw/*24.29*/("""&nbsp;&nbsp;</p></li>
+						<li><p>"""),_display_(/*20.15*/user/*20.19*/.getNome()),format.raw/*20.29*/("""&nbsp;&nbsp;</p></li>
 						<li>							
 							<button class="btn btn-danger navbar-btn" onclick="location.href='/logout'">
 							<span class="glyphicon glyphicon-log-out"></span>
@@ -73,13 +69,13 @@ Seq[Any](format.raw/*1.60*/("""
 				
 				<div>
 					<ul class="nav" id="main-menu">
-						"""),_display_(/*48.8*/for(tema <- temas) yield /*48.26*/{_display_(Seq[Any](format.raw/*48.27*/("""
-							"""),format.raw/*49.8*/("""<li>				
-							<a  class="temas" data-nome=""""),_display_(/*50.38*/tema/*50.42*/.getNome()),format.raw/*50.52*/("""" id =""""),_display_(/*50.60*/tema/*50.64*/.getIdString()),format.raw/*50.78*/("""">"""),_display_(/*50.81*/tema/*50.85*/.getNome()),format.raw/*50.95*/("""</a>							
+						"""),_display_(/*44.8*/for(tema <- temas) yield /*44.26*/{_display_(Seq[Any](format.raw/*44.27*/("""
+							"""),format.raw/*45.8*/("""<li>				
+							<a  class="temas" data-nome=""""),_display_(/*46.38*/tema/*46.42*/.getNome()),format.raw/*46.52*/("""" id =""""),_display_(/*46.60*/tema/*46.64*/.getIdString()),format.raw/*46.78*/("""">"""),_display_(/*46.81*/tema/*46.85*/.getNome()),format.raw/*46.95*/("""</a>							
 							</li>
 							
-						""")))}),format.raw/*53.8*/("""
-					"""),format.raw/*54.6*/("""</ul>
+						""")))}),format.raw/*49.8*/("""
+					"""),format.raw/*50.6*/("""</ul>
 				</div>
 			</div>	
 		</div>
@@ -99,11 +95,11 @@ Seq[Any](format.raw/*1.60*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 07:47:11 BRT 2015
-                  SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/app/views/index.scala.html
-                  HASH: efb7398d55ff7a2fe8a696af363b41615e7ea5e6
-                  MATRIX: 749->1|895->59|928->67|959->90|998->92|1031->99|1781->822|1794->826|1825->836|2462->1447|2496->1465|2535->1466|2571->1475|2645->1522|2658->1526|2689->1536|2724->1544|2737->1548|2772->1562|2802->1565|2815->1569|2846->1579|2919->1622|2953->1629
-                  LINES: 26->1|29->1|32->4|32->4|32->4|35->7|52->24|52->24|52->24|76->48|76->48|76->48|77->49|78->50|78->50|78->50|78->50|78->50|78->50|78->50|78->50|78->50|81->53|82->54
+                  DATE: Mon Mar 23 11:02:24 BRT 2015
+                  SOURCE: /home/andrezarmq/Documentos/SI1/ProjetoSI1/app/views/index.scala.html
+                  HASH: 6da722f297a58b8e9cb78b4cb66871da033cd529
+                  MATRIX: 749->1|895->59|925->64|956->87|995->89|1025->93|1631->672|1644->676|1675->686|2288->1273|2322->1291|2361->1292|2396->1300|2469->1346|2482->1350|2513->1360|2548->1368|2561->1372|2596->1386|2626->1389|2639->1393|2670->1403|2740->1443|2773->1449
+                  LINES: 26->1|29->1|32->4|32->4|32->4|35->7|48->20|48->20|48->20|72->44|72->44|72->44|73->45|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|77->49|78->50
                   -- GENERATED --
               */
           

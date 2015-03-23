@@ -1,7 +1,10 @@
 
 $(function() {
 	povoarDivTema();
-	alternaDivModal();
+	alternaDivModal();	
+//	var idTema = 11;
+//	enviarFormNovaDica(idTema);
+	
 });
 
 function povoarDivTema() {	
@@ -21,8 +24,8 @@ function povoarDivTema() {
 			url:'/tema?$id='+idTema,
 			success:function(data){
 				document.getElementById("campoTemas").innerHTML = data;
-				$(".idDoTema").attr("value", idTema);
-				carregaRota();
+				$(".idDoTema").attr("value", idTema);	
+				//enviarFormNovaDica(idTema);
 			}
 		});			
 	});		
@@ -35,10 +38,17 @@ function alternaDivModal() {
     });
 }
 
-function carregaRota() {
-	$(".acaoRota").click(function(e) {
-		e.preventDefault();			
-	});
+function enviarFormNovaDica(idTema) {
+	if(idTema != null) {
+		alert("entrou aqui");
+		$.ajax({
+			type:'GET',
+			url:'/tema?$id='+idTema,
+			success:function(data){
+				document.getElementById("campoTemas").innerHTML = data;						
+			}
+		});		
+	}
 }
 
 

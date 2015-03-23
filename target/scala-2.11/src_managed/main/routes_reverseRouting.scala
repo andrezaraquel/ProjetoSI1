@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/conf/routes
-// @HASH:2bf20612ad916d5fa81183ec75b2a878bb8a20df
-// @DATE:Mon Mar 23 07:47:06 BRT 2015
+// @SOURCE:/home/andrezarmq/Documentos/SI1/ProjetoSI1/conf/routes
+// @HASH:215ba2c1fb56f1e019dd69760edd795222a1857b
+// @DATE:Mon Mar 23 11:02:23 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
