@@ -36,8 +36,6 @@ public class Tema {
 	@ElementCollection
 	private Map<Usuario, Integer> valoresAvaliacoesOrdenadas;
 	private String nome;
-	
-	private final int MAX_DENUNCIAS = 3;
 
 	public Tema() {
 		this.dicas = new ArrayList<Dica>();
@@ -90,12 +88,13 @@ public class Tema {
 
 	public void avaliarTema(Usuario usuario, AvaliacaoDoTema nota) {
 		if (valoresAvaliacoes.containsKey(usuario)) {
-			editarAvaliacao(usuario, nota);
+			//editarAvaliacao(usuario, nota);
 		} else {
 			this.valoresAvaliacoes.put(usuario, nota.getNota());
 		}		
 	}	
-
+	
+		
 	public void editarAvaliacao(Usuario user, AvaliacaoDoTema novaAvaliacao) {
 		for (Iterator<Entry<Usuario, Integer>> it = valoresAvaliacoes.entrySet().iterator(); it.hasNext(); ) {  
 			Map.Entry<Usuario, Integer> entry = (Map.Entry<Usuario, Integer>) it.next();  
@@ -105,7 +104,24 @@ public class Tema {
 			}                 
 		}  
 	}
+	
+	public AvaliacaoDoTema getEnumAvaliacaoTema(int nota){
+		switch(nota){
+		
+		case -1:
+			return AvaliacaoDoTema.FACIL;
+		case 0:
+			return AvaliacaoDoTema.NORMAL;
+		case 1:
+			return AvaliacaoDoTema.DIFICIL;
+		case 2:
+			return AvaliacaoDoTema.MUITO_DIFICIL;
+		default:
+			return AvaliacaoDoTema.MUITO_FACIL;
+		}	
+	}
 
+	
 	public double getAvaliacaoMedia(){
 		double soma = 0;
 		for (int nota : getValoresAvaliacoes().values()) {

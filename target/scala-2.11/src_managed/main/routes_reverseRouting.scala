@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/conf/routes
-// @HASH:aa9dea5f71ccde4816e448ece5384642656e63ca
-// @DATE:Sun Mar 22 18:42:14 BRT 2015
+// @HASH:2bf20612ad916d5fa81183ec75b2a878bb8a20df
+// @DATE:Sun Mar 22 22:55:57 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,14 +15,15 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:32
+// @LINE:33
+// @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
-// @LINE:21
+// @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:14
@@ -78,11 +79,11 @@ def autenticar(): Call = {
 }
                           
 
-// @LINE:32
+// @LINE:33
 class ReverseAssets {
 
 
-// @LINE:32
+// @LINE:33
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -92,28 +93,36 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
-// @LINE:21
+// @LINE:19
 // @LINE:18
 class ReverseTemaController {
 
 
-// @LINE:24
+// @LINE:25
 def addDicaDiscAnteriores(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "addDicaDiscAnteriores")
 }
                         
 
-// @LINE:27
+// @LINE:28
 def discordar(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "discordar")
+}
+                        
+
+// @LINE:19
+def avaliarTema(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "avaliar")
 }
                         
 
@@ -124,35 +133,35 @@ def showTema($id:String): Call = {
 }
                         
 
-// @LINE:26
+// @LINE:27
 def concordar($id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "concordar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$id", $id)))))
 }
                         
 
-// @LINE:22
+// @LINE:23
 def addDicaConselho(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "addDicaConselho")
 }
                         
 
-// @LINE:23
+// @LINE:24
 def addDicaMaterialUtil(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "addDicaMaterialUtil")
 }
                         
 
-// @LINE:21
+// @LINE:22
 def addDicaSemDificuldade(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "addDicaSemDificuldade")
 }
                         
 
-// @LINE:28
+// @LINE:29
 def denunciar($idTema:String, $idDica:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "denunciar" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("$idTema", $idTema)), Some(implicitly[QueryStringBindable[String]].unbind("$idDica", $idDica)))))
@@ -179,14 +188,15 @@ def index(): Call = {
                   
 
 
-// @LINE:32
+// @LINE:33
+// @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
-// @LINE:21
+// @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:14
@@ -263,11 +273,11 @@ def autenticar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:32
+// @LINE:33
 class ReverseAssets {
 
 
-// @LINE:32
+// @LINE:33
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -281,18 +291,19 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
-// @LINE:21
+// @LINE:19
 // @LINE:18
 class ReverseTemaController {
 
 
-// @LINE:24
+// @LINE:25
 def addDicaDiscAnteriores : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.addDicaDiscAnteriores",
    """
@@ -303,12 +314,23 @@ def addDicaDiscAnteriores : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:27
+// @LINE:28
 def discordar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.discordar",
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "discordar"})
+      }
+   """
+)
+                        
+
+// @LINE:19
+def avaliarTema : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemaController.avaliarTema",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "avaliar"})
       }
    """
 )
@@ -325,7 +347,7 @@ def showTema : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:26
+// @LINE:27
 def concordar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.concordar",
    """
@@ -336,7 +358,7 @@ def concordar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:22
+// @LINE:23
 def addDicaConselho : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.addDicaConselho",
    """
@@ -347,7 +369,7 @@ def addDicaConselho : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
+// @LINE:24
 def addDicaMaterialUtil : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.addDicaMaterialUtil",
    """
@@ -358,7 +380,7 @@ def addDicaMaterialUtil : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:21
+// @LINE:22
 def addDicaSemDificuldade : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.addDicaSemDificuldade",
    """
@@ -369,7 +391,7 @@ def addDicaSemDificuldade : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:28
+// @LINE:29
 def denunciar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.TemaController.denunciar",
    """
@@ -404,14 +426,15 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:32
+// @LINE:33
+// @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
-// @LINE:21
+// @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:14
@@ -463,11 +486,11 @@ def autenticar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:32
+// @LINE:33
 class ReverseAssets {
 
 
-// @LINE:32
+// @LINE:33
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -476,26 +499,33 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
-// @LINE:21
+// @LINE:19
 // @LINE:18
 class ReverseTemaController {
 
 
-// @LINE:24
+// @LINE:25
 def addDicaDiscAnteriores(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.addDicaDiscAnteriores(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaDiscAnteriores", Seq(), "POST", """""", _prefix + """addDicaDiscAnteriores""")
 )
                       
 
-// @LINE:27
+// @LINE:28
 def discordar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.discordar(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "discordar", Seq(), "POST", """""", _prefix + """discordar""")
+)
+                      
+
+// @LINE:19
+def avaliarTema(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemaController.avaliarTema(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "avaliarTema", Seq(), "POST", """""", _prefix + """avaliar""")
 )
                       
 
@@ -505,31 +535,31 @@ def showTema($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 )
                       
 
-// @LINE:26
+// @LINE:27
 def concordar($id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.concordar($id), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "concordar", Seq(classOf[String]), "GET", """""", _prefix + """concordar""")
 )
                       
 
-// @LINE:22
+// @LINE:23
 def addDicaConselho(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.addDicaConselho(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaConselho", Seq(), "POST", """""", _prefix + """addDicaConselho""")
 )
                       
 
-// @LINE:23
+// @LINE:24
 def addDicaMaterialUtil(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.addDicaMaterialUtil(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaMaterialUtil", Seq(), "POST", """""", _prefix + """addDicaMaterialUtil""")
 )
                       
 
-// @LINE:21
+// @LINE:22
 def addDicaSemDificuldade(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.addDicaSemDificuldade(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "addDicaSemDificuldade", Seq(), "POST", """Dicas""", _prefix + """addDicaSemDificuldade""")
 )
                       
 
-// @LINE:28
+// @LINE:29
 def denunciar($idTema:String, $idDica:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.TemaController.denunciar($idTema, $idDica), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemaController", "denunciar", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """denunciar""")
 )

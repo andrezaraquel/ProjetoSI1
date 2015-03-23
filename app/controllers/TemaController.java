@@ -21,8 +21,6 @@ import views.html.*;
 
 public class TemaController extends Controller {	
 	
-
-	
 	@Transactional
 	public static Result showTema(String id) {
 
@@ -43,6 +41,24 @@ public class TemaController extends Controller {
 
 		}
 		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+	
+	}	
+		
+	@Transactional
+	public static Result avaliarTema() {
+		DynamicForm form = Form.form().bindFromRequest();
+		
+		String idTema = form.field("idTema").value();		
+		String nota = form.field("notaValue").value();
+		
+		int notaValue = Integer.parseInt(nota);
+		long idLong = Long.parseLong(idTema);
+		Tema tema = getTema(idLong);
+		
+		tema.avaliarTema(Application.getUsuarioLogado(), tema.getEnumAvaliacaoTema(notaValue));
+		
+		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+
 	
 	}	
 	
@@ -89,6 +105,7 @@ public class TemaController extends Controller {
 		}
 		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
 	}
+	
 	
 	
 

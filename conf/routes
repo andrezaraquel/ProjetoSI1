@@ -16,6 +16,7 @@ POST   /cadastro					controllers.AutenticacaoController.cadastrar()
 
 #Tema
 GET		/tema						controllers.TemaController.showTema($id)
+POST	/avaliar					controllers.TemaController.avaliarTema()
 
 #Dicas
 POST	/addDicaSemDificuldade		controllers.TemaController.addDicaSemDificuldade()

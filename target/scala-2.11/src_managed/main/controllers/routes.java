@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/conf/routes
-// @HASH:aa9dea5f71ccde4816e448ece5384642656e63ca
-// @DATE:Sun Mar 22 18:42:14 BRT 2015
+// @HASH:2bf20612ad916d5fa81183ec75b2a878bb8a20df
+// @DATE:Sun Mar 22 22:55:57 BRT 2015
 
 package controllers;
 

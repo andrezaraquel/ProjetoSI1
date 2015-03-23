@@ -27,7 +27,7 @@ public class UsuarioTest extends AbstractTest {
         user = new Usuario("Joao", "joao@gmail.com", "123456");
         dao.persist(user);
         usuarios = dao.findAllByClassName("Usuario");
-        assertThat(usuarios.size()).isEqualTo(1);
+        assertThat(usuarios.size()).isEqualTo(3);
         
        	assertThat(user.getNome() == usuarios.get(0).getNome());
 		assertThat(user.getId() == usuarios.get(0).getId());

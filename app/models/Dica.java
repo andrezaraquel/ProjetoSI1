@@ -33,7 +33,7 @@ public abstract class Dica implements Comparable<Dica> {
 	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable(name="listaDenuncias")
 	private List<Usuario> listaDenuncias;
-	
+
 	@ElementCollection
 	private Map<Usuario, String> frasesDicaDiscordada;
 
@@ -58,13 +58,13 @@ public abstract class Dica implements Comparable<Dica> {
 
 	public boolean isDicaFechada(){
 		if (getQuantConcordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS ||
-			getQuantDiscordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS){
-				return true;
+				getQuantDiscordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS){
+			return true;
 		}
 		return false;
 	}
-	
-	
+
+
 	public void concordar(Usuario user) {	
 		if(!listaDiscordancia.contains(user) && !listaConcordancia.contains(user)) {
 			listaConcordancia.add(user);
@@ -87,7 +87,7 @@ public abstract class Dica implements Comparable<Dica> {
 	public void adicionarFrase(Usuario user, String frase) {
 		frasesDicaDiscordada.put(user, frase);
 	}
-	
+
 	public double getIndiceConcordancia(){
 		if (getQuantConcordancias() == 0){
 			return 0;
@@ -95,7 +95,7 @@ public abstract class Dica implements Comparable<Dica> {
 			return getQuantConcordancias()/(getQuantConcordancias() + getQuantDiscordancias()); 
 		}		
 	}
-	
+
 	public List<Usuario> getRelacaoDenuncia() {
 		return listaDenuncias;
 	}
@@ -146,7 +146,7 @@ public abstract class Dica implements Comparable<Dica> {
 	public int getQuantDiscordancias() {
 		return listaDiscordancia.size();
 	}
-	
+
 	public Map<Usuario, String> getFrasesDicaDiscordada(){
 		return frasesDicaDiscordada;
 	}
@@ -167,10 +167,10 @@ public abstract class Dica implements Comparable<Dica> {
 	}
 
 	public abstract String exibir();
-	
+
 	public String exibirFraseDeDiscordancia(Usuario user){
 		return frasesDicaDiscordada.get(user);
-		
+
 	}
 	
 	@Override
@@ -183,5 +183,4 @@ public abstract class Dica implements Comparable<Dica> {
 		}
 		return 0;
 	}
-
 }

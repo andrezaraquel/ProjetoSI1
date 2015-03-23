@@ -22,18 +22,7 @@ public class DicaConselho extends Dica {
 		this.conselho = conselho;
 	}
 	
-//	public void isDicaValida(String conselho) throws Exception{
-//		if (conselho == null) {
-//			throw new Exception("Conselho não pode ser nulo");
-//		}
-//		if (conselho.trim().equals("")) {
-//			throw new Exception("Conselho não pode ser vazio");
-//		}
-//		if (conselho.length() > 100) { //Decidir o tamanho
-//			throw new Exception("Conselho muito longo");
-//		}
-//		this.conselho = conselho;
-//	}
+	
 
 	
 	@Override
