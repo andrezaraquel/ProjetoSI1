@@ -28,7 +28,7 @@ object login extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 
 Seq[Any](format.raw/*1.63*/("""
 
-"""),_display_(/*3.2*/main("Login")/*3.15*/{_display_(Seq[Any](format.raw/*3.16*/("""
+"""),_display_(/*3.2*/main("´Portal do Leite - Login")/*3.34*/{_display_(Seq[Any](format.raw/*3.35*/("""
 		"""),format.raw/*4.3*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -74,27 +74,24 @@ Seq[Any](format.raw/*1.63*/("""
 				<p>"""),_display_(/*46.9*/(mensagem)),format.raw/*46.19*/("""</p>
 			</div>
 		""")))}),format.raw/*48.4*/("""
-
-
-		"""),format.raw/*51.3*/("""<div class="panel panel-default">
-				
 		
+		"""),format.raw/*50.3*/("""<div class="panel panel-default">
 			<div class="panel-heading">Login</div>
-			<div class="panel-body">
-				"""),_display_(/*56.6*/helper/*56.12*/.form(routes.AutenticacaoController.autenticar)/*56.59*/ {_display_(Seq[Any](format.raw/*56.61*/("""
-				"""),format.raw/*57.5*/("""<form role="form">
-					<div class="form-group">
-						<input type="email" class="form-control" name="email" value='"""),_display_(/*59.69*/form("email")/*59.82*/.value),format.raw/*59.88*/("""' placeholder="Digite seu email" required>
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control" name="senha" placeholder="Digite sua senha" required>
-					</div>
-					<button type="submit" class="btn btn-primary">Entrar</button>
-				</form>
-			""")))}),format.raw/*66.5*/("""
-		"""),format.raw/*67.3*/("""</div>
-	</div>
-</div>
+				<div class="panel-body">
+					"""),_display_(/*53.7*/helper/*53.13*/.form(routes.AutenticacaoController.autenticar)/*53.60*/ {_display_(Seq[Any](format.raw/*53.62*/("""
+						"""),format.raw/*54.7*/("""<form role="form">
+							<div class="form-group">
+								<input type="email" class="form-control" name="email" value='"""),_display_(/*56.71*/form("email")/*56.84*/.value),format.raw/*56.90*/("""' placeholder="Digite seu email" required>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="senha" placeholder="Digite sua senha" required>
+							</div>
+							<button type="submit" class="btn btn-primary">Entrar</button>
+						</form>
+					""")))}),format.raw/*63.7*/("""
+				"""),format.raw/*64.5*/("""</div>
+			</div>
+		</div>
 <div class="col-md-3">
 	<!-- Vazio -->
 </div>
@@ -112,11 +109,11 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 22 22:23:54 BRT 2015
+                  DATE: Mon Mar 23 01:16:21 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/app/views/login.scala.html
-                  HASH: d1f0c9f80e7011adf406b8ae9fb0ea785a96e8ba
-                  MATRIX: 744->1|893->62|923->67|944->80|982->81|1012->85|2224->1271|2292->1330|2332->1332|2365->1338|2435->1381|2470->1395|2522->1417|2557->1426|2617->1477|2657->1479|2689->1484|2758->1527|2789->1537|2839->1557|2874->1565|3022->1687|3037->1693|3093->1740|3133->1742|3166->1748|3312->1867|3334->1880|3361->1886|3682->2177|3713->2181
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|66->38|66->38|66->38|67->39|68->40|68->40|70->42|72->44|72->44|72->44|73->45|74->46|74->46|76->48|79->51|84->56|84->56|84->56|84->56|85->57|87->59|87->59|87->59|94->66|95->67
+                  HASH: 13270dc7b380e72d64a0262ae34d14f7e474cdfb
+                  MATRIX: 744->1|893->62|923->67|963->99|1001->100|1031->104|2243->1290|2311->1349|2351->1351|2384->1357|2454->1400|2489->1414|2541->1436|2576->1445|2636->1496|2676->1498|2708->1503|2777->1546|2808->1556|2858->1576|2893->1584|3033->1698|3048->1704|3104->1751|3144->1753|3179->1761|3329->1884|3351->1897|3378->1903|3713->2208|3746->2214
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|66->38|66->38|66->38|67->39|68->40|68->40|70->42|72->44|72->44|72->44|73->45|74->46|74->46|76->48|78->50|81->53|81->53|81->53|81->53|82->54|84->56|84->56|84->56|91->63|92->64
                   -- GENERATED --
               */
           

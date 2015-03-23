@@ -22,9 +22,6 @@ public class DicaConselho extends Dica {
 		this.conselho = conselho;
 	}
 	
-	
-
-	
 	@Override
 	public String exibir() {
 		String label = "<span class=\"label label-info\">" + "Conselho" + "</span>";
@@ -32,7 +29,4 @@ public class DicaConselho extends Dica {
 		return textConselho + label + "<br>";
 	}
 
-
-
-	
 }

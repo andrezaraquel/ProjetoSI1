@@ -48,25 +48,67 @@ public class Tema {
 		this.nome = nome;		
 	}
 
-	public long getId() {
-		return id;
+	public void adicionarDica(Dica dica) {
+		dicas.add(dica);
+		
+	}
+	
+	public void removerDica(Dica dica) {
+		dicas.remove(dica);
+	}
+	
+	public void avaliarTema(Usuario usuario, AvaliacaoDoTema nota) {
+		if (valoresAvaliacoes.containsKey(usuario)) {
+			editarAvaliacao(usuario, nota);
+		} else {
+			this.valoresAvaliacoes.put(usuario, nota.getNota());
+		}		
+	}	
+	
+	public void editarAvaliacao(Usuario user, AvaliacaoDoTema novaAvaliacao) {
+		for (Iterator<Entry<Usuario, Integer>> it = valoresAvaliacoes.entrySet().iterator(); it.hasNext(); ) {  
+			Map.Entry<Usuario, Integer> entry = (Map.Entry<Usuario, Integer>) it.next();  
+
+			if (user.equals ((Usuario)entry.getKey())) {
+				entry.setValue (novaAvaliacao.getNota()); 
+			}                 
+		}  
+	}
+		
+	public AvaliacaoDoTema getEnumAvaliacaoTema(int nota){
+		switch(nota){
+		
+		case -1:
+			return AvaliacaoDoTema.FACIL;
+		case 0:
+			return AvaliacaoDoTema.NORMAL;
+		case 1:
+			return AvaliacaoDoTema.DIFICIL;
+		case 2:
+			return AvaliacaoDoTema.MUITO_DIFICIL;
+		default:
+			return AvaliacaoDoTema.MUITO_FACIL;
+		}	
+	}
+	
+	public double getAvaliacaoMedia(){
+		double soma = 0;
+		for (int nota : getValoresAvaliacoes().values()) {
+			soma += nota;
+		}
+		return soma/getValoresAvaliacoes().size(); 
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-
-	public String getIdString() {
-		return "" + id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public Integer getAvaliacaoMediana(){
+		Integer mediana = 0;		
+		if (getValoresAvaliacoesOrdenadas().size() % 2 != 0){
+			int indexMediana = (int) Math.ceil(numAvaliacoes()/2);
+			mediana = getValoresAvaliacoesOrdenadas().get(indexMediana);
+		} else {
+			mediana = getValoresAvaliacoesOrdenadas().get(numAvaliacoes()/2) + 
+					(getValoresAvaliacoesOrdenadas().get((numAvaliacoes()/2) + 1));
+		}
+		return mediana; 
 	}
 
 	public Map<Usuario, Integer> getValoresAvaliacoes() {
@@ -86,64 +128,8 @@ public class Tema {
 		this.valoresAvaliacoesOrdenadas = valoresAvaliacoesOrdenadas;
 	}
 
-	public void avaliarTema(Usuario usuario, AvaliacaoDoTema nota) {
-		if (valoresAvaliacoes.containsKey(usuario)) {
-			//editarAvaliacao(usuario, nota);
-		} else {
-			this.valoresAvaliacoes.put(usuario, nota.getNota());
-		}		
-	}	
-	
-		
-	public void editarAvaliacao(Usuario user, AvaliacaoDoTema novaAvaliacao) {
-		for (Iterator<Entry<Usuario, Integer>> it = valoresAvaliacoes.entrySet().iterator(); it.hasNext(); ) {  
-			Map.Entry<Usuario, Integer> entry = (Map.Entry<Usuario, Integer>) it.next();  
-
-			if (user.equals ((Usuario)entry.getKey())) {
-				entry.setValue (novaAvaliacao.getNota()); 
-			}                 
-		}  
-	}
-	
-	public AvaliacaoDoTema getEnumAvaliacaoTema(int nota){
-		switch(nota){
-		
-		case -1:
-			return AvaliacaoDoTema.FACIL;
-		case 0:
-			return AvaliacaoDoTema.NORMAL;
-		case 1:
-			return AvaliacaoDoTema.DIFICIL;
-		case 2:
-			return AvaliacaoDoTema.MUITO_DIFICIL;
-		default:
-			return AvaliacaoDoTema.MUITO_FACIL;
-		}	
-	}
-
-	
-	public double getAvaliacaoMedia(){
-		double soma = 0;
-		for (int nota : getValoresAvaliacoes().values()) {
-			soma += nota;
-		}
-		return soma/getValoresAvaliacoes().size(); 
-	}
-
 	public int numAvaliacoes() {
 		return (int) Math.floor(getValoresAvaliacoesOrdenadas().size());
-	}
-
-	public Integer getAvaliacaoMediana(){
-		Integer mediana = 0;		
-		if (getValoresAvaliacoesOrdenadas().size() % 2 != 0){
-			int indexMediana = (int) Math.ceil(numAvaliacoes()/2);
-			mediana = getValoresAvaliacoesOrdenadas().get(indexMediana);
-		} else {
-			mediana = getValoresAvaliacoesOrdenadas().get(numAvaliacoes()/2) + 
-					(getValoresAvaliacoesOrdenadas().get((numAvaliacoes()/2) + 1));
-		}
-		return mediana; 
 	}
 
 	public boolean isEmpty() {
@@ -159,13 +145,28 @@ public class Tema {
         return dicas;
 	}
 	
-	public void adicionarDica(Dica dica) {
-		dicas.add(dica);
-	
-		
+	public void setDicas(List<Dica> dicas) {
+		this.dicas = dicas;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getIdString() {
+		return "" + id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
-	public void removerDica(Dica dica) {
-		dicas.remove(dica);
-	}	
 }

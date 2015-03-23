@@ -52,19 +52,10 @@ public abstract class Dica implements Comparable<Dica> {
 	public Dica(Usuario user){
 		this();
 		this.nameUser = new String(user.getNome());
-
-
 	}
-
-	public boolean isDicaFechada(){
-		if (getQuantConcordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS ||
-				getQuantDiscordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS){
-			return true;
-		}
-		return false;
-	}
-
-
+	
+	public abstract String exibir();
+	
 	public void concordar(Usuario user) {	
 		if(!listaDiscordancia.contains(user) && !listaConcordancia.contains(user)) {
 			listaConcordancia.add(user);
@@ -77,7 +68,7 @@ public abstract class Dica implements Comparable<Dica> {
 			adicionarFrase(user, frase);
 		}
 	}	
-
+	
 	public void denunciar(Usuario user){
 		if (!listaDenuncias.contains(user)){
 			listaDenuncias.add(user);
@@ -87,7 +78,7 @@ public abstract class Dica implements Comparable<Dica> {
 	public void adicionarFrase(Usuario user, String frase) {
 		frasesDicaDiscordada.put(user, frase);
 	}
-
+	
 	public double getIndiceConcordancia(){
 		if (getQuantConcordancias() == 0){
 			return 0;
@@ -95,44 +86,49 @@ public abstract class Dica implements Comparable<Dica> {
 			return getQuantConcordancias()/(getQuantConcordancias() + getQuantDiscordancias()); 
 		}		
 	}
-
-	public List<Usuario> getRelacaoDenuncia() {
+	
+	public List<Usuario> getListaDenuncia() {
 		return listaDenuncias;
 	}
-
-	public void setRelacaoDenuncia(List<Usuario> relacaoDenuncia) {
-		this.listaDenuncias = relacaoDenuncia;
+	
+	public List<Usuario> getListaConcordancia() {
+		return listaConcordancia;
 	}
 
-	public void setRelacaoConcordancia(List<Usuario> relacaoConcordancia) {
-		this.listaConcordancia = relacaoConcordancia;
+	public List<Usuario> getListaDiscordancia() {
+		return listaDiscordancia;
+	}
+	
+	public void setListaoDenuncia(List<Usuario> listaDenuncia) {
+		this.listaDenuncias = listaDenuncia;
 	}
 
-	public void setRelacaoDiscordancia(List<Usuario> relacaoDiscordancia) {
-		this.listaDiscordancia = relacaoDiscordancia;
+	public void setListaConcordancia(List<Usuario> listaConcordancia) {
+		this.listaConcordancia = listaConcordancia;
 	}
 
-
-	public void setNameUser(String nameUser) {
-		this.nameUser = nameUser;
+	public void setListaDiscordancia(List<Usuario> listaDiscordancia) {
+		this.listaDiscordancia = listaDiscordancia;
 	}
-
 
 	public String getNameUser() {
 		return nameUser;
 	}
 
+	public void setNameUser(String nameUser) {
+		this.nameUser = nameUser;
+	}
 
 	public long getIdDica() {
 		return idDica;
 	}
+	
+	public void setIdDica(long id) {
+		this.idDica = id;
+	}
 
 	public String getIdDicaString() {
 		return "" + idDica;
-	}
-
-	public void setIdDica(long id) {
-		this.idDica = id;
 	}
 
 	public int getQuantDenuncias() {
@@ -150,24 +146,19 @@ public abstract class Dica implements Comparable<Dica> {
 	public Map<Usuario, String> getFrasesDicaDiscordada(){
 		return frasesDicaDiscordada;
 	}
-	public List<Usuario> getListaConcordancia() {
-		return listaConcordancia;
-	}
-
-	public List<Usuario> getListaDiscordancia() {
-		return listaDiscordancia;
-	}
-
-	public List<Usuario> getListaDenucnia() {
-		return listaDenuncias;
-	}
-
+	
 	public boolean isDicaInapropriada() {
 		return this.getQuantDenuncias() == MAX_DENUNCIAS;
 	}
 
-	public abstract String exibir();
-
+	public boolean isDicaFechada(){
+		if (getQuantConcordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS ||
+				getQuantDiscordancias() == MAX_CONCORDANDICAS_OU_DISCORDANCIAS){
+			return true;
+		}
+		return false;
+	}
+	
 	public String exibirFraseDeDiscordancia(Usuario user){
 		return frasesDicaDiscordada.get(user);
 

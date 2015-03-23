@@ -31,21 +31,6 @@ public class DicaDisciplinasAnteriores extends Dica {
 		this.razao = razao;
 	}
 	
-	
-//	public void isDicaValida(String razao) throws Exception{
-//		if (razao == null) {
-//			throw new Exception("Nome ou Razao não pode ser nulo");
-//		}
-//		if (razao.trim().equals("")) {
-//			throw new Exception("Nome ou razão não pode ser vazio");
-//		}
-//		if (razao.length() > 50) { //Decidir o tamanho
-//			throw new Exception("Nome ou razão muito longa");
-//		}
-//		this.razao = razao;
-//	}
-
-
 	@Override
 	public String exibir() {
 		String label = "<span class=\"label label-info\">" + "Disciplinas anteriores que te ajudarão aqui" + "</span>";

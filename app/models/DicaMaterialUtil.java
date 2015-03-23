@@ -23,20 +23,6 @@ public class DicaMaterialUtil extends Dica {
 		this.urlDoMaterial = urlDoMaterial;
 	}
 
-//	public void isDicaValida(String urlDoMaterial) throws Exception{
-//		if (urlDoMaterial == null) {
-//			throw new Exception("Url não pode ser nulo");
-//		}
-//		if (urlDoMaterial.trim().equals("")) {
-//			throw new Exception("Url não pode ser vazio");
-//		}
-////		if (WEB.matcher(url).matches()) { //Decidir o tamanho
-//	//		throw new Exception("Url inválida");
-//	//	}
-//		this.urlDoMaterial = urlDoMaterial;
-//	}
-
-
 	@Override
 	public String exibir() {
 		String label = "<span class=\"label label-info\">" + "Material Útil" + "</span>";

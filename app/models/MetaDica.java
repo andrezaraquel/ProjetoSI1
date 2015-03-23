@@ -11,7 +11,6 @@ public class MetaDica extends Dica {
 		super(user);
 	}
 	
-
 	@Override
 	public String exibir() {
 		// TODO Auto-generated method stub

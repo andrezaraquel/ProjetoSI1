@@ -127,8 +127,7 @@ public class Usuario {
 		if (email.trim().equals("")) {
 			throw new Exception("Email não pode ser vazio");
 		}
-		if (!(email
-				.matches("^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$"))) {
+		if (!(email.matches("^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$"))) {
 			throw new Exception("Email inválido");
 		}
 		this.email = email;

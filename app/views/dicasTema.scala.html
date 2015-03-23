@@ -15,28 +15,22 @@
 			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
 			</div>
 			
+			
 		</div>
 	</div>
 	
-	<div class="panel">	
-		<div class="col-md-5 col-offset-1">
-		
-		<button class="btn btn-small btn-default" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button>
-			
-		
-		<div class="col-md-2 col-md-offset-1">
-			<label>Média</label>
-			<div >222</div>
-		</div>
-		<div class="col-md-2 col-md-offset-1">
-			<label>Mediana</label>
-			<div >200</div>
-		</div>	
-	</div>		
-</div>
 
+	<div  class=" avaliacoesTema">
+		<label class="col-md-5">@user.getNome()</label>
+		<!--<div class="progress"> 
+			<div class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"> Muito difícil</div>
+		</div>-->
+		<label>Média</label>0.0
+		<button class="btn-small btn-default" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button>
+	</div>
+	
 
-<div class="panel col-md-12 ">
+<div class="col-md-12 panelDicas">
 	@if(tema.isEmpty()){
 		<p>Nenhuma dica para este tema.</p>	
 	}else{	
@@ -47,13 +41,11 @@
 			@for(user <- dica.getListaDiscordancia()){
 				<p class="nomeUsuarios">@user.getNome()</p> 
 				<h5>@dica.exibirFraseDeDiscordancia(user)</h5>
-			
 			}
-			
 			<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'" disabled="@dica.isDicaFechada()" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
-			<a disabled="@dica.isDicaFechada()" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
-			<p> Índicie de concordância </p>@dica.getIndiceConcordancia()
-			<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())'" class="acaoRota linkDenunciar">Denunciar </a>@dica.getQuantDenuncias()
+			<a disabled="@dica.isDicaFechada()" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/discurtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
+			<a disabled="true">Índicie de concordância</a>@dica.getIndiceConcordancia()&nbsp;&nbsp;
+			<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString()) '" class="acaoRota linkDenunciar">Denunciar </a>@dica.getQuantDenuncias()&nbsp;&nbsp;
 			<legend></legend>
 		
 
@@ -112,13 +104,4 @@
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
-
-
-
-
-
-
-
-
-
 }

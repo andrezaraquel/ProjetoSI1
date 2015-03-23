@@ -43,46 +43,38 @@ Seq[Any](format.raw/*1.36*/("""
 			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
 			</div>
 			
+			
 		</div>
 	</div>
 	
-	<div class="panel">	
-		<div class="col-md-5 col-offset-1">
-		
-		<button class="btn btn-small btn-default" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button>
-			
-		
-		<div class="col-md-2 col-md-offset-1">
-			<label>Média</label>
-			<div >222</div>
-		</div>
-		<div class="col-md-2 col-md-offset-1">
-			<label>Mediana</label>
-			<div >200</div>
-		</div>	
-	</div>		
-</div>
 
+	<div  class=" avaliacoesTema">
+		<label class="col-md-5">"""),_display_(/*24.28*/user/*24.32*/.getNome()),format.raw/*24.42*/("""</label>
+		<!--<div class="progress"> 
+			<div class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"> Muito difícil</div>
+		</div>-->
+		<label>Média</label>0.0
+		<button class="btn-small btn-default" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button>
+	</div>
+	
 
-<div class="panel col-md-12 ">
-	"""),_display_(/*40.3*/if(tema.isEmpty())/*40.21*/{_display_(Seq[Any](format.raw/*40.22*/("""
-		"""),format.raw/*41.3*/("""<p>Nenhuma dica para este tema.</p>	
-	""")))}/*42.3*/else/*42.7*/{_display_(Seq[Any](format.raw/*42.8*/("""	
-		"""),_display_(/*43.4*/for(dica <- tema.getDicas()) yield /*43.32*/{_display_(Seq[Any](format.raw/*43.33*/("""
-			"""),format.raw/*44.4*/("""<p class="nomeUsuarios">"""),_display_(/*44.29*/dica/*44.33*/.getNameUser()),format.raw/*44.47*/("""</p>
-			"""),_display_(/*45.5*/Html(dica.exibir())),format.raw/*45.24*/("""
+<div class="col-md-12 panelDicas">
+	"""),_display_(/*34.3*/if(tema.isEmpty())/*34.21*/{_display_(Seq[Any](format.raw/*34.22*/("""
+		"""),format.raw/*35.3*/("""<p>Nenhuma dica para este tema.</p>	
+	""")))}/*36.3*/else/*36.7*/{_display_(Seq[Any](format.raw/*36.8*/("""	
+		"""),_display_(/*37.4*/for(dica <- tema.getDicas()) yield /*37.32*/{_display_(Seq[Any](format.raw/*37.33*/("""
+			"""),format.raw/*38.4*/("""<p class="nomeUsuarios">"""),_display_(/*38.29*/dica/*38.33*/.getNameUser()),format.raw/*38.47*/("""</p>
+			"""),_display_(/*39.5*/Html(dica.exibir())),format.raw/*39.24*/("""
 
-			"""),_display_(/*47.5*/for(user <- dica.getListaDiscordancia()) yield /*47.45*/{_display_(Seq[Any](format.raw/*47.46*/("""
-				"""),format.raw/*48.5*/("""<p class="nomeUsuarios">"""),_display_(/*48.30*/user/*48.34*/.getNome()),format.raw/*48.44*/("""</p> 
-				<h5>"""),_display_(/*49.10*/dica/*49.14*/.exibirFraseDeDiscordancia(user)),format.raw/*49.46*/("""</h5>
-			
-			""")))}),format.raw/*51.5*/("""
-			
-			"""),format.raw/*53.4*/("""<a onClick="location.href='"""),_display_(/*53.32*/routes/*53.38*/.TemaController.concordar(dica.getIdDicaString())),format.raw/*53.87*/("""'" disabled=""""),_display_(/*53.101*/dica/*53.105*/.isDicaFechada()),format.raw/*53.121*/("""" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*53.213*/dica/*53.217*/.getQuantConcordancias()),format.raw/*53.241*/("""&nbsp;&nbsp;
-			<a disabled=""""),_display_(/*54.18*/dica/*54.22*/.isDicaFechada()),format.raw/*54.38*/("""" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/curtir_icon.jpg"/>"""),_display_(/*54.174*/dica/*54.178*/.getQuantDiscordancias()),format.raw/*54.202*/("""&nbsp;&nbsp;
-			<p> Índicie de concordância </p>"""),_display_(/*55.37*/dica/*55.41*/.getIndiceConcordancia()),format.raw/*55.65*/("""
-			"""),format.raw/*56.4*/("""<a onClick="location.href='"""),_display_(/*56.32*/routes/*56.38*/.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())),format.raw/*56.106*/("""'" class="acaoRota linkDenunciar">Denunciar </a>"""),_display_(/*56.155*/dica/*56.159*/.getQuantDenuncias()),format.raw/*56.179*/("""
-			"""),format.raw/*57.4*/("""<legend></legend>
+			"""),_display_(/*41.5*/for(user <- dica.getListaDiscordancia()) yield /*41.45*/{_display_(Seq[Any](format.raw/*41.46*/("""
+				"""),format.raw/*42.5*/("""<p class="nomeUsuarios">"""),_display_(/*42.30*/user/*42.34*/.getNome()),format.raw/*42.44*/("""</p> 
+				<h5>"""),_display_(/*43.10*/dica/*43.14*/.exibirFraseDeDiscordancia(user)),format.raw/*43.46*/("""</h5>
+			""")))}),format.raw/*44.5*/("""
+			"""),format.raw/*45.4*/("""<a onClick="location.href='"""),_display_(/*45.32*/routes/*45.38*/.TemaController.concordar(dica.getIdDicaString())),format.raw/*45.87*/("""'" disabled=""""),_display_(/*45.101*/dica/*45.105*/.isDicaFechada()),format.raw/*45.121*/("""" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />"""),_display_(/*45.213*/dica/*45.217*/.getQuantConcordancias()),format.raw/*45.241*/("""&nbsp;&nbsp;
+			<a disabled=""""),_display_(/*46.18*/dica/*46.22*/.isDicaFechada()),format.raw/*46.38*/("""" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/discurtir_icon.jpg"/>"""),_display_(/*46.177*/dica/*46.181*/.getQuantDiscordancias()),format.raw/*46.205*/("""&nbsp;&nbsp;
+			<a disabled="true">Índicie de concordância</a>"""),_display_(/*47.51*/dica/*47.55*/.getIndiceConcordancia()),format.raw/*47.79*/("""&nbsp;&nbsp;
+			<a onClick="location.href='"""),_display_(/*48.32*/routes/*48.38*/.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString())),format.raw/*48.106*/(""" """),format.raw/*48.107*/("""'" class="acaoRota linkDenunciar">Denunciar </a>"""),_display_(/*48.156*/dica/*48.160*/.getQuantDenuncias()),format.raw/*48.180*/("""&nbsp;&nbsp;
+			<legend></legend>
 		
 
 			<div class="modal fade" id="discordar">
@@ -94,7 +86,7 @@ Seq[Any](format.raw/*1.36*/("""
 						</div>
 						<div class="modal-body">
 							<form class="form-horizontal" method="POST" role="form"  id="formDiscordar"  action="/discordar">
-								<input type="hidden"  name="idDica" value=""""),_display_(/*69.53*/dica/*69.57*/.getIdDicaString()),format.raw/*69.75*/("""" />
+								<input type="hidden"  name="idDica" value=""""),_display_(/*61.53*/dica/*61.57*/.getIdDicaString()),format.raw/*61.75*/("""" />
 								<div class="col-sm-8">
 									<textarea class="form-control" name="frase" maxlength="100"
 										placeholder="Digite a razão pela qual você discorda desta dica." required></textarea>
@@ -108,9 +100,9 @@ Seq[Any](format.raw/*1.36*/("""
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
-			""")))}),format.raw/*83.5*/("""
-		""")))}),format.raw/*84.4*/("""	
-"""),format.raw/*85.1*/("""</div>
+			""")))}),format.raw/*75.5*/("""
+		""")))}),format.raw/*76.4*/("""	
+"""),format.raw/*77.1*/("""</div>
 
 <div class="modal fade" id="avaliarTema">
 				<div class="modal-dialog">
@@ -122,7 +114,7 @@ Seq[Any](format.raw/*1.36*/("""
 						<div class="modal-body">
 							
 							<form class="form-horizontal" method="POST" role="form"  id="formAvaliar"  action="/avaliar">
-								<input type="hidden"  name="idTema" value=""""),_display_(/*97.53*/tema/*97.57*/.getIdString()),format.raw/*97.71*/("""" />
+								<input type="hidden"  name="idTema" value=""""),_display_(/*89.53*/tema/*89.57*/.getIdString()),format.raw/*89.71*/("""" />
 								<div class="form-group">
 									<label class="radio-inline"><input name="notaValue" type="radio" value="-2" checked>Muito Fácil</input></label>
 									<label class="radio-inline"><input name="notaValue" type="radio" value="-1" value="facil">Fácil</input></label>
@@ -140,15 +132,6 @@ Seq[Any](format.raw/*1.36*/("""
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
-
-
-
-
-
-
-
-
-
 """)))}))}
   }
 
@@ -161,11 +144,11 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 22 22:55:40 BRT 2015
+                  DATE: Mon Mar 23 01:36:28 BRT 2015
                   SOURCE: C:/Users/Daniela/Documents/CC/projetosi1-vespera/ProjetoSI1/app/views/dicasTema.scala.html
-                  HASH: 15880b2e7d426eb8011bbbbd1f9d7b850db6c6d1
-                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|2001->950|2028->968|2067->969|2098->973|2156->1013|2168->1017|2206->1018|2238->1024|2282->1052|2321->1053|2353->1058|2405->1083|2418->1087|2453->1101|2489->1111|2529->1130|2563->1138|2619->1178|2658->1179|2691->1185|2743->1210|2756->1214|2787->1224|2830->1240|2843->1244|2896->1276|2942->1292|2979->1302|3034->1330|3049->1336|3119->1385|3161->1399|3175->1403|3213->1419|3333->1511|3347->1515|3393->1539|3451->1570|3464->1574|3501->1590|3665->1726|3679->1730|3725->1754|3802->1804|3815->1808|3860->1832|3892->1837|3947->1865|3962->1871|4052->1939|4129->1988|4143->1992|4185->2012|4217->2017|4810->2583|4823->2587|4862->2605|5487->3200|5522->3205|5552->3208|6128->3757|6141->3761|6176->3775
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|68->40|68->40|68->40|69->41|70->42|70->42|70->42|71->43|71->43|71->43|72->44|72->44|72->44|72->44|73->45|73->45|75->47|75->47|75->47|76->48|76->48|76->48|76->48|77->49|77->49|77->49|79->51|81->53|81->53|81->53|81->53|81->53|81->53|81->53|81->53|81->53|81->53|82->54|82->54|82->54|82->54|82->54|82->54|83->55|83->55|83->55|84->56|84->56|84->56|84->56|84->56|84->56|84->56|85->57|97->69|97->69|97->69|111->83|112->84|113->85|125->97|125->97|125->97
+                  HASH: e040e74330fd7f1cd70ad0cb7af536a3225a70e0
+                  MATRIX: 740->1|862->35|892->40|923->63|961->64|991->69|1031->89|1059->91|1278->283|1291->287|1322->297|1626->574|1639->578|1670->588|2111->1003|2138->1021|2177->1022|2208->1026|2266->1066|2278->1070|2316->1071|2348->1077|2392->1105|2431->1106|2463->1111|2515->1136|2528->1140|2563->1154|2599->1164|2639->1183|2673->1191|2729->1231|2768->1232|2801->1238|2853->1263|2866->1267|2897->1277|2940->1293|2953->1297|3006->1329|3047->1340|3079->1345|3134->1373|3149->1379|3219->1428|3261->1442|3275->1446|3313->1462|3433->1554|3447->1558|3493->1582|3551->1613|3564->1617|3601->1633|3768->1772|3782->1776|3828->1800|3919->1864|3932->1868|3977->1892|4049->1937|4064->1943|4154->2011|4184->2012|4261->2061|4275->2065|4317->2085|4927->2668|4940->2672|4979->2690|5604->3285|5639->3290|5669->3293|6245->3842|6258->3846|6293->3860
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|34->6|39->11|39->11|39->11|52->24|52->24|52->24|62->34|62->34|62->34|63->35|64->36|64->36|64->36|65->37|65->37|65->37|66->38|66->38|66->38|66->38|67->39|67->39|69->41|69->41|69->41|70->42|70->42|70->42|70->42|71->43|71->43|71->43|72->44|73->45|73->45|73->45|73->45|73->45|73->45|73->45|73->45|73->45|73->45|74->46|74->46|74->46|74->46|74->46|74->46|75->47|75->47|75->47|76->48|76->48|76->48|76->48|76->48|76->48|76->48|89->61|89->61|89->61|103->75|104->76|105->77|117->89|117->89|117->89
                   -- GENERATED --
               */
           

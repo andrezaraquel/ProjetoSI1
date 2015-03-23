@@ -39,3 +39,11 @@ a[disabled="true"] {
     pointer-events: none;
 	color: black;
 }
+
+.avaliacoesTema{
+	background-color: #CFCFCF;
+}
+
+.panelDicas{
+	background-color: #ffffff;
+}

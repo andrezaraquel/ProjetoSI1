@@ -23,8 +23,6 @@ public class DicaSemDificuldades extends Dica {
 		this.nomeDoAssunto = nomeDoAssunto;
 	}
 
-	
-
 	@Override
 	public String exibir() {
 		String label = "<span class=\"label label-info\">" + "O que você precisa saber para não ter dificuldades" + "</span>";

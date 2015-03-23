@@ -1,270 +1,255 @@
-2015-03-22 22:25:07,669 - [INFO] - from play in pool-6-thread-2 
+2015-03-23 01:17:44,679 - [INFO] - from play in pool-6-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-22 22:25:27,039 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-23 01:18:06,786 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-03-22 22:25:27,550 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-23 01:18:07,373 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-22 22:25:32,943 - [INFO] - from application in play-internal-execution-context-1 
+2015-03-23 01:18:13,660 - [INFO] - from application in play-internal-execution-context-1 
 Aplicacao inicializada...
 
-2015-03-22 22:25:33,765 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-23 01:18:14,570 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-22 22:27:48,176 - [INFO] - from play in play-internal-execution-context-2 
+2015-03-23 01:19:18,519 - [INFO] - from play in play-internal-execution-context-2 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-03-22 22:27:48,186 - [INFO] - from play in play-internal-execution-context-2 
+2015-03-23 01:19:18,526 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-22 22:27:49,878 - [INFO] - from application in play-internal-execution-context-2 
+2015-03-23 01:19:20,038 - [INFO] - from application in play-internal-execution-context-2 
 Aplicacao inicializada...
 
-2015-03-22 22:27:49,901 - [INFO] - from play in play-internal-execution-context-2 
+2015-03-23 01:19:20,086 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-22 22:40:08,195 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg5pidm - Internal server error, for (POST) [/avaliar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: variable idDica is already defined in method denunciar(String,String)]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:42:16,254 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg66ppn - Internal server error, for (POST) [/avaliar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: variable idDica is already defined in method denunciar(String,String)]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:43:07,364 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg69nfc - Internal server error, for (POST) [/avaliar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not enough arguments for method denunciar: (idTema: String, idDica: String)play.mvc.Result.
-Unspecified value parameter idDica.]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:43:34,461 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg6bbho - Internal server error, for (POST) [/avaliar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not enough arguments for method denunciar: (idTema: String, idDica: String)play.mvc.Result.
-Unspecified value parameter idDica.]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:46:56,909 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg6mp48 - Internal server error, for (POST) [/avaliar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: variable idDicaLong is already defined in method denunciar(String)]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:49:13,400 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg74j21 - Internal server error, for (POST) [/avaliar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: variable idDicaLong is already defined in method denunciar(String)]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:50:21,425 - [INFO] - from play in play-internal-execution-context-11 
+2015-03-23 01:20:41,788 - [INFO] - from play in play-internal-execution-context-2 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-03-22 22:50:21,434 - [INFO] - from play in play-internal-execution-context-11 
+2015-03-23 01:20:41,796 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-22 22:50:22,998 - [INFO] - from application in play-internal-execution-context-11 
+2015-03-23 01:20:43,113 - [INFO] - from application in play-internal-execution-context-2 
 Aplicacao inicializada...
 
-2015-03-22 22:50:23,023 - [INFO] - from play in play-internal-execution-context-11 
+2015-03-23 01:20:43,193 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-22 22:55:43,915 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6lhg80ojk - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[too many arguments for method denunciar: ($idTema: String)play.api.mvc.Call]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-22 22:56:40,048 - [INFO] - from play in play-internal-execution-context-18 
+2015-03-23 01:21:17,301 - [INFO] - from play in play-internal-execution-context-2 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-03-22 22:56:40,057 - [INFO] - from play in play-internal-execution-context-18 
+2015-03-23 01:21:17,308 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-22 22:56:41,290 - [INFO] - from application in play-internal-execution-context-18 
+2015-03-23 01:21:18,548 - [INFO] - from application in play-internal-execution-context-2 
 Aplicacao inicializada...
 
-2015-03-22 22:56:41,311 - [INFO] - from play in play-internal-execution-context-18 
+2015-03-23 01:21:18,570 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-03-23 01:21:53,836 - [INFO] - from play in play-internal-execution-context-15 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:21:53,843 - [INFO] - from play in play-internal-execution-context-15 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:21:55,134 - [INFO] - from application in play-internal-execution-context-15 
+Aplicacao inicializada...
+
+2015-03-23 01:21:55,163 - [INFO] - from play in play-internal-execution-context-15 
+Application started (Dev)
+
+2015-03-23 01:22:34,996 - [INFO] - from play in play-internal-execution-context-19 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:22:35,002 - [INFO] - from play in play-internal-execution-context-19 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:22:36,055 - [INFO] - from application in play-internal-execution-context-19 
+Aplicacao inicializada...
+
+2015-03-23 01:22:36,086 - [INFO] - from play in play-internal-execution-context-19 
+Application started (Dev)
+
+2015-03-23 01:23:02,984 - [INFO] - from play in play-internal-execution-context-20 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:23:02,994 - [INFO] - from play in play-internal-execution-context-20 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:23:04,922 - [INFO] - from application in play-internal-execution-context-20 
+Aplicacao inicializada...
+
+2015-03-23 01:23:04,957 - [INFO] - from play in play-internal-execution-context-20 
+Application started (Dev)
+
+2015-03-23 01:23:32,272 - [INFO] - from play in play-internal-execution-context-24 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:23:32,280 - [INFO] - from play in play-internal-execution-context-24 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:23:33,314 - [INFO] - from application in play-internal-execution-context-24 
+Aplicacao inicializada...
+
+2015-03-23 01:23:33,335 - [INFO] - from play in play-internal-execution-context-24 
+Application started (Dev)
+
+2015-03-23 01:24:01,620 - [INFO] - from play in play-internal-execution-context-24 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:24:01,627 - [INFO] - from play in play-internal-execution-context-24 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:24:02,758 - [INFO] - from application in play-internal-execution-context-24 
+Aplicacao inicializada...
+
+2015-03-23 01:24:02,781 - [INFO] - from play in play-internal-execution-context-24 
+Application started (Dev)
+
+2015-03-23 01:24:26,373 - [INFO] - from play in play-internal-execution-context-30 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:24:26,380 - [INFO] - from play in play-internal-execution-context-30 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:24:27,505 - [INFO] - from application in play-internal-execution-context-30 
+Aplicacao inicializada...
+
+2015-03-23 01:24:27,528 - [INFO] - from play in play-internal-execution-context-30 
+Application started (Dev)
+
+2015-03-23 01:25:00,148 - [INFO] - from play in play-internal-execution-context-24 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:25:00,156 - [INFO] - from play in play-internal-execution-context-24 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:25:01,279 - [INFO] - from application in play-internal-execution-context-24 
+Aplicacao inicializada...
+
+2015-03-23 01:25:01,302 - [INFO] - from play in play-internal-execution-context-24 
+Application started (Dev)
+
+2015-03-23 01:25:48,061 - [INFO] - from play in play-internal-execution-context-33 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:25:48,072 - [INFO] - from play in play-internal-execution-context-33 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:25:49,285 - [INFO] - from application in play-internal-execution-context-33 
+Aplicacao inicializada...
+
+2015-03-23 01:25:49,309 - [INFO] - from play in play-internal-execution-context-33 
+Application started (Dev)
+
+2015-03-23 01:26:53,319 - [INFO] - from play in play-internal-execution-context-37 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:26:53,329 - [INFO] - from play in play-internal-execution-context-37 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:26:54,465 - [INFO] - from application in play-internal-execution-context-37 
+Aplicacao inicializada...
+
+2015-03-23 01:26:54,487 - [INFO] - from play in play-internal-execution-context-37 
+Application started (Dev)
+
+2015-03-23 01:28:07,140 - [INFO] - from play in play-internal-execution-context-44 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:28:07,147 - [INFO] - from play in play-internal-execution-context-44 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:28:08,218 - [INFO] - from application in play-internal-execution-context-44 
+Aplicacao inicializada...
+
+2015-03-23 01:28:08,267 - [INFO] - from play in play-internal-execution-context-44 
+Application started (Dev)
+
+2015-03-23 01:28:34,464 - [INFO] - from play in play-internal-execution-context-44 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:28:34,471 - [INFO] - from play in play-internal-execution-context-44 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:28:35,436 - [INFO] - from application in play-internal-execution-context-44 
+Aplicacao inicializada...
+
+2015-03-23 01:28:35,457 - [INFO] - from play in play-internal-execution-context-44 
+Application started (Dev)
+
+2015-03-23 01:30:26,832 - [INFO] - from play in play-internal-execution-context-46 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:30:26,840 - [INFO] - from play in play-internal-execution-context-46 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:30:27,935 - [INFO] - from application in play-internal-execution-context-46 
+Aplicacao inicializada...
+
+2015-03-23 01:30:27,961 - [INFO] - from play in play-internal-execution-context-46 
+Application started (Dev)
+
+2015-03-23 01:32:18,531 - [INFO] - from play in play-internal-execution-context-50 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:32:18,539 - [INFO] - from play in play-internal-execution-context-50 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:32:19,584 - [INFO] - from application in play-internal-execution-context-50 
+Aplicacao inicializada...
+
+2015-03-23 01:32:19,605 - [INFO] - from play in play-internal-execution-context-50 
+Application started (Dev)
+
+2015-03-23 01:33:13,637 - [INFO] - from play in play-internal-execution-context-51 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:33:13,645 - [INFO] - from play in play-internal-execution-context-51 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:33:14,698 - [INFO] - from application in play-internal-execution-context-51 
+Aplicacao inicializada...
+
+2015-03-23 01:33:14,720 - [INFO] - from play in play-internal-execution-context-51 
+Application started (Dev)
+
+2015-03-23 01:33:59,355 - [INFO] - from play in play-internal-execution-context-51 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:33:59,359 - [INFO] - from play in play-internal-execution-context-51 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:34:00,619 - [INFO] - from application in play-internal-execution-context-51 
+Aplicacao inicializada...
+
+2015-03-23 01:34:00,638 - [INFO] - from play in play-internal-execution-context-51 
+Application started (Dev)
+
+2015-03-23 01:36:11,947 - [INFO] - from play in play-internal-execution-context-51 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:36:11,956 - [INFO] - from play in play-internal-execution-context-51 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:36:12,984 - [INFO] - from application in play-internal-execution-context-51 
+Aplicacao inicializada...
+
+2015-03-23 01:36:13,003 - [INFO] - from play in play-internal-execution-context-51 
+Application started (Dev)
+
+2015-03-23 01:36:37,511 - [INFO] - from play in play-internal-execution-context-51 
+datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-03-23 01:36:37,518 - [INFO] - from play in play-internal-execution-context-51 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-23 01:36:38,487 - [INFO] - from application in play-internal-execution-context-51 
+Aplicacao inicializada...
+
+2015-03-23 01:36:38,506 - [INFO] - from play in play-internal-execution-context-51 
 Application started (Dev)
 
