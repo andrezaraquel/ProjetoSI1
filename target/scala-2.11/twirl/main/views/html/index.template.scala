@@ -93,7 +93,7 @@ Seq[Any](format.raw/*1.91*/("""
 						</div>
 						
 						<div class="col-md-3 " >
-						<button type="button" class="btn-info btn" data-toggle="modal" data-target="#adicionarMetaDica" >Crie sua meta dica</button>
+						<button type="button" class="btn-info btn" data-toggle="modal" data-target="" >Crie sua meta dica</button>
 						</div>						
 					</div>
 				</div>
@@ -102,7 +102,8 @@ Seq[Any](format.raw/*1.91*/("""
 		
 	</div>
 </div>		
-""")))}))}
+""")))}),format.raw/*77.2*/("""
+"""))}
   }
 
   def render(user:Usuario,diciplina:models.Disciplina,temas:List[models.Tema],message:String): play.twirl.api.HtmlFormat.Appendable = apply(user,diciplina,temas,message)
@@ -114,11 +115,11 @@ Seq[Any](format.raw/*1.91*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 14:57:12 BRT 2015
-                  SOURCE: /home/mariadch/projetosi-ultima/ProjetoSI1/app/views/index.scala.html
-                  HASH: 2655607211ac81946b8898451a07b88a082f4672
-                  MATRIX: 767->1|944->90|974->95|1005->118|1044->120|1071->122|1115->146|1144->149|1750->728|1763->732|1794->742|2407->1329|2441->1347|2480->1348|2515->1356|2588->1402|2601->1406|2632->1416|2667->1424|2680->1428|2715->1442|2745->1445|2758->1449|2789->1459|2859->1499|2892->1505
-                  LINES: 26->1|29->1|32->4|32->4|32->4|33->5|33->5|35->7|48->20|48->20|48->20|72->44|72->44|72->44|73->45|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|77->49|78->50
+                  DATE: Mon Mar 23 15:39:23 BRT 2015
+                  SOURCE: /home/mariadch/ultimo/ProjetoSI1/app/views/index.scala.html
+                  HASH: 06bac319f31516926e0ab8e02d1c9ab8b785a48a
+                  MATRIX: 767->1|944->90|974->95|1005->118|1044->120|1071->122|1115->146|1144->149|1750->728|1763->732|1794->742|2407->1329|2441->1347|2480->1348|2515->1356|2588->1402|2601->1406|2632->1416|2667->1424|2680->1428|2715->1442|2745->1445|2758->1449|2789->1459|2859->1499|2892->1505|3523->2106
+                  LINES: 26->1|29->1|32->4|32->4|32->4|33->5|33->5|35->7|48->20|48->20|48->20|72->44|72->44|72->44|73->45|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|77->49|78->50|105->77
                   -- GENERATED --
               */
           
