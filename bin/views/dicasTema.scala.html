@@ -7,12 +7,12 @@
 <div class="panel panel-info ">
 	<div class="panel-heading">
 		<div class="row">
-			<div class="col-md-10 ">
+			<div class="col-md-9 ">
 			<h1 class="panel-title" id ="temaSelecionado">@tema.getNome()</h1>
 			</div>
 			
-			<div class="col-md-1.5 " >
-			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
+			<div class="col-md-3" >
+			<button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
 			</div>		
 			
 		</div>
@@ -20,11 +20,12 @@
 	
 
 	<div  class=" avaliacoesTema">
-		<div class="row">
-			<div class="col-md-3"><label>Nível de dificuldade</label> </div>
-			<div class="col-md-2 "><label>Média: &nbsp;</label><label>@tema.getAvaliacaoMedia()</label></div>
-			<div class="col-md-2 "><label>Mediana:&nbsp;</label><label>@tema.getAvaliacaoMediana()</label></div>
-			<div class="col-md-offset-2.5 col-md-2"><button class="btn btn-small btn-default" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button></div>
+		<div class="panel-heading">	
+			<div class="row">
+				<div class="col-md-5 "><label>Média de Dificuldade do Tema: &nbsp;</label><label>@tema.getAvaliacaoMedia()</label></div>
+				<div class="col-md-4 "><label>Mediana das Avaliações:&nbsp;</label><label>@tema.getAvaliacaoMediana()</label></div>
+				<div class="col-md-3"><button class="btn btn-xs btn-info" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button></div>
+			</div>
 		</div>
 	</div>
 	
