@@ -37,17 +37,24 @@
 				<p class="nomeUsuarios">@dica.getNameUser()&nbsp;&nbsp;@Html(dica.exibirLabel())</p>
 				@Html(dica.exibirDica())
 
-				@for(user <- dica.getListaDiscordancia()){
-					<p class="nomeUsuarios">@user.getNome()</p> 
-					<h5>@dica.exibirFraseDeDiscordancia(user)</h5>
-				}
+				
 				<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'" disabled="@dica.isDicaFechada()" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
 				<a disabled="@dica.isDicaFechada()" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/discurtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
 				<a disabled="true">Índicie de concordância</a>@dica.getIndiceConcordancia()&nbsp;&nbsp;
-				<a onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString()) '" class="acaoRota linkDenunciar">Denunciar </a>@dica.getQuantDenuncias()&nbsp;&nbsp;
+				<a class="acaoRota linkDenunciar" data-toggle="modal" data-target="#denunciar">Denunciar </a>
+				
+				
+				@if(!dica.getListaDiscordancia().isEmpty()){
+					<div class= "panel container col-md-12 panelFrase">
+					@for(user <- dica.getListaDiscordancia()){
+							<p class="nomeUsuarios">@user.getNome() discordou pelo seguinte motivo:</p> 
+							<h5>@dica.exibirFraseDeDiscordancia(user)</h5>
+							<legend></legend>
+					}
+					</div>
+					
+				}			
 				<legend></legend>
-			
-
 				<div class="modal fade" id="discordar">
 					<div class="modal-dialog">
 						<div class="modal-content">
@@ -94,7 +101,7 @@
 						
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-default" >Denunciar</button>
+							<button type="button" class="btn btn-default" onClick="location.href='@routes.TemaController.denunciar(tema.getIdString(),dica.getIdDicaString()) '" >Denunciar</button>
 						</div>	
 					 </div> <!--3-->
 				</div> <!--2-->

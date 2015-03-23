@@ -47,3 +47,7 @@ a[disabled="true"] {
 .panelDicas{
 	background-color: #ffffff;
 }
+
+.panelFrase{
+	 border: 1px solid #428bca;
+}

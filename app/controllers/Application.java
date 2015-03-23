@@ -3,6 +3,7 @@ package controllers;
 import java.util.List;
 
 import models.Usuario;
+import models.Disciplina;
 import models.dao.*;
 import play.*;
 import play.db.jpa.Transactional;
@@ -18,8 +19,8 @@ public class Application extends Controller {
 		if (session().get("user") == null) {
 			return redirect(routes.AutenticacaoController.showLogin());
 		}
-	//return ok(index.render("Portal do Leite"));
-	return ok(index.render(getUsuarioLogado(), TemaController.getTemas(), ""));
+	Disciplina disciplina = (Disciplina) dao.findByAttributeName("Disciplina", "nome", "Sistema de Informação I").get(0);
+	return ok(index.render(getUsuarioLogado(), disciplina, TemaController.getTemas(), ""));
 	}
 
 	

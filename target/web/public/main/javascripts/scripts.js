@@ -9,6 +9,9 @@ $(function() {
 
 function povoarDivTema() {	
 	$(".temas").click(function(){
+		
+		$(".metaDica").hide();
+		
 		$(".temas").each(function(){
 			$(this).removeClass("active-menu");
 		});

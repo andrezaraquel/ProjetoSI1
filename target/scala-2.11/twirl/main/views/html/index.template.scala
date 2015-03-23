@@ -20,13 +20,13 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[Usuario,List[models.Tema],String,play.twirl.api.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template4[Usuario,models.Disciplina,List[models.Tema],String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(user: Usuario, temas: List[models.Tema], message: String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: Usuario, diciplina: models.Disciplina, temas : List[models.Tema], message: String):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.60*/(""" 
+Seq[Any](format.raw/*1.91*/(""" 
 
 
 """),_display_(/*4.2*/main("Portal do Leite")/*4.25*/ {_display_(Seq[Any](format.raw/*4.27*/("""
@@ -81,24 +81,43 @@ Seq[Any](format.raw/*1.60*/("""
 		</div>
 		<div class="col-md-8 col-offset-1" id="campoTemas">			
 		</div>
+		
+	
+		<div class="col-md-8 col-offset-1 metaDica" >	
+			<br /> <br /> <br /> <br />
+			<div class="panel panel-info ">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-md-9 ">
+						<h1 class="panel-title" >Meta Dicas</h1>
+						</div>
+						
+						<div class="col-md-3 " >
+						<button type="button" class="btn-info btn" data-toggle="modal" data-target="#adicionarMetaDica" >Crie sua meta dica</button>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </div>		
 """)))}))}
   }
 
-  def render(user:Usuario,temas:List[models.Tema],message:String): play.twirl.api.HtmlFormat.Appendable = apply(user,temas,message)
+  def render(user:Usuario,diciplina:models.Disciplina,temas:List[models.Tema],message:String): play.twirl.api.HtmlFormat.Appendable = apply(user,diciplina,temas,message)
 
-  def f:((Usuario,List[models.Tema],String) => play.twirl.api.HtmlFormat.Appendable) = (user,temas,message) => apply(user,temas,message)
+  def f:((Usuario,models.Disciplina,List[models.Tema],String) => play.twirl.api.HtmlFormat.Appendable) = (user,diciplina,temas,message) => apply(user,diciplina,temas,message)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 11:02:24 BRT 2015
-                  SOURCE: /home/andrezarmq/Documentos/SI1/ProjetoSI1/app/views/index.scala.html
-                  HASH: 6da722f297a58b8e9cb78b4cb66871da033cd529
-                  MATRIX: 749->1|895->59|925->64|956->87|995->89|1025->93|1631->672|1644->676|1675->686|2288->1273|2322->1291|2361->1292|2396->1300|2469->1346|2482->1350|2513->1360|2548->1368|2561->1372|2596->1386|2626->1389|2639->1393|2670->1403|2740->1443|2773->1449
+                  DATE: Mon Mar 23 13:37:51 BRT 2015
+                  SOURCE: /home/mariadch/projetosi1-dia/ProjetoSI1/app/views/index.scala.html
+                  HASH: ae797363aed6a4bcdd22da37481c1e0e759bcd1c
+                  MATRIX: 767->1|944->90|974->95|1005->118|1044->120|1074->124|1680->703|1693->707|1724->717|2337->1304|2371->1322|2410->1323|2445->1331|2518->1377|2531->1381|2562->1391|2597->1399|2610->1403|2645->1417|2675->1420|2688->1424|2719->1434|2789->1474|2822->1480
                   LINES: 26->1|29->1|32->4|32->4|32->4|35->7|48->20|48->20|48->20|72->44|72->44|72->44|73->45|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|74->46|77->49|78->50
                   -- GENERATED --
               */

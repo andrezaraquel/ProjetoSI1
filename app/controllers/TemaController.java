@@ -9,6 +9,7 @@ import models.DicaConselho;
 import models.DicaDisciplinasAnteriores;
 import models.DicaMaterialUtil;
 import models.DicaSemDificuldades;
+import models.Disciplina;
 import models.Tema;
 import models.Usuario;
 import play.data.DynamicForm;
@@ -34,13 +35,10 @@ public class TemaController extends Controller {
 
 		long idLong = Long.parseLong(id);
 		Dica dica = getDica(idLong);
-		try {
-			dica.concordar(Application.getUsuarioLogado());
-		} catch (Exception e) {
-			return ok(index.render(Application.getUsuarioLogado(), getTemas(), e.getMessage()));
 
-		}
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		dica.concordar(Application.getUsuarioLogado());
+	
+		return redirect(routes.Application.index());
 	
 	}	
 		
@@ -57,7 +55,7 @@ public class TemaController extends Controller {
 		
 		tema.avaliarTema(Application.getUsuarioLogado(), tema.getEnumAvaliacaoTema(notaValue));
 		
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		return redirect(routes.Application.index());
 
 	
 	}	
@@ -75,10 +73,10 @@ public class TemaController extends Controller {
 		try {
 			dica.discordar(Application.getUsuarioLogado(), frase);
 		} catch (Exception e) {
-			return ok(index.render(Application.getUsuarioLogado(), getTemas(), e.getMessage()));
+			return redirect(routes.Application.index());
 
 		}
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		return redirect(routes.Application.index());
 	}
 	
 	
@@ -100,13 +98,35 @@ public class TemaController extends Controller {
 				
 			}
 		} catch (Exception e) {
-			return ok(index.render(Application.getUsuarioLogado(), getTemas(), e.getMessage()));
+			return redirect(routes.Application.index());
 
 		}
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		return redirect(routes.Application.index());
 	}
 	
-	
+	@Transactional
+	public static Result addDicaMaterialUtil(){    	
+
+		DynamicForm form = Form.form().bindFromRequest();
+
+		String idTema = form.field("idTema").value();		
+		String  urlDoMaterial = form.field("urlMaterial").value();
+		
+		try {
+			Dica dica = new DicaMaterialUtil( Application.getUsuarioLogado(), urlDoMaterial);
+			long idTemaLong = Long.parseLong(idTema);
+			Tema tema = getTema(idTemaLong);
+			tema.adicionarDica(dica);
+			Application.salvaObjeto(dica); 
+		}catch (Exception e){
+			return redirect(routes.Application.index());
+		}
+
+//		Application.salvaObjeto(tema);
+//		Application.salvaObjeto(Application.getUsuarioLogado());
+		
+		return redirect(routes.Application.index());
+	} 
 	
 
 	@Transactional
@@ -129,7 +149,7 @@ public class TemaController extends Controller {
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
 
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		return redirect(routes.Application.index());
 	} 
 
 	@Transactional
@@ -149,27 +169,8 @@ public class TemaController extends Controller {
 		tema.adicionarDica(dica);
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
-	} 
-
-	@Transactional
-	public static Result addDicaMaterialUtil(){    	
-
-		DynamicForm form = Form.form().bindFromRequest();
-
-		String idTema = form.field("idTema").value();		
-		String  urlDoMaterial = form.field("urlMaterial").value();
-
-		Dica dica = new DicaMaterialUtil( Application.getUsuarioLogado(), urlDoMaterial);
-
-		Application.salvaObjeto(dica); 
-
-		long idTemaLong = Long.parseLong(idTema);
-		Tema tema = getTema(idTemaLong);
-		tema.adicionarDica(dica);
-		Application.salvaObjeto(tema);
-		Application.salvaObjeto(Application.getUsuarioLogado());
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		
+		return redirect(routes.Application.index());
 	} 
 
 
@@ -192,7 +193,8 @@ public class TemaController extends Controller {
 		tema.adicionarDica(dica);
 		Application.salvaObjeto(tema);
 		Application.salvaObjeto(Application.getUsuarioLogado());
-		return ok(index.render(Application.getUsuarioLogado(), getTemas(), ""));
+		
+		return redirect(routes.Application.index());
 
 	} 
 	
@@ -220,6 +222,20 @@ public class TemaController extends Controller {
 
 		return temas;
 	}
+	
+	@Transactional
+	protected static Disciplina getDisciplina(Long id) {
+		return Application.getDAO().findByEntityId(Disciplina.class, id);
+	}
+	
+	@Transactional
+	protected static List<Disciplina> getDisciplina() {
+		List<Disciplina> disciplinas = Application.getDAO().findAllByClassName("Disciplina");
+		if (disciplinas == null) {
+			disciplinas = new ArrayList<Disciplina>();
+		}
 
+		return disciplinas;
+	}
 
 }

@@ -6,6 +6,7 @@
 	import models.dao.GenericDAOImpl;
 	import models.Tema;
 	import models.Usuario;
+	import models.Disciplina;
 	import play.*;
 	import play.db.jpa.JPA;
 	
@@ -14,6 +15,7 @@
 		private GenericDAO dao = new GenericDAOImpl();
 		private List<Tema> temas = new LinkedList<Tema>();
 		private List<Usuario> usuarios = new LinkedList<Usuario>();
+		private List<Disciplina> disciplinas = new LinkedList<Disciplina>();
 	
 		private String[] temasPadrao = {"Análise x Design", "Arquitetura de Software", "Heroku", "HTML, CSS e Bootstrap", "Javascript","Laboratórios", "Minitestes", "Orientação a Objetos", "Padros de Projeto GRASP", "Padrões de Projeto GoF", "Play Framework", "Projeto"};
 		private String[] nomeUsuariosPadrao = {"Andreza Raquel", "Daniela", "João", "Maria", "José", "Paula", "Marcos", "Arthur", "Bruno", "Raquel", "Rayssa", "Lucas", "Claúdia", "Abner", "Douglas"};
@@ -28,14 +30,23 @@
 	            	Logger.info("Aplicacao inicializada...");
 	            	
 	            	if(dao.findAllByClassName("Tema").isEmpty()){	
+	            		
+	            		Disciplina disciplina = new Disciplina("Sistema de Informação I");
 	
-						for (String tema : temasPadrao){
-								temas.add(new Tema(tema));
+						for (String t : temasPadrao){
+								Tema tema = new Tema(t);
+								temas.add(tema);
+								disciplina.adicionarTema(tema);
 							
 						}
 						for(int i=0; i < nomeUsuariosPadrao.length; i++ ){
 							usuarios.add(new Usuario(nomeUsuariosPadrao[i], emailUsuariosPadrao[i], senhaUsuariosPadrao[i]));
 						}
+						
+						
+						disciplinas.add(disciplina);
+						
+						
 				
 						Iterator<Tema> it = temas.iterator();
 	            	while(it.hasNext()){
@@ -44,6 +55,11 @@
 	            	Iterator<Usuario> it_u = usuarios.iterator();
 	            	while(it_u.hasNext()){
 	            	   salvaObjeto(it_u.next());
+	               }
+	            	
+	            	Iterator<Disciplina> it_d = disciplinas.iterator();
+	            	while(it_d.hasNext()){
+	            	   salvaObjeto(it_d.next());
 	               }
             	}
             }
