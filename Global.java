@@ -16,7 +16,7 @@
 		private List<Usuario> usuarios = new LinkedList<Usuario>();
 	
 		private String[] temasPadrao = {"Análise x Design", "Arquitetura de Software", "Heroku", "HTML, CSS e Bootstrap", "Javascript","Laboratórios", "Minitestes", "Orientação a Objetos", "Padros de Projeto GRASP", "Padrões de Projeto GoF", "Play Framework", "Projeto"};
-		private String[] nomeUsuariosPadrao = {"Andreza", "Daniela", "João", "Maria", "José", "Paula", "Marcos", "Arthur", "Bruno", "Raquel", "Rayssa", "Lucas", "Claúdia", "Abner", "Douglas"};
+		private String[] nomeUsuariosPadrao = {"Andreza Raquel", "Daniela", "João", "Maria", "José", "Paula", "Marcos", "Arthur", "Bruno", "Raquel", "Rayssa", "Lucas", "Claúdia", "Abner", "Douglas"};
 		private String[] emailUsuariosPadrao = {"andreza@gmail.com", "daniela@gmail.com", "joao@gmail.com", "maria@gmail.com", "jose@hotmail.com", "paula@hotmail.com", "marcos@gmail.com", "arthur@gmail.com", "bruno@hotmail.com", "raquel@gmail.com", "rayssa@gmail.com", "lucas@yahoo.com.br", "claudia@yahoo.com", "abner@yahoo.com.br", "douglas@yahoo.com.br"};				
 		private String[] senhaUsuariosPadrao = {"123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456","123456", "123456", "123456","123456","123456","123456"};
 	
