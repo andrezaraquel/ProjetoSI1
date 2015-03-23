@@ -54,7 +54,8 @@ public abstract class Dica implements Comparable<Dica> {
 		this.nameUser = new String(user.getNome());
 	}
 	
-	public abstract String exibir();
+	public abstract String exibirDica();
+	public abstract String exibirLabel();
 	
 	public void concordar(Usuario user) {	
 		if(!listaDiscordancia.contains(user) && !listaConcordancia.contains(user)) {

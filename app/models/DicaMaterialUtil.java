@@ -24,10 +24,14 @@ public class DicaMaterialUtil extends Dica {
 	}
 
 	@Override
-	public String exibir() {
+	public String exibirLabel(){
 		String label = "<span class=\"label label-info\">" + "Material Útil" + "</span>";
+		return label;
+	}
+	@Override
+	public String exibirDica() {
 		String textUrl = "<h5>" + urlDoMaterial + "</h5>";
-		return  textUrl +  label + "<br>";
+		return  textUrl;
 	}
 
 }

@@ -22,12 +22,18 @@ public class DicaSemDificuldades extends Dica {
 	public void setNomeDoAssunto(String nomeDoAssunto) {
 		this.nomeDoAssunto = nomeDoAssunto;
 	}
+	
+	@Override
+	public String exibirLabel(){
+		String label = "<span class=\"label label-info\">" + "O que você precisa saber para não ter dificuldades" + "</span>";
+		return label;
+		
+	}
 
 	@Override
-	public String exibir() {
-		String label = "<span class=\"label label-info\">" + "O que você precisa saber para não ter dificuldades" + "</span>";
+	public String exibirDica() {
 		String textAssunto = "<h5>" + nomeDoAssunto + "</h5>";
-		return textAssunto + label + "<br>" ;
+		return textAssunto;
 	}
 
 }

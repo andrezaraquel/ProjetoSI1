@@ -12,7 +12,13 @@ public class MetaDica extends Dica {
 	}
 	
 	@Override
-	public String exibir() {
+	public String exibirDica() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String exibirLabel() {
 		// TODO Auto-generated method stub
 		return null;
 	}	

@@ -32,11 +32,16 @@ public class DicaDisciplinasAnteriores extends Dica {
 	}
 	
 	@Override
-	public String exibir() {
+	public String exibirLabel(){
 		String label = "<span class=\"label label-info\">" + "Disciplinas anteriores que te ajudarão aqui" + "</span>";
+		return label;
+	}
+	
+	@Override
+	public String exibirDica() {
 		String textDisciplina = "<h5>" + "Disciplina: " + nomeDaDisciplina + "</h5>";
 		String textRazao = "<h5>" + razao + "</h5>";
-		return  textDisciplina  + textRazao + label + "<br>";
+		return  textDisciplina  + textRazao;
 	}
 	
 
