@@ -7,27 +7,27 @@
 <div class="panel panel-info ">
 	<div class="panel-heading">
 		<div class="row">
-			<div class="col-md-9 ">
+			<div class="col-md-10 ">
 			<h1 class="panel-title" id ="temaSelecionado">@tema.getNome()</h1>
 			</div>
 			
-			<div class="col-md-3" >
-			<button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
+			<div class="col-md-1.5 " >
+			<button type="button" class="btn-info " data-toggle="modal" data-target="#adicionarDica" >Adicionar dica</button>
 			</div>		
 			
 		</div>
 	</div>
-	
 
-	<div  class=" avaliacoesTema">
-		<div class="panel-heading">	
-			<div class="row">
-				<div class="col-md-5 "><label>Média de Dificuldade do Tema: &nbsp;</label><label>@tema.getAvaliacaoMedia()</label></div>
-				<div class="col-md-4 "><label>Mediana das Avaliações:&nbsp;</label><label>@tema.getAvaliacaoMediana()</label></div>
-				<div class="col-md-3"><button class="btn btn-xs btn-info" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button></div>
+
+		<div  class=" avaliacoesTema">
+			<div class="panel-heading">	
+				<div class="row">
+					<div class="col-md-5 "><label>Média de Dificuldade do Tema: &nbsp;</label><label>@tema.getAvaliacaoMedia()</label></div>
+					<div class="col-md-4 "><label>Mediana das Avaliações:&nbsp;</label><label>@tema.getAvaliacaoMediana()</label></div>
+					<div class="col-md-3"><button class="btn btn-xs btn-info" data-toggle="modal" data-target="#avaliarTema">Avaliar tema</button></div>
+				</div>
 			</div>
 		</div>
-	</div>
 	
 
 	<div class="col-md-12 panelDicas">
@@ -35,15 +35,15 @@
 			<p>Nenhuma dica para este tema.</p>	
 		}else{	
 			@for(dica <- tema.getDicas()){
-				<p class="nomeUsuarios">@dica.getNameUser()&nbsp;&nbsp;@Html(dica.exibirLabel())</p>
+				<p class="nomeUsuarios">@dica.getNameUser()&nbsp;&nbsp;@Html(dica.exibirLabel())&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a><img src="/assets/images/add.png"/></a></p>
 				@Html(dica.exibirDica())
 
-				
-				<a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'" disabled="@dica.isDicaFechada()" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()&nbsp;&nbsp;
-				<a disabled="@dica.isDicaFechada()" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/discurtir_icon.jpg"/>@dica.getQuantDiscordancias()&nbsp;&nbsp;
-				<a disabled="true">Índicie de concordância</a>@dica.getIndiceConcordancia()&nbsp;&nbsp;
-				<a class="acaoRota linkDenunciar" data-toggle="modal" data-target="#denunciar">Denunciar </a>
-				
+				<div class="row"></div>
+					<div class="col-md-3"><a onClick="location.href='@routes.TemaController.concordar(dica.getIdDicaString())'" disabled="@dica.isDicaFechada()" class="acaoRota linkConcordar">Concordar</a> <img src="/assets/images/curtir_icon.jpg" />@dica.getQuantConcordancias()</div>
+					<div class="col-md-3"><a disabled="@dica.isDicaFechada()" class="acaoRota linkDiscordar" data-toggle="modal" data-target="#discordar">Discordar</a> <img src="/assets/images/discurtir_icon.jpg"/>@dica.getQuantDiscordancias()</div>
+					<div class="col-md-3"><a disabled="true">I.C = </a>@dica.getIndiceConcordancia()</div>
+					<div class="col-md-3"><a class="acaoRota linkDenunciar" data-toggle="modal" data-target="#denunciar">Denunciar </a></div>
+			
 				
 				@if(!dica.getListaDiscordancia().isEmpty()){
 					<div class= "panel container col-md-12 panelFrase">
@@ -56,6 +56,7 @@
 					
 				}			
 				<legend></legend>
+				</div>
 				<div class="modal fade" id="discordar">
 					<div class="modal-dialog">
 						<div class="modal-content">

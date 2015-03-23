@@ -28,7 +28,7 @@ object login extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 
 Seq[Any](format.raw/*1.63*/("""
 
-"""),_display_(/*3.2*/main("´Portal do Leite - Login")/*3.34*/{_display_(Seq[Any](format.raw/*3.35*/("""
+"""),_display_(/*3.2*/main("Portal do Leite - Login")/*3.33*/{_display_(Seq[Any](format.raw/*3.34*/("""
 		"""),format.raw/*4.3*/("""<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -105,10 +105,10 @@ Seq[Any](format.raw/*1.63*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 13:52:24 BRT 2015
-                  SOURCE: /home/andrezarmq/Documentos/SI1/ProjetoSI1/app/views/login.scala.html
-                  HASH: 8ce287df64c6768c3a572ab143a147e7b3bd7dd4
-                  MATRIX: 744->1|893->62|921->65|961->97|999->98|1028->101|2079->1126|2147->1185|2187->1187|2219->1192|2288->1234|2323->1248|2373->1268|2406->1275|2466->1326|2506->1328|2537->1332|2605->1374|2636->1384|2684->1402|2717->1408|2854->1519|2869->1525|2925->1572|2965->1574|2999->1581|3147->1702|3169->1715|3196->1721|3524->2019|3556->2024
+                  DATE: Mon Mar 23 14:57:12 BRT 2015
+                  SOURCE: /home/mariadch/projetosi-ultima/ProjetoSI1/app/views/login.scala.html
+                  HASH: df284ad5d4bfd6f432f3e3450a56c90a508b34b7
+                  MATRIX: 744->1|893->62|921->65|960->96|998->97|1027->100|2078->1125|2146->1184|2186->1186|2218->1191|2287->1233|2322->1247|2372->1267|2405->1274|2465->1325|2505->1327|2536->1331|2604->1373|2635->1383|2683->1401|2716->1407|2853->1518|2868->1524|2924->1571|2964->1573|2998->1580|3146->1701|3168->1714|3195->1720|3523->2018|3555->2023
                   LINES: 26->1|29->1|31->3|31->3|31->3|32->4|62->34|62->34|62->34|63->35|64->36|64->36|66->38|68->40|68->40|68->40|69->41|70->42|70->42|72->44|74->46|77->49|77->49|77->49|77->49|78->50|80->52|80->52|80->52|87->59|88->60
                   -- GENERATED --
               */

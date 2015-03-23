@@ -1,0 +1,32 @@
+<!-- Modal - adicionar dicas -->
+
+<div id="adicionarMetaDica" class="modal fade "> <!--1-->
+    <div class="modal-dialog centralizarModal"><!--2-->
+        <div class="modal-content"><!--3-->
+            <div class="modal-header"><!--4-->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Adicionando Meta Dica</h4>				
+            </div><!--4-->
+		
+            <div class="modal-body"> <!--5-->
+  
+						<form class="form-horizontal" method="POST" role="form" id="addDicaComentario" action="/addDicaConselho">
+							<input type="hidden" class="idDoTema" name="idTema" value="" />
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Comentário</label>
+								<div class="col-sm-8">
+								<textarea class="form-control" name="comentario" maxlength="100"
+										 placeholder="Digite seu comentário para esta meta dica." required></textarea>						
+								</div>
+							</div>				
+						</form>
+						
+						<div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			                <input type="submit" class="btn btn-primary enviarFormDica" form="addDicaComentario" value="Adicionar" />
+						</div>				
+			</div> <!--5-->	
+            
+        </div> <!--3-->
+    </div> <!--2-->
+</div><!--1-->
